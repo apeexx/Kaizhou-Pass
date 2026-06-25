@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>数据分析 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="电商商户导航">
+      <a class="brand" href="index.html"><span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 10.2 12 5l8 5.2v8.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-8.3Z" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span><span class="brand-title">开州金厨</span><span class="brand-subtitle">电商商户端</span></span></a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8"/></svg></span>控制台</a>
+        <a class="nav-link" href="products.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M6 7h12l-1 13H7L6 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.8"/></svg></span>商品管理</a>
+        <a class="nav-link" href="orders.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 8h5M9.5 12h5M9.5 16H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>订单管理</a>
+        <a class="nav-link active" href="analytics.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 19V9m7 10V5m7 14v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>数据分析</a>
+        <a class="nav-link" href="earnings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16v11H4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h5m-5 3h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>收益结算</a>
+        <a class="nav-link" href="settings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M19 13.5v-3l-2.1-.4a7.5 7.5 0 0 0-.8-1.8l1.2-1.8-2.1-2.1-1.8 1.2a7.5 7.5 0 0 0-1.8-.8L11.2 2h-3l-.4 2.1a7.5 7.5 0 0 0-1.8.8L4.2 3.7 2.1 5.8l1.2 1.8a7.5 7.5 0 0 0-.8 1.8L.4 9.8v3l2.1.4c.2.7.5 1.3.8 1.8l-1.2 1.8 2.1 2.1 1.8-1.2c.6.3 1.2.6 1.8.8l.4 2.1h3l.4-2.1c.7-.2 1.3-.5 1.8-.8l1.8 1.2 2.1-2.1-1.2-1.8c.3-.6.6-1.2.8-1.8l2.1-.4Z" stroke="currentColor" stroke-width="1.3" opacity=".65"/></svg></span>店铺设置</a>
+      </nav>
+      <div class="sidebar-foot"><button class="nav-link" type="button" data-toast="已退出登录演示"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M10 6H5v12h5M14 8l4 4-4 4M9 12h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>退出登录</button></div>
+    </aside>
+
+    <div class="content">
+      <header class="topbar">
+        <button class="menu-button" type="button" data-menu-toggle aria-label="打开导航"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        <label class="search"><svg viewBox="0 0 24 24" fill="none"><path d="m20 20-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="search" placeholder="搜索分析指标..."></label>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="切换深色模式"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A7.5 7.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+          <button class="icon-button notification" type="button" data-count="4" aria-label="查看通知"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 9a6 6 0 1 0-12 0c0 7-2 7-2 9h16c0-2-2-2-2-9Z" stroke="currentColor" stroke-width="1.8"/><path d="M10 21h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+          <div class="profile"><span class="avatar">掌</span><strong>金厨优选店</strong></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="page-header">
+          <div>
+            <p class="eyeline">经营分析</p>
+            <h1>数据分析</h1>
+            <p class="page-subtitle">跟踪流量来源、转化效率、复购表现和商品结构。</p>
+          </div>
+          <div class="page-actions">
+            <select class="select" aria-label="选择分析周期"><option>近 30 天</option><option>近 7 天</option><option>本季度</option></select>
+            <button class="btn btn-primary" type="button" data-toast="分析报表已生成演示">导出分析</button>
+          </div>
+        </section>
+
+        <section class="grid stats-grid">
+          <article class="metric-card" style="--metric-color: var(--chart-1)"><div class="metric-head"><div><p class="metric-label">访客数</p><div class="metric-value">42.5K</div><p class="metric-note"><span class="trend-up">↑ 15.3%</span> 较上月</p></div><span class="metric-icon">访</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-2)"><div class="metric-head"><div><p class="metric-label">支付转化</p><div class="metric-value">4.8%</div><p class="metric-note"><span class="trend-up">↑ 0.6%</span> 较上月</p></div><span class="metric-icon">转</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-3)"><div class="metric-head"><div><p class="metric-label">客单价</p><div class="metric-value">¥126</div><p class="metric-note"><span class="trend-up">↑ 8.1%</span> 商品组合提升</p></div><span class="metric-icon">客</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-5)"><div class="metric-head"><div><p class="metric-label">跳失率</p><div class="metric-value">32%</div><p class="metric-note"><span class="trend-down">↓ 4.2%</span> 页面优化有效</p></div><span class="metric-icon">跳</span></div></article>
+        </section>
+
+        <section class="grid two-col" style="margin-top: 22px;">
+          <article class="panel">
+            <div class="panel-header"><h2>流量与转化趋势</h2><div class="tabs"><button class="tab-button active" type="button">访客</button><button class="tab-button" type="button" data-toast="转化率视图为静态演示">转化</button><button class="tab-button" type="button" data-toast="复购率视图为静态演示">复购</button></div></div>
+            <div class="panel-body">
+              <svg class="chart-svg" viewBox="0 0 900 330" role="img" aria-label="流量与转化趋势图">
+                <path class="chart-grid" d="M70 40H860M70 100H860M70 160H860M70 220H860M70 280H860"/>
+                <path d="M75 248 C160 230 240 215 320 188 S470 142 565 154 720 104 860 88" fill="none" stroke="var(--chart-1)" stroke-width="5" stroke-linecap="round"/>
+                <path d="M75 268 C150 258 240 248 330 226 S490 188 600 198 720 170 860 146" fill="none" stroke="var(--chart-2)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M75 248 C160 230 240 215 320 188 S470 142 565 154 720 104 860 88 V280H75Z" fill="rgba(30,157,241,.12)"/>
+                <g class="axis-text"><text x="82" y="312">第1周</text><text x="235" y="312">第2周</text><text x="388" y="312">第3周</text><text x="541" y="312">第4周</text><text x="694" y="312">第5周</text></g>
+              </svg>
+              <div class="legend"><span><i style="--legend-color: var(--chart-1)"></i>访客数</span><span><i style="--legend-color: var(--chart-2)"></i>支付人数</span></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header"><h2>渠道来源</h2></div>
+            <div class="panel-body">
+              <div class="donut"><div class="donut-ring"><div class="donut-center"><span class="donut-value">68%</span><span class="donut-label">内容渠道</span></div></div></div>
+              <div class="legend"><span><i style="--legend-color: var(--chart-1)"></i>平台搜索</span><span><i style="--legend-color: var(--chart-2)"></i>直播推荐</span><span><i style="--legend-color: var(--chart-3)"></i>私域分享</span><span><i style="--legend-color: var(--chart-5)"></i>广告投放</span></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid two-col" style="margin-top: 22px;">
+          <article class="panel">
+            <div class="panel-header"><h2>商品贡献排行</h2></div>
+            <div class="panel-body list">
+              <div class="progress"><div class="progress-head"><span>开州香辣牛肉酱</span><span>¥128,480</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 92%; --progress-color: var(--chart-1)"></div></div></div>
+              <div class="progress"><div class="progress-head"><span>山城腊味礼盒</span><span>¥96,320</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 72%; --progress-color: var(--chart-2)"></div></div></div>
+              <div class="progress"><div class="progress-head"><span>鲜椒鸡预制菜</span><span>¥74,120</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 58%; --progress-color: var(--chart-3)"></div></div></div>
+              <div class="progress"><div class="progress-head"><span>酸萝卜老鸭汤</span><span>¥42,880</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 38%; --progress-color: var(--chart-5)"></div></div></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header"><h2>运营洞察</h2></div>
+            <div class="panel-body list">
+              <div class="list-row"><div><span class="item-title">直播渠道转化提升</span><span class="item-subtitle">建议增加热销礼盒库存</span></div><span class="badge badge-green">机会</span></div>
+              <div class="list-row"><div><span class="item-title">冷链商品跳失偏高</span><span class="item-subtitle">详情页配送说明需要前置</span></div><span class="badge badge-yellow">关注</span></div>
+              <div class="list-row"><div><span class="item-title">复购客户增长稳定</span><span class="item-subtitle">可推组合券提高客单价</span></div><span class="badge badge-blue">建议</span></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="overlay" data-nav-close></div>
+</body>
+</html>

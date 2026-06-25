@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>收益结算 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="电商商户导航">
+      <a class="brand" href="index.html"><span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 10.2 12 5l8 5.2v8.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-8.3Z" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span><span class="brand-title">开州金厨</span><span class="brand-subtitle">电商商户端</span></span></a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8"/></svg></span>控制台</a>
+        <a class="nav-link" href="products.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M6 7h12l-1 13H7L6 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.8"/></svg></span>商品管理</a>
+        <a class="nav-link" href="orders.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 8h5M9.5 12h5M9.5 16H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>订单管理</a>
+        <a class="nav-link" href="analytics.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 19V9m7 10V5m7 14v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>数据分析</a>
+        <a class="nav-link active" href="earnings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16v11H4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h5m-5 3h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>收益结算</a>
+        <a class="nav-link" href="settings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M19 13.5v-3l-2.1-.4a7.5 7.5 0 0 0-.8-1.8l1.2-1.8-2.1-2.1-1.8 1.2a7.5 7.5 0 0 0-1.8-.8L11.2 2h-3l-.4 2.1a7.5 7.5 0 0 0-1.8.8L4.2 3.7 2.1 5.8l1.2 1.8a7.5 7.5 0 0 0-.8 1.8L.4 9.8v3l2.1.4c.2.7.5 1.3.8 1.8l-1.2 1.8 2.1 2.1 1.8-1.2c.6.3 1.2.6 1.8.8l.4 2.1h3l.4-2.1c.7-.2 1.3-.5 1.8-.8l1.8 1.2 2.1-2.1-1.2-1.8c.3-.6.6-1.2.8-1.8l2.1-.4Z" stroke="currentColor" stroke-width="1.3" opacity=".65"/></svg></span>店铺设置</a>
+      </nav>
+      <div class="sidebar-foot"><button class="nav-link" type="button" data-toast="已退出登录演示"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M10 6H5v12h5M14 8l4 4-4 4M9 12h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>退出登录</button></div>
+    </aside>
+
+    <div class="content">
+      <header class="topbar">
+        <button class="menu-button" type="button" data-menu-toggle aria-label="打开导航"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        <label class="search"><svg viewBox="0 0 24 24" fill="none"><path d="m20 20-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="search" placeholder="搜索结算记录..." data-table-search="settlement-table"></label>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="切换深色模式"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A7.5 7.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+          <button class="icon-button notification" type="button" data-count="2" aria-label="查看通知"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 9a6 6 0 1 0-12 0c0 7-2 7-2 9h16c0-2-2-2-2-9Z" stroke="currentColor" stroke-width="1.8"/><path d="M10 21h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+          <div class="profile"><span class="avatar">掌</span><strong>金厨优选店</strong></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="page-header">
+          <div>
+            <p class="eyeline">财务中心</p>
+            <h1>收益结算</h1>
+            <p class="page-subtitle">查看收入、平台服务费、待结算金额和结算记录。</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn" type="button" data-toast="账单已刷新演示">刷新账单</button>
+            <button class="btn btn-primary" type="button" data-toast="提现申请为静态演示">申请提现</button>
+          </div>
+        </section>
+
+        <section class="grid stats-grid">
+          <article class="metric-card" style="--metric-color: var(--chart-1)"><div class="metric-head"><div><p class="metric-label">本月收入</p><div class="metric-value">¥428,960</div><p class="metric-note"><span class="trend-up">↑ 18.6%</span> 较上月</p></div><span class="metric-icon">收</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-2)"><div class="metric-head"><div><p class="metric-label">可提现金额</p><div class="metric-value">¥86,420</div><p class="metric-note"><span class="trend-up">今日可结算</span></p></div><span class="metric-icon">提</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-3)"><div class="metric-head"><div><p class="metric-label">待结算</p><div class="metric-value">¥124,708</div><p class="metric-note">T+1/T+7 分批入账</p></div><span class="metric-icon">待</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-5)"><div class="metric-head"><div><p class="metric-label">退款扣减</p><div class="metric-value">¥4,286</div><p class="metric-note"><span class="trend-down">↓ 2.1%</span> 风险下降</p></div><span class="metric-icon">退</span></div></article>
+        </section>
+
+        <section class="grid two-col" style="margin-top: 22px;">
+          <article class="panel">
+            <div class="panel-header"><h2>收入趋势</h2><div class="tabs"><button class="tab-button active" type="button">收入</button><button class="tab-button" type="button" data-toast="利润视图为静态演示">利润</button><button class="tab-button" type="button" data-toast="费用视图为静态演示">费用</button></div></div>
+            <div class="panel-body">
+              <svg class="chart-svg" viewBox="0 0 900 330" role="img" aria-label="收入趋势图">
+                <path class="chart-grid" d="M70 40H860M70 100H860M70 160H860M70 220H860M70 280H860"/>
+                <path d="M70 244 C160 214 230 232 300 190 S430 132 520 142 620 108 700 116 780 78 860 66" fill="none" stroke="var(--chart-1)" stroke-width="5" stroke-linecap="round"/>
+                <path d="M70 262 C150 242 240 252 330 218 S470 182 570 188 690 150 860 134" fill="none" stroke="var(--chart-2)" stroke-width="4" stroke-linecap="round"/>
+                <path d="M70 244 C160 214 230 232 300 190 S430 132 520 142 620 108 700 116 780 78 860 66 V280H70Z" fill="rgba(30,157,241,.12)"/>
+              </svg>
+              <div class="legend"><span><i style="--legend-color: var(--chart-1)"></i>总收入</span><span><i style="--legend-color: var(--chart-2)"></i>净收入</span></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header"><h2>收入来源</h2></div>
+            <div class="panel-body">
+              <div class="donut"><div class="donut-ring"><div class="donut-center"><span class="donut-value">76%</span><span class="donut-label">商品销售</span></div></div></div>
+              <div class="legend"><span><i style="--legend-color: var(--chart-1)"></i>商品销售</span><span><i style="--legend-color: var(--chart-2)"></i>套餐组合</span><span><i style="--legend-color: var(--chart-3)"></i>直播活动</span><span><i style="--legend-color: var(--chart-5)"></i>其他</span></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid two-col" style="margin-top: 22px;">
+          <article class="panel">
+            <div class="panel-header"><h2>结算记录</h2><span class="badge badge-blue" data-count-for="settlement-table">0 条记录</span></div>
+            <div class="panel-body">
+              <div class="filters"><input class="form-control" type="search" placeholder="搜索结算单号..." data-table-search="settlement-table"><button class="btn" type="button" data-toast="下载账单为静态演示">下载账单</button></div>
+              <div class="table-wrap">
+                <table class="data-table" id="settlement-table">
+                  <thead><tr><th>结算单</th><th>周期</th><th>金额</th><th>状态</th><th>操作</th></tr></thead>
+                  <tbody>
+                    <tr data-status="done"><td><span class="item-title">SET-20260624</span><span class="item-subtitle">自动结算</span></td><td>06-23 至 06-24</td><td>¥28,640</td><td><span class="badge badge-green">已入账</span></td><td><button class="action-button" type="button" data-row-action="settle">⌕</button></td></tr>
+                    <tr data-status="pending"><td><span class="item-title">SET-20260623</span><span class="item-subtitle">待审核</span></td><td>06-22 至 06-23</td><td>¥31,208</td><td><span class="badge badge-yellow">处理中</span></td><td><button class="action-button" type="button" data-row-action="settle">⌕</button></td></tr>
+                    <tr data-status="done"><td><span class="item-title">SET-20260622</span><span class="item-subtitle">自动结算</span></td><td>06-21 至 06-22</td><td>¥24,982</td><td><span class="badge badge-green">已入账</span></td><td><button class="action-button" type="button" data-row-action="settle">⌕</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="empty-state" data-empty-for="settlement-table">没有匹配的结算记录</div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header"><h2>待结算提醒</h2></div>
+            <div class="panel-body list">
+              <div class="list-row"><div><span class="item-title">冷链商品交易</span><span class="item-subtitle">预计明日 10:00 入账</span></div><strong>¥48,260</strong></div>
+              <div class="list-row"><div><span class="item-title">直播活动订单</span><span class="item-subtitle">平台复核中</span></div><strong>¥39,120</strong></div>
+              <div class="list-row"><div><span class="item-title">售后冻结金额</span><span class="item-subtitle">售后完成后释放</span></div><strong>¥8,642</strong></div>
+              <button class="btn btn-primary" type="button" data-toast="结算明细为静态演示">查看结算明细</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="overlay" data-nav-close></div>
+</body>
+</html>

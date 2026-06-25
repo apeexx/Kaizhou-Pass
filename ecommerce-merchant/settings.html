@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>店铺设置 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="电商商户导航">
+      <a class="brand" href="index.html"><span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 10.2 12 5l8 5.2v8.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-8.3Z" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><span><span class="brand-title">开州金厨</span><span class="brand-subtitle">电商商户端</span></span></a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8"/></svg></span>控制台</a>
+        <a class="nav-link" href="products.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M6 7h12l-1 13H7L6 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.8"/></svg></span>商品管理</a>
+        <a class="nav-link" href="orders.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 8h5M9.5 12h5M9.5 16H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>订单管理</a>
+        <a class="nav-link" href="analytics.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 19V9m7 10V5m7 14v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>数据分析</a>
+        <a class="nav-link" href="earnings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16v11H4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h5m-5 3h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>收益结算</a>
+        <a class="nav-link active" href="settings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M19 13.5v-3l-2.1-.4a7.5 7.5 0 0 0-.8-1.8l1.2-1.8-2.1-2.1-1.8 1.2a7.5 7.5 0 0 0-1.8-.8L11.2 2h-3l-.4 2.1a7.5 7.5 0 0 0-1.8.8L4.2 3.7 2.1 5.8l1.2 1.8a7.5 7.5 0 0 0-.8 1.8L.4 9.8v3l2.1.4c.2.7.5 1.3.8 1.8l-1.2 1.8 2.1 2.1 1.8-1.2c.6.3 1.2.6 1.8.8l.4 2.1h3l.4-2.1c.7-.2 1.3-.5 1.8-.8l1.8 1.2 2.1-2.1-1.2-1.8c.3-.6.6-1.2.8-1.8l2.1-.4Z" stroke="currentColor" stroke-width="1.3" opacity=".65"/></svg></span>店铺设置</a>
+      </nav>
+      <div class="sidebar-foot"><button class="nav-link" type="button" data-toast="已退出登录演示"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M10 6H5v12h5M14 8l4 4-4 4M9 12h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>退出登录</button></div>
+    </aside>
+
+    <div class="content">
+      <header class="topbar">
+        <button class="menu-button" type="button" data-menu-toggle aria-label="打开导航"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        <label class="search"><svg viewBox="0 0 24 24" fill="none"><path d="m20 20-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="search" placeholder="搜索设置项..."></label>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="切换深色模式"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A7.5 7.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+          <button class="icon-button notification" type="button" data-count="1" aria-label="查看通知"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 9a6 6 0 1 0-12 0c0 7-2 7-2 9h16c0-2-2-2-2-9Z" stroke="currentColor" stroke-width="1.8"/><path d="M10 21h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+          <div class="profile"><span class="avatar">掌</span><strong>金厨优选店</strong></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="page-header">
+          <div>
+            <p class="eyeline">店铺配置</p>
+            <h1>店铺设置</h1>
+            <p class="page-subtitle">维护店铺资料、通知策略、偏好设置和安全操作。</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn" type="button" data-theme-toggle><span data-theme-label>深色模式</span></button>
+            <button class="btn btn-primary" type="button" data-toast="店铺设置已保存演示">保存设置</button>
+          </div>
+        </section>
+
+        <section class="settings-layout" data-tab-group>
+          <aside class="panel settings-menu" aria-label="设置分类">
+            <button class="settings-link active" type="button" data-tab-target="store-info" aria-selected="true">店铺资料</button>
+            <button class="settings-link" type="button" data-tab-target="notify-info" aria-selected="false">通知设置</button>
+            <button class="settings-link" type="button" data-tab-target="operation-info" aria-selected="false">经营偏好</button>
+            <button class="settings-link" type="button" data-tab-target="security-info" aria-selected="false">安全设置</button>
+          </aside>
+
+          <div class="grid">
+            <article class="panel tab-panel" id="store-info">
+              <div class="panel-header"><h2>基础资料</h2><span class="badge badge-green">已认证</span></div>
+              <div class="panel-body">
+                <div class="form-grid">
+                  <div class="field"><label for="store-name">店铺名称</label><input class="form-control" id="store-name" value="金厨优选店"></div>
+                  <div class="field"><label for="store-owner">负责人</label><input class="form-control" id="store-owner" value="周掌柜"></div>
+                  <div class="field"><label for="store-phone">客服电话</label><input class="form-control" id="store-phone" value="400-000-6288"></div>
+                  <div class="field"><label for="store-category">主营类目</label><select class="select" id="store-category"><option>地方特色食品</option><option>预制菜</option><option>调味酱料</option></select></div>
+                  <div class="field span-2"><label for="store-desc">店铺简介</label><textarea class="form-control" id="store-desc">专注开州地方风味、私厨预制菜和特色礼盒，提供稳定冷链与售后服务。</textarea></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel tab-panel" id="notify-info" hidden>
+              <div class="panel-header"><h2>通知设置</h2></div>
+              <div class="panel-body">
+                <div class="toggle-row"><div><span class="item-title">新订单提醒</span><span class="item-subtitle">支付成功后立即通知运营人员</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><span class="item-title">低库存预警</span><span class="item-subtitle">商品低于安全库存时提醒补货</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><span class="item-title">售后超时提醒</span><span class="item-subtitle">售后单超过 4 小时未处理时提醒</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+              </div>
+            </article>
+
+            <article class="panel tab-panel" id="operation-info" hidden>
+              <div class="panel-header"><h2>经营偏好</h2></div>
+              <div class="panel-body">
+                <div class="form-grid">
+                  <div class="field"><label for="ship-mode">默认发货方式</label><select class="select" id="ship-mode"><option>普通快递优先</option><option>同城配送优先</option><option>冷链配送优先</option></select></div>
+                  <div class="field"><label for="stock-safe">库存预警阈值</label><input class="form-control" id="stock-safe" value="20%"></div>
+                  <div class="field"><label for="after-sale">售后响应目标</label><input class="form-control" id="after-sale" value="4 小时内"></div>
+                  <div class="field"><label for="settle-cycle">结算周期</label><select class="select" id="settle-cycle"><option>T+1 自动结算</option><option>T+7 周期结算</option></select></div>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel tab-panel" id="security-info" hidden>
+              <div class="panel-header"><h2>安全设置</h2></div>
+              <div class="panel-body">
+                <div class="toggle-row"><div><span class="item-title">二次确认敏感操作</span><span class="item-subtitle">删除商品、批量下架时要求确认</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><span class="item-title">导出数据脱敏</span><span class="item-subtitle">导出订单时隐藏完整手机号和地址</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><span class="item-title">登录异常提醒</span><span class="item-subtitle">异地登录后提醒店铺管理员</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+              </div>
+            </article>
+
+            <article class="panel danger-zone">
+              <div class="panel-header"><h2>危险操作区</h2></div>
+              <div class="panel-body">
+                <p>以下操作只做静态演示，不会删除真实数据。生产环境需要二次确认、权限校验和操作日志。</p>
+                <button class="btn btn-danger" type="button" data-toast="静态演示未执行删除操作">停用店铺</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="overlay" data-nav-close></div>
+</body>
+</html>

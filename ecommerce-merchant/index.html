@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>电商商户控制台 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="电商商户导航">
+      <a class="brand" href="index.html" aria-label="开州金厨电商商户端首页">
+        <span class="brand-mark">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 10.2 12 5l8 5.2v8.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-8.3Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span>
+          <span class="brand-title">开州金厨</span>
+          <span class="brand-subtitle">电商商户端</span>
+        </span>
+      </a>
+      <nav class="nav">
+        <a class="nav-link active" href="index.html">
+          <span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8"/></svg></span>
+          控制台
+        </a>
+        <a class="nav-link" href="products.html">
+          <span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M6 7h12l-1 13H7L6 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.8"/></svg></span>
+          商品管理
+        </a>
+        <a class="nav-link" href="orders.html">
+          <span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 8h5M9.5 12h5M9.5 16H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          订单管理
+        </a>
+        <a class="nav-link" href="analytics.html">
+          <span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 19V9m7 10V5m7 14v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          数据分析
+        </a>
+        <a class="nav-link" href="earnings.html">
+          <span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16v11H4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h5m-5 3h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+          收益结算
+        </a>
+        <a class="nav-link" href="settings.html">
+          <span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M19 13.5v-3l-2.1-.4a7.5 7.5 0 0 0-.8-1.8l1.2-1.8-2.1-2.1-1.8 1.2a7.5 7.5 0 0 0-1.8-.8L11.2 2h-3l-.4 2.1a7.5 7.5 0 0 0-1.8.8L4.2 3.7 2.1 5.8l1.2 1.8a7.5 7.5 0 0 0-.8 1.8L.4 9.8v3l2.1.4c.2.7.5 1.3.8 1.8l-1.2 1.8 2.1 2.1 1.8-1.2c.6.3 1.2.6 1.8.8l.4 2.1h3l.4-2.1c.7-.2 1.3-.5 1.8-.8l1.8 1.2 2.1-2.1-1.2-1.8c.3-.6.6-1.2.8-1.8l2.1-.4Z" stroke="currentColor" stroke-width="1.3" opacity=".65"/></svg></span>
+          店铺设置
+        </a>
+      </nav>
+      <div class="sidebar-foot">
+        <button class="nav-link" type="button" data-toast="已退出登录演示">
+          <span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M10 6H5v12h5M14 8l4 4-4 4M9 12h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          退出登录
+        </button>
+      </div>
+    </aside>
+
+    <div class="content">
+      <header class="topbar">
+        <button class="menu-button" type="button" data-menu-toggle aria-label="打开导航">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m20 20-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input type="search" placeholder="搜索商品、订单、客户...">
+        </label>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="切换深色模式">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A7.5 7.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="icon-button notification" type="button" data-count="5" aria-label="查看通知">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 9a6 6 0 1 0-12 0c0 7-2 7-2 9h16c0-2-2-2-2-9Z" stroke="currentColor" stroke-width="1.8"/><path d="M10 21h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <div class="profile">
+            <span class="avatar">掌</span>
+            <strong>金厨优选店</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="page-header">
+          <div>
+            <p class="eyeline">今日经营概览</p>
+            <h1>电商商户仪表盘</h1>
+            <p class="page-subtitle">查看销售、订单、库存和客户转化的关键变化。</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn" type="button" data-toast="已刷新控制台数据">刷新数据</button>
+            <button class="btn btn-primary" type="button" data-toast="报表已生成，静态演示未下载文件">生成报表</button>
+          </div>
+        </section>
+
+        <section class="grid stats-grid" aria-label="核心指标">
+          <article class="metric-card" style="--metric-color: var(--chart-1)">
+            <div class="metric-head">
+              <div>
+                <p class="metric-label">今日销售额</p>
+                <div class="metric-value">¥42,389</div>
+                <p class="metric-note"><span class="trend-up">↑ 12.5%</span> 较昨日</p>
+              </div>
+              <span class="metric-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3v18m4-14H9.5a3 3 0 0 0 0 6H14a3 3 0 0 1 0 6H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            </div>
+          </article>
+          <article class="metric-card" style="--metric-color: var(--chart-2)">
+            <div class="metric-head">
+              <div>
+                <p class="metric-label">待发货订单</p>
+                <div class="metric-value">128</div>
+                <p class="metric-note"><span class="trend-up">↑ 8.3%</span> 较昨日</p>
+              </div>
+              <span class="metric-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 7h12v10H3zM15 11h3l3 3v3h-6z" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="19" r="1.5" fill="currentColor"/><circle cx="18" cy="19" r="1.5" fill="currentColor"/></svg></span>
+            </div>
+          </article>
+          <article class="metric-card" style="--metric-color: var(--chart-3)">
+            <div class="metric-head">
+              <div>
+                <p class="metric-label">在售商品</p>
+                <div class="metric-value">1,426</div>
+                <p class="metric-note"><span class="trend-up">↑ 3.9%</span> 本周新增</p>
+              </div>
+              <span class="metric-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M6 7h12l-1 13H7L6 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            </div>
+          </article>
+          <article class="metric-card" style="--metric-color: var(--chart-5)">
+            <div class="metric-head">
+              <div>
+                <p class="metric-label">店铺转化率</p>
+                <div class="metric-value">18.4%</div>
+                <p class="metric-note"><span class="trend-down">↓ 1.2%</span> 需关注</p>
+              </div>
+              <span class="metric-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 18 9 13l4 4 7-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 8h5v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid two-col" style="margin-top: 22px;">
+          <article class="panel" data-tab-group>
+            <div class="panel-header">
+              <h2>销售趋势</h2>
+              <div class="tabs" role="tablist" aria-label="销售趋势维度">
+                <button class="tab-button active" type="button" data-tab-target="sales-day" aria-selected="true">销售额</button>
+                <button class="tab-button" type="button" data-tab-target="sales-orders" aria-selected="false">订单数</button>
+                <button class="tab-button" type="button" data-tab-target="sales-visitors" aria-selected="false">访客数</button>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="tab-panel" id="sales-day">
+                <div class="chart-wrap" aria-label="近七日销售额折线图">
+                  <svg class="chart-svg" viewBox="0 0 900 330" role="img">
+                    <path class="chart-grid" d="M70 40H860M70 100H860M70 160H860M70 220H860M70 280H860"/>
+                    <path d="M70 280H860" stroke="#dbe5ec"/>
+                    <path d="M70 40V280" stroke="#dbe5ec"/>
+                    <path d="M70 248 C145 220 185 218 240 198 S350 158 420 168 520 112 590 118 706 84 790 94 834 82 860 74" fill="none" stroke="var(--chart-1)" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M70 248 C145 220 185 218 240 198 S350 158 420 168 520 112 590 118 706 84 790 94 834 82 860 74 V280H70Z" fill="rgba(30,157,241,.13)"/>
+                    <path d="M70 262 C150 254 220 230 290 238 S420 210 500 206 600 180 680 188 770 160 860 148" fill="none" stroke="var(--chart-2)" stroke-width="4" stroke-linecap="round"/>
+                    <g class="axis-text">
+                      <text x="58" y="45">60k</text><text x="58" y="105">45k</text><text x="58" y="165">30k</text><text x="58" y="225">15k</text><text x="62" y="286">0</text>
+                      <text x="82" y="312">周一</text><text x="205" y="312">周二</text><text x="328" y="312">周三</text><text x="451" y="312">周四</text><text x="574" y="312">周五</text><text x="697" y="312">周六</text><text x="820" y="312">周日</text>
+                    </g>
+                  </svg>
+                </div>
+                <div class="legend">
+                  <span><i style="--legend-color: var(--chart-1)"></i>销售额</span>
+                  <span><i style="--legend-color: var(--chart-2)"></i>净收入</span>
+                </div>
+              </div>
+              <div class="tab-panel" id="sales-orders" hidden>
+                <div class="chart-wrap">
+                  <svg class="chart-svg" viewBox="0 0 900 330" role="img" aria-label="订单数柱状图">
+                    <path class="chart-grid" d="M70 60H860M70 120H860M70 180H860M70 240H860M70 280H860"/>
+                    <g fill="var(--chart-1)">
+                      <rect x="110" y="160" width="56" height="120" rx="12"/><rect x="230" y="120" width="56" height="160" rx="12"/><rect x="350" y="150" width="56" height="130" rx="12"/><rect x="470" y="94" width="56" height="186" rx="12"/><rect x="590" y="86" width="56" height="194" rx="12"/><rect x="710" y="52" width="56" height="228" rx="12"/>
+                    </g>
+                    <g class="axis-text"><text x="112" y="312">一</text><text x="232" y="312">二</text><text x="352" y="312">三</text><text x="472" y="312">四</text><text x="592" y="312">五</text><text x="712" y="312">六</text></g>
+                  </svg>
+                </div>
+              </div>
+              <div class="tab-panel" id="sales-visitors" hidden>
+                <div class="chart-wrap">
+                  <svg class="chart-svg" viewBox="0 0 900 330" role="img" aria-label="访客数折线图">
+                    <path class="chart-grid" d="M70 40H860M70 100H860M70 160H860M70 220H860M70 280H860"/>
+                    <path d="M80 240 C170 190 250 210 330 160 S460 122 540 136 640 98 720 104 800 88 860 62" fill="none" stroke="var(--chart-4)" stroke-width="5" stroke-linecap="round"/>
+                    <path d="M80 268 C180 250 250 232 340 224 S500 190 600 198 740 160 860 146" fill="none" stroke="var(--chart-1)" stroke-width="4" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div class="legend">
+                  <span><i style="--legend-color: var(--chart-4)"></i>新访客</span>
+                  <span><i style="--legend-color: var(--chart-1)"></i>回访客</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h2>订单状态</h2>
+              <button class="btn btn-ghost" type="button" data-toast="已跳转到订单管理演示">查看订单</button>
+            </div>
+            <div class="panel-body">
+              <div class="donut">
+                <div class="donut-ring" role="img" aria-label="订单状态占比">
+                  <div class="donut-center">
+                    <span class="donut-value">1,248</span>
+                    <span class="donut-label">今日订单</span>
+                  </div>
+                </div>
+              </div>
+              <div class="legend">
+                <span><i style="--legend-color: var(--chart-1)"></i>待发货</span>
+                <span><i style="--legend-color: var(--chart-2)"></i>已完成</span>
+                <span><i style="--legend-color: var(--chart-3)"></i>售后中</span>
+                <span><i style="--legend-color: var(--chart-5)"></i>异常</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid two-col" style="margin-top: 22px;">
+          <article class="panel">
+            <div class="panel-header">
+              <h2>最近订单</h2>
+              <a class="btn" href="orders.html">全部订单</a>
+            </div>
+            <div class="panel-body">
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>订单</th><th>客户</th><th>金额</th><th>状态</th><th>操作</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="item-title">KZ2026062501</span><span class="item-subtitle">山城腊味礼盒 x2</span></td>
+                      <td>李女士</td>
+                      <td>¥398.00</td>
+                      <td><span class="badge badge-yellow">待发货</span></td>
+                      <td><button class="action-button" type="button" data-row-action="ship" aria-label="发货">↗</button></td>
+                    </tr>
+                    <tr>
+                      <td><span class="item-title">KZ2026062502</span><span class="item-subtitle">开州香辣牛肉酱 x6</span></td>
+                      <td>周先生</td>
+                      <td>¥168.00</td>
+                      <td><span class="badge badge-green">已完成</span></td>
+                      <td><button class="action-button" type="button" data-row-action="view" aria-label="查看">⌕</button></td>
+                    </tr>
+                    <tr>
+                      <td><span class="item-title">KZ2026062503</span><span class="item-subtitle">私厨预制菜组合</span></td>
+                      <td>陈先生</td>
+                      <td>¥526.00</td>
+                      <td><span class="badge badge-blue">配送中</span></td>
+                      <td><button class="action-button" type="button" data-row-action="view" aria-label="查看">⌕</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h2>热销商品</h2>
+              <a class="btn" href="products.html">商品管理</a>
+            </div>
+            <div class="panel-body">
+              <div class="list">
+                <div class="list-row">
+                  <div class="item"><span class="thumb">酱</span><div><span class="item-title">开州香辣牛肉酱</span><span class="item-subtitle">今日售出 326 件</span></div></div>
+                  <strong>¥9,780</strong>
+                </div>
+                <div class="list-row">
+                  <div class="item"><span class="thumb">礼</span><div><span class="item-title">山城腊味礼盒</span><span class="item-subtitle">今日售出 142 件</span></div></div>
+                  <strong>¥8,236</strong>
+                </div>
+                <div class="list-row">
+                  <div class="item"><span class="thumb">鲜</span><div><span class="item-title">鲜椒鸡预制菜</span><span class="item-subtitle">今日售出 98 件</span></div></div>
+                  <strong>¥5,684</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="grid three-col" style="margin-top: 22px;">
+          <article class="panel">
+            <div class="panel-header"><h2>库存预警</h2></div>
+            <div class="panel-body list">
+              <div class="progress"><div class="progress-head"><span>香辣牛肉酱</span><span>18%</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 18%; --progress-color: var(--chart-5)"></div></div></div>
+              <div class="progress"><div class="progress-head"><span>腊味礼盒</span><span>32%</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 32%; --progress-color: var(--chart-3)"></div></div></div>
+              <div class="progress"><div class="progress-head"><span>冷链包装箱</span><span>27%</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 27%; --progress-color: var(--chart-3)"></div></div></div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header"><h2>售后提醒</h2></div>
+            <div class="panel-body list">
+              <div class="list-row"><span>退款待审核</span><span class="badge badge-red">6 单</span></div>
+              <div class="list-row"><span>换货待确认</span><span class="badge badge-yellow">12 单</span></div>
+              <div class="list-row"><span>评价待回复</span><span class="badge badge-blue">28 条</span></div>
+            </div>
+          </article>
+          <article class="panel">
+            <div class="panel-header"><h2>运营进度</h2></div>
+            <div class="panel-body list">
+              <div class="progress"><div class="progress-head"><span>618 活动备货</span><span>86%</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 86%"></div></div></div>
+              <div class="progress"><div class="progress-head"><span>新品资料完善</span><span>64%</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 64%; --progress-color: var(--chart-2)"></div></div></div>
+              <div class="progress"><div class="progress-head"><span>售后时效达标</span><span>92%</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 92%; --progress-color: var(--chart-4)"></div></div></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="overlay" data-nav-close></div>
+</body>
+</html>

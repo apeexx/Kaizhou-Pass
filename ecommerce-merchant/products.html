@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商品管理 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="电商商户导航">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 10.2 12 5l8 5.2v8.3a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-8.3Z" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M8 15h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span><span class="brand-title">开州金厨</span><span class="brand-subtitle">电商商户端</span></span>
+      </a>
+      <nav class="nav">
+        <a class="nav-link" href="index.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 11.5 12 5l8 6.5V20H4v-8.5Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 20v-6h6v6" stroke="currentColor" stroke-width="1.8"/></svg></span>控制台</a>
+        <a class="nav-link active" href="products.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M6 7h12l-1 13H7L6 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="1.8"/></svg></span>商品管理</a>
+        <a class="nav-link" href="orders.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M7 4h10v16H7z" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 8h5M9.5 12h5M9.5 16H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>订单管理</a>
+        <a class="nav-link" href="analytics.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M5 19V9m7 10V5m7 14v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4 19h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>数据分析</a>
+        <a class="nav-link" href="earnings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 7h16v11H4z" stroke="currentColor" stroke-width="1.8"/><path d="M8 11h5m-5 3h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>收益结算</a>
+        <a class="nav-link" href="settings.html"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" stroke="currentColor" stroke-width="1.8"/><path d="M19 13.5v-3l-2.1-.4a7.5 7.5 0 0 0-.8-1.8l1.2-1.8-2.1-2.1-1.8 1.2a7.5 7.5 0 0 0-1.8-.8L11.2 2h-3l-.4 2.1a7.5 7.5 0 0 0-1.8.8L4.2 3.7 2.1 5.8l1.2 1.8a7.5 7.5 0 0 0-.8 1.8L.4 9.8v3l2.1.4c.2.7.5 1.3.8 1.8l-1.2 1.8 2.1 2.1 1.8-1.2c.6.3 1.2.6 1.8.8l.4 2.1h3l.4-2.1c.7-.2 1.3-.5 1.8-.8l1.8 1.2 2.1-2.1-1.2-1.8c.3-.6.6-1.2.8-1.8l2.1-.4Z" stroke="currentColor" stroke-width="1.3" opacity=".65"/></svg></span>店铺设置</a>
+      </nav>
+      <div class="sidebar-foot"><button class="nav-link" type="button" data-toast="已退出登录演示"><span class="nav-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M10 6H5v12h5M14 8l4 4-4 4M9 12h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>退出登录</button></div>
+    </aside>
+
+    <div class="content">
+      <header class="topbar">
+        <button class="menu-button" type="button" data-menu-toggle aria-label="打开导航"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        <label class="search"><svg viewBox="0 0 24 24" fill="none"><path d="m20 20-4.2-4.2m1.2-5.3a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input type="search" placeholder="搜索商品..." data-table-search="products-table"></label>
+        <div class="topbar-actions">
+          <button class="icon-button" type="button" data-theme-toggle aria-label="切换深色模式"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A7.5 7.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+          <button class="icon-button notification" type="button" data-count="3" aria-label="查看通知"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 9a6 6 0 1 0-12 0c0 7-2 7-2 9h16c0-2-2-2-2-9Z" stroke="currentColor" stroke-width="1.8"/><path d="M10 21h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+          <div class="profile"><span class="avatar">掌</span><strong>金厨优选店</strong></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="page-header">
+          <div>
+            <p class="eyeline">商品经营</p>
+            <h1>商品管理</h1>
+            <p class="page-subtitle">维护在售商品、库存、分类和上下架状态。</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn" type="button" data-toast="已导出商品列表演示">导出商品</button>
+            <button class="btn btn-primary" type="button" data-toast="新增商品弹窗为静态演示">新增商品</button>
+          </div>
+        </section>
+
+        <section class="grid stats-grid" aria-label="商品指标">
+          <article class="metric-card" style="--metric-color: var(--chart-1)"><div class="metric-head"><div><p class="metric-label">商品总数</p><div class="metric-value">1,426</div><p class="metric-note"><span class="trend-up">↑ 36</span> 本周新增</p></div><span class="metric-icon">货</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-2)"><div class="metric-head"><div><p class="metric-label">在售商品</p><div class="metric-value">1,128</div><p class="metric-note"><span class="trend-up">↑ 6.2%</span> 较上周</p></div><span class="metric-icon">售</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-3)"><div class="metric-head"><div><p class="metric-label">库存预警</p><div class="metric-value">28</div><p class="metric-note"><span class="trend-down">需补货</span> 低于安全库存</p></div><span class="metric-icon">仓</span></div></article>
+          <article class="metric-card" style="--metric-color: var(--chart-5)"><div class="metric-head"><div><p class="metric-label">下架商品</p><div class="metric-value">46</div><p class="metric-note"><span class="trend-down">↓ 4</span> 已优化</p></div><span class="metric-icon">停</span></div></article>
+        </section>
+
+        <section class="panel" style="margin-top: 22px;">
+          <div class="panel-header">
+            <h2>商品列表</h2>
+            <span class="badge badge-blue" data-count-for="products-table">0 条记录</span>
+          </div>
+          <div class="panel-body">
+            <div class="filters">
+              <div class="toolbar">
+                <select class="select" data-category-filter="products-table" aria-label="按分类筛选">
+                  <option value="">全部分类</option>
+                  <option value="sauce">酱料调味</option>
+                  <option value="gift">礼盒套餐</option>
+                  <option value="fresh">预制鲜食</option>
+                  <option value="tool">包装耗材</option>
+                </select>
+                <select class="select" data-status-filter="products-table" aria-label="按状态筛选">
+                  <option value="">全部状态</option>
+                  <option value="on">在售</option>
+                  <option value="low">低库存</option>
+                  <option value="draft">草稿</option>
+                  <option value="off">已下架</option>
+                </select>
+              </div>
+              <input class="form-control" type="search" placeholder="搜索商品名称或编号..." data-table-search="products-table">
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table" id="products-table">
+                <thead>
+                  <tr><th>商品</th><th>分类</th><th>价格</th><th>库存</th><th>销量</th><th>状态</th><th>操作</th></tr>
+                </thead>
+                <tbody>
+                  <tr data-status="on" data-category="sauce"><td><div class="item"><span class="thumb">酱</span><div><span class="item-title">开州香辣牛肉酱</span><span class="item-subtitle">SPU-KZ-1001</span></div></div></td><td>酱料调味</td><td>¥28.00</td><td>3,248</td><td>12,849</td><td><span class="badge badge-green">在售</span></td><td><span class="actions"><button class="action-button" type="button" data-row-action="view">⌕</button><button class="action-button" type="button" data-row-action="edit">✎</button></span></td></tr>
+                  <tr data-status="low" data-category="gift"><td><div class="item"><span class="thumb">礼</span><div><span class="item-title">山城腊味礼盒</span><span class="item-subtitle">SPU-KZ-1028</span></div></div></td><td>礼盒套餐</td><td>¥199.00</td><td>86</td><td>4,206</td><td><span class="badge badge-yellow">低库存</span></td><td><span class="actions"><button class="action-button" type="button" data-row-action="view">⌕</button><button class="action-button" type="button" data-row-action="edit">✎</button></span></td></tr>
+                  <tr data-status="on" data-category="fresh"><td><div class="item"><span class="thumb">鲜</span><div><span class="item-title">鲜椒鸡预制菜</span><span class="item-subtitle">SPU-KZ-1086</span></div></div></td><td>预制鲜食</td><td>¥58.00</td><td>986</td><td>6,113</td><td><span class="badge badge-green">在售</span></td><td><span class="actions"><button class="action-button" type="button" data-row-action="view">⌕</button><button class="action-button" type="button" data-row-action="edit">✎</button></span></td></tr>
+                  <tr data-status="draft" data-category="fresh"><td><div class="item"><span class="thumb">汤</span><div><span class="item-title">酸萝卜老鸭汤</span><span class="item-subtitle">SPU-KZ-1120</span></div></div></td><td>预制鲜食</td><td>¥76.00</td><td>420</td><td>0</td><td><span class="badge badge-blue">草稿</span></td><td><span class="actions"><button class="action-button" type="button" data-row-action="view">⌕</button><button class="action-button" type="button" data-row-action="edit">✎</button></span></td></tr>
+                  <tr data-status="off" data-category="tool"><td><div class="item"><span class="thumb">箱</span><div><span class="item-title">冷链包装箱</span><span class="item-subtitle">SPU-KZ-3002</span></div></div></td><td>包装耗材</td><td>¥12.00</td><td>0</td><td>732</td><td><span class="badge badge-muted">已下架</span></td><td><span class="actions"><button class="action-button" type="button" data-row-action="view">⌕</button><button class="action-button" type="button" data-row-action="edit">✎</button></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="empty-state" data-empty-for="products-table">没有匹配的商品记录</div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="overlay" data-nav-close></div>
+</body>
+</html>
