@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>订单 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">订单处理</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">订单列表</h1>
+            <p class="page-subtitle">同一个页面中通过筛选高亮展示不同订单关注状态。</p>
+          </header>
+          <main class="content">
+            <section class="section">
+              <div class="chip-row" data-choice-group data-choice-initial="all">
+                <button class="chip-button" type="button" data-choice-item data-choice-value="all">全部</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="new">待接单</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="cooking">备餐中</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="pickup">待取货</button>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="list-stack">
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>#JC20260625001</h3>
+                      <div class="meta-line">香辣回锅肉饭 ×1 · 冰粉 ×1</div>
+                    </div>
+                    <span class="status-pill status-waiting">待接单</span>
+                  </div>
+                  <div class="meta-line">下单时间 09:23 · 用户备注：少辣，多放青椒</div>
+                  <div class="amount-line">实收 ¥34.00</div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./order-detail.html">查看详情</a>
+                    <a class="button button--small button--ghost" href="./home.html">回到工作台</a>
+                  </div>
+                </article>
+
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>#JC20260625002</h3>
+                      <div class="meta-line">青椒肉丝盖饭 ×2 · 紫菜蛋花汤 ×2</div>
+                    </div>
+                    <span class="status-pill status-preparing">备餐中</span>
+                  </div>
+                  <div class="meta-line">预计出餐 09:50 · 骑手将在 8 分钟后到店</div>
+                  <div class="amount-line">实收 ¥56.00</div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./order-detail.html">查看详情</a>
+                    <a class="button button--small button--ghost" href="./products.html">查看商品</a>
+                  </div>
+                </article>
+
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>#JC20260625003</h3>
+                      <div class="meta-line">番茄牛腩饭 ×1 · 凉拌海带丝 ×1</div>
+                    </div>
+                    <span class="status-pill status-pickup">待骑手取货</span>
+                  </div>
+                  <div class="meta-line">骑手已到店 · 请核对餐品后交接</div>
+                  <div class="amount-line">实收 ¥41.00</div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./order-detail.html">查看详情</a>
+                    <a class="button button--small button--ghost" href="./profile.html">店铺信息</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="商家端底部导航">
+            <a class="tab-link" href="./home.html">
+              <span class="tab-link__dot"></span>
+              <span>工作台</span>
+            </a>
+            <a class="tab-link is-active" href="./orders.html">
+              <span class="tab-link__dot"></span>
+              <span>订单</span>
+            </a>
+            <a class="tab-link" href="./products.html">
+              <span class="tab-link__dot"></span>
+              <span>商品</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <span class="tab-link__dot"></span>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

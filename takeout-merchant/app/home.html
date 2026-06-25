@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>工作台 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">商家工作台</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">今日经营概览</h1>
+            <p class="page-subtitle">用工作台集中展示营业状态、待处理订单和基础经营数据。</p>
+          </header>
+          <main class="content">
+            <section
+              class="hero-card"
+              data-cycle-control
+              data-cycle-values="营业中|休息中"
+              data-cycle-notes="当前可正常接单，建议保持备餐节奏。|当前暂停接单，可用于演示打烊或短暂休息状态。"
+              data-cycle-classes="status-live|status-off"
+            >
+              <div class="split-row">
+                <div>
+                  <span class="eyebrow">门店状态</span>
+                  <h2 class="hero-title">开州金厨示范店</h2>
+                </div>
+                <span class="status-value" data-cycle-value>营业中</span>
+              </div>
+              <p class="hero-copy" data-cycle-note>当前可正常接单，建议保持备餐节奏。</p>
+              <div class="card-actions">
+                <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为休息中</button>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="metric-grid">
+                <div class="stat-card">
+                  <div class="stat-label">今日订单</div>
+                  <div class="stat-value">36</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">待接单</div>
+                  <div class="stat-value">4</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">营业额</div>
+                  <div class="stat-value">¥1,286</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">好评率</div>
+                  <div class="stat-value">98%</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <h2>快捷入口</h2>
+                <span class="section-caption">保留核心经营动作</span>
+              </div>
+              <div class="quick-actions">
+                <a class="mini-link" href="./orders.html">
+                  <strong>处理订单</strong>
+                  <span>查看待接单与备餐中的订单</span>
+                </a>
+                <a class="mini-link" href="./products.html">
+                  <strong>维护商品</strong>
+                  <span>商品上下架与分类浏览</span>
+                </a>
+                <a class="mini-link" href="./profile.html">
+                  <strong>门店资料</strong>
+                  <span>查看营业信息与账户设置</span>
+                </a>
+                <a class="mini-link" href="../onboarding/success.html">
+                  <strong>入驻结果</strong>
+                  <span>回看开店成功展示页</span>
+                </a>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="notice-card">
+                <div class="card-title-row">
+                  <h3>今日提醒</h3>
+                  <span class="status-pill">4 条待处理</span>
+                </div>
+                <p class="muted-note">当前有 2 笔新订单待接单，1 个热销商品库存偏低，1 条骑手取货即将到店提醒。</p>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="商家端底部导航">
+            <a class="tab-link is-active" href="./home.html">
+              <span class="tab-link__dot"></span>
+              <span>工作台</span>
+            </a>
+            <a class="tab-link" href="./orders.html">
+              <span class="tab-link__dot"></span>
+              <span>订单</span>
+            </a>
+            <a class="tab-link" href="./products.html">
+              <span class="tab-link__dot"></span>
+              <span>商品</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <span class="tab-link__dot"></span>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

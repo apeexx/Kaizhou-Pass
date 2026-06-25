@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页 - 开州金厨骑手端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">骑手首页</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">接单状态</h1>
+            <p class="page-subtitle">首页主要展示在线状态、今日配送数据和快速进入接单大厅的入口。</p>
+          </header>
+          <main class="content">
+            <section
+              class="hero-card"
+              data-cycle-control
+              data-cycle-values="在线接单|暂时休息"
+              data-cycle-notes="当前可参与系统派单，也可以主动进入接单大厅抢单。|暂停接单展示休息状态，方便说明骑手端状态切换逻辑。"
+              data-cycle-classes="status-online|status-rest"
+            >
+              <div class="split-row">
+                <div>
+                  <span class="eyebrow">今日班次</span>
+                  <h2 class="hero-title">上午配送时段</h2>
+                </div>
+                <span class="status-value" data-cycle-value>在线接单</span>
+              </div>
+              <p class="hero-copy" data-cycle-note>当前可参与系统派单，也可以主动进入接单大厅抢单。</p>
+              <div class="card-actions">
+                <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为暂时休息</button>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="metric-grid">
+                <div class="stat-card">
+                  <div class="stat-label">今日完成</div>
+                  <div class="stat-value">18 单</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">当前待送</div>
+                  <div class="stat-value">2 单</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">今日收入</div>
+                  <div class="stat-value">¥138</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">准时率</div>
+                  <div class="stat-value">97%</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="quick-actions">
+                <a class="mini-link" href="./hall.html">
+                  <strong>进入接单大厅</strong>
+                  <span>查看附近可接订单与筛选状态</span>
+                </a>
+                <a class="mini-link" href="./delivery-detail.html">
+                  <strong>查看配送详情</strong>
+                  <span>演示取货中、配送中与已送达</span>
+                </a>
+                <a class="mini-link" href="./earnings.html">
+                  <strong>收入统计</strong>
+                  <span>切换今日、本周、本月收入视图</span>
+                </a>
+                <a class="mini-link" href="./profile.html">
+                  <strong>我的资料</strong>
+                  <span>查看骑手档案和演示说明</span>
+                </a>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="骑手端底部导航">
+            <a class="tab-link is-active" href="./home.html">
+              <span class="tab-link__dot"></span>
+              <span>首页</span>
+            </a>
+            <a class="tab-link" href="./hall.html">
+              <span class="tab-link__dot"></span>
+              <span>接单</span>
+            </a>
+            <a class="tab-link" href="./earnings.html">
+              <span class="tab-link__dot"></span>
+              <span>收入</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <span class="tab-link__dot"></span>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

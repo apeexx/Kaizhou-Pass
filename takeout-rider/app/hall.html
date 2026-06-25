@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>接单大厅 - 开州金厨骑手端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">接单大厅</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">附近可接订单</h1>
+            <p class="page-subtitle">筛选高亮只在本页切换，方便演示不同订单池关注方式。</p>
+          </header>
+          <main class="content">
+            <section class="section">
+              <div class="chip-row" data-choice-group data-choice-initial="nearby">
+                <button class="chip-button" type="button" data-choice-item data-choice-value="nearby">附近优先</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="high-pay">高收入</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="stack">顺路单</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="rush">即将超时</button>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="list-stack">
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>开州金厨示范店</h3>
+                      <div class="meta-line">距商家 0.6km · 距用户 1.8km</div>
+                    </div>
+                    <span class="status-pill status-online">预计 ¥8.6</span>
+                  </div>
+                  <div class="meta-line">香辣回锅肉饭 ×1 · 取餐后 16 分钟内送达</div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./delivery-detail.html">查看详情</a>
+                    <a class="button button--small button--ghost" href="./home.html">返回首页</a>
+                  </div>
+                </article>
+
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>江湖小炒铺</h3>
+                      <div class="meta-line">距商家 1.2km · 距用户 2.4km</div>
+                    </div>
+                    <span class="status-pill status-online">预计 ¥10.2</span>
+                  </div>
+                  <div class="meta-line">青椒牛柳双人餐 · 适合与同向订单拼送</div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./delivery-detail.html">查看详情</a>
+                    <a class="button button--small button--ghost" href="./earnings.html">收入页</a>
+                  </div>
+                </article>
+
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>滨湖汤饭馆</h3>
+                      <div class="meta-line">距商家 0.9km · 距用户 1.1km</div>
+                    </div>
+                    <span class="status-pill status-waiting">即将超时</span>
+                  </div>
+                  <div class="meta-line">牛肉汤饭 ×2 · 建议优先接单尽快到店</div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./delivery-detail.html">查看详情</a>
+                    <a class="button button--small button--ghost" href="./profile.html">我的</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="骑手端底部导航">
+            <a class="tab-link" href="./home.html">
+              <span class="tab-link__dot"></span>
+              <span>首页</span>
+            </a>
+            <a class="tab-link is-active" href="./hall.html">
+              <span class="tab-link__dot"></span>
+              <span>接单</span>
+            </a>
+            <a class="tab-link" href="./earnings.html">
+              <span class="tab-link__dot"></span>
+              <span>收入</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <span class="tab-link__dot"></span>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

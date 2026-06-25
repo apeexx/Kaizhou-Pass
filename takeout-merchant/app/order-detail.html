@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>订单详情 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">订单详情</span>
+          </div>
+          <header class="header header--compact">
+            <a class="back-link" href="./orders.html">返回订单列表</a>
+            <h1 class="page-title">#JC20260625001</h1>
+            <p class="page-subtitle">同一页通过按钮循环演示不同订单处理阶段。</p>
+          </header>
+          <main class="content">
+            <section
+              class="hero-card"
+              data-cycle-control
+              data-cycle-values="待接单|备餐中|待骑手取货|已完成"
+              data-cycle-notes="用户刚下单，建议尽快确认并开始准备。|餐品制作中，注意控制出餐时间。|餐品已完成，等待骑手到店核对取走。|订单已完成，可以回到待接单状态重新演示。"
+              data-cycle-classes="status-waiting|status-preparing|status-pickup|status-complete"
+            >
+              <span class="eyebrow">订单状态</span>
+              <h2 class="hero-title">当前为 <span class="status-value" data-cycle-value>待接单</span></h2>
+              <p class="hero-copy" data-cycle-note>用户刚下单，建议尽快确认并开始准备。</p>
+              <div class="card-actions">
+                <button class="button button--small button--primary" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为备餐中</button>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="detail-grid">
+                <div class="detail-card">
+                  <h3>餐品明细</h3>
+                  <ul class="detail-list">
+                    <li><span>香辣回锅肉饭 ×1</span><span>¥24.00</span></li>
+                    <li><span>冰粉 ×1</span><span>¥10.00</span></li>
+                    <li><span>包装费</span><span>¥0.00</span></li>
+                  </ul>
+                </div>
+                <div class="detail-card">
+                  <h3>配送信息</h3>
+                  <ul class="detail-list">
+                    <li><span>收货人</span><span>王女士</span></li>
+                    <li><span>联系电话</span><span>138 0000 1234</span></li>
+                    <li><span>送达地址</span><span>开州区滨湖中路 18 号 2 栋</span></li>
+                    <li><span>骑手备注</span><span>到店后请先联系商家</span></li>
+                  </ul>
+                </div>
+                <div class="detail-card">
+                  <h3>用户备注</h3>
+                  <p class="muted-note">少辣，多放青椒；餐品分开打包，汤汁封口。</p>
+                </div>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="商家端底部导航">
+            <a class="tab-link" href="./home.html">
+              <span class="tab-link__dot"></span>
+              <span>工作台</span>
+            </a>
+            <a class="tab-link is-active" href="./orders.html">
+              <span class="tab-link__dot"></span>
+              <span>订单</span>
+            </a>
+            <a class="tab-link" href="./products.html">
+              <span class="tab-link__dot"></span>
+              <span>商品</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <span class="tab-link__dot"></span>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

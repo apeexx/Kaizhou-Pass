@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商品 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">商品管理</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">商品与分类</h1>
+            <p class="page-subtitle">用分类高亮和商品状态开关，展示核心维护场景。</p>
+          </header>
+          <main class="content">
+            <section class="section">
+              <div class="chip-row" data-choice-group data-choice-initial="hot">
+                <button class="chip-button" type="button" data-choice-item data-choice-value="hot">热销</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="main">主食</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="drink">饮品</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="dessert">甜品</button>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="list-stack">
+                <article
+                  class="list-card"
+                  data-cycle-control
+                  data-cycle-values="上架中|已下架"
+                  data-cycle-classes="status-live|status-off"
+                >
+                  <div class="switch-row">
+                    <div>
+                      <h3>香辣回锅肉饭</h3>
+                      <div class="meta-line">月售 186 · 库存充足 · 热销主食</div>
+                    </div>
+                    <span class="status-value" data-cycle-value>上架中</span>
+                  </div>
+                  <div class="amount-line">售价 ¥24.00</div>
+                  <div class="card-actions">
+                    <button class="switch-button" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为已下架</button>
+                  </div>
+                </article>
+
+                <article
+                  class="list-card"
+                  data-cycle-control
+                  data-cycle-values="上架中|已下架"
+                  data-cycle-classes="status-live|status-off"
+                >
+                  <div class="switch-row">
+                    <div>
+                      <h3>青椒肉丝盖饭</h3>
+                      <div class="meta-line">月售 132 · 中午高峰出单较快</div>
+                    </div>
+                    <span class="status-value" data-cycle-value>上架中</span>
+                  </div>
+                  <div class="amount-line">售价 ¥22.00</div>
+                  <div class="card-actions">
+                    <button class="switch-button" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为已下架</button>
+                  </div>
+                </article>
+
+                <article
+                  class="list-card"
+                  data-cycle-control
+                  data-cycle-values="已下架|上架中"
+                  data-cycle-classes="status-off|status-live"
+                >
+                  <div class="switch-row">
+                    <div>
+                      <h3>红糖冰粉</h3>
+                      <div class="meta-line">月售 96 · 适合作为搭配甜品</div>
+                    </div>
+                    <span class="status-value" data-cycle-value>已下架</span>
+                  </div>
+                  <div class="amount-line">售价 ¥10.00</div>
+                  <div class="card-actions">
+                    <button class="switch-button" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为上架中</button>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="商家端底部导航">
+            <a class="tab-link" href="./home.html">
+              <span class="tab-link__dot"></span>
+              <span>工作台</span>
+            </a>
+            <a class="tab-link" href="./orders.html">
+              <span class="tab-link__dot"></span>
+              <span>订单</span>
+            </a>
+            <a class="tab-link is-active" href="./products.html">
+              <span class="tab-link__dot"></span>
+              <span>商品</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <span class="tab-link__dot"></span>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

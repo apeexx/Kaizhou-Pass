@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>收入 - 开州金厨骑手端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">收入统计</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">收入概览</h1>
+            <p class="page-subtitle">通过时间筛选高亮切换展示日常收入查看场景。</p>
+          </header>
+          <main class="content">
+            <section class="section">
+              <div class="chip-row" data-choice-group data-choice-initial="today">
+                <button class="chip-button" type="button" data-choice-item data-choice-value="today">今日</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="week">本周</button>
+                <button class="chip-button" type="button" data-choice-item data-choice-value="month">本月</button>
+              </div>
+            </section>
+
+            <section class="hero-card hero-card--tight">
+              <span class="eyebrow">配送收入</span>
+              <h2 class="hero-title">¥138.00</h2>
+              <p class="hero-copy">当前演示为今日视图，重点在筛选高亮和收入信息排版，不接真实结算数据。</p>
+            </section>
+
+            <section class="section">
+              <div class="metric-grid">
+                <div class="stat-card">
+                  <div class="stat-label">配送单数</div>
+                  <div class="stat-value">18</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">基础配送费</div>
+                  <div class="stat-value">¥102</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">时段补贴</div>
+                  <div class="stat-value">¥24</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">奖励收入</div>
+                  <div class="stat-value">¥12</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="notice-card">
+                <div class="card-title-row">
+                  <h3>收入说明</h3>
+                  <span class="status-pill">纯展示页</span>
+                </div>
+                <p class="muted-note">首批页面不扩展等级、站点奖励、提现审核等深层模块，只保留基础收入浏览体验。</p>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="骑手端底部导航">
+            <a class="tab-link" href="./home.html">
+              <span class="tab-link__dot"></span>
+              <span>首页</span>
+            </a>
+            <a class="tab-link" href="./hall.html">
+              <span class="tab-link__dot"></span>
+              <span>接单</span>
+            </a>
+            <a class="tab-link is-active" href="./earnings.html">
+              <span class="tab-link__dot"></span>
+              <span>收入</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <span class="tab-link__dot"></span>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>
