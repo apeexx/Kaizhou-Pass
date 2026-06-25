@@ -8,6 +8,7 @@
 - 页面以 HTML、CSS、JavaScript 为主。
 - 当前阶段暂不涉及后端服务、数据库、接口联调、文件落盘、构建工具或部署脚本。
 - 后续如需增加框架、依赖、接口或后端能力，需要先更新项目文档并确认实现范围。
+- C 端页面由其他人负责，本仓库当前只保留非 C 端目录。
 
 ## 当前项目结构
 
@@ -15,26 +16,33 @@
 Kaizhou-Golden-Chef/
 ├── AGENTS.md
 ├── README.md
-├── ecommerce/
+├── ecommerce-merchant/
 │   └── .gitkeep
-├── enterprise-services/
+├── enterprise-services-admin/
 │   └── .gitkeep
-├── private-chef/
+├── platform-admin/
 │   └── .gitkeep
-└── takeout/
+├── private-chef-merchant/
+│   └── .gitkeep
+├── takeout-merchant/
+│   └── .gitkeep
+└── takeout-rider/
     └── .gitkeep
 ```
 
 ## 目录说明
 
-- `ecommerce/`：电商相关静态页面目录。
-- `enterprise-services/`：企业服务相关静态页面目录。
-- `private-chef/`：私厨上门相关静态页面目录。
-- `takeout/`：外卖相关静态页面目录。
+- `ecommerce-merchant/`：电商商户端相关静态页面目录。
+- `enterprise-services-admin/`：企业服务管理端相关静态页面目录。
+- `platform-admin/`：平台中间商管理端相关静态页面目录，用于后续承载审核、客服、运营、资金等管理页面。
+- `private-chef-merchant/`：私厨上门商户端或厨师端相关静态页面目录。
+- `takeout-merchant/`：外卖商户端相关静态页面目录。
+- `takeout-rider/`：外卖骑手端相关静态页面目录。
 
 ## 开发注意事项
 
-- 每个业务目录当前仅包含 `.gitkeep`，用于让 Git 保留空目录；后续用于放置对应业务的静态 HTML 页面和相关静态资源。
+- 每个业务目录当前仅包含 `.gitkeep`，用于让 Git 保留空目录；业务页面尚未开始编写。
+- 不在本仓库创建 `customer`、`client`、`user` 等 C 端目录，除非后续任务明确要求。
 - 修改页面时优先保持最小必要改动，不做无关重构。
 - 如果新增 JavaScript 文件，优先运行 `node --check <file>` 检查语法。
 - 如果新增 HTML 页面，需要在浏览器中打开页面进行基础展示和交互验证。

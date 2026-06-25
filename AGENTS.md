@@ -17,6 +17,7 @@
 - 当前不需要数据库。
 - 当前不需要接口联调。
 - 当前不需要构建工具、打包配置或部署脚本。
+- C 端页面由其他人负责，本仓库当前只保留非 C 端目录。
 - 不要随意引入新依赖或前端框架；如确实需要，必须先说明原因、影响和替代方案。
 
 ## 当前项目结构
@@ -25,22 +26,28 @@
 Kaizhou-Golden-Chef/
 ├── AGENTS.md
 ├── README.md
-├── ecommerce/
+├── ecommerce-merchant/
 │   └── .gitkeep
-├── enterprise-services/
+├── enterprise-services-admin/
 │   └── .gitkeep
-├── private-chef/
+├── platform-admin/
 │   └── .gitkeep
-└── takeout/
+├── private-chef-merchant/
+│   └── .gitkeep
+├── takeout-merchant/
+│   └── .gitkeep
+└── takeout-rider/
     └── .gitkeep
 ```
 
 ## 目录用途
 
-- `ecommerce/`：电商相关静态页面。
-- `enterprise-services/`：企业服务相关静态页面。
-- `private-chef/`：私厨上门相关静态页面。
-- `takeout/`：外卖相关静态页面。
+- `ecommerce-merchant/`：电商商户端相关静态页面。
+- `enterprise-services-admin/`：企业服务管理端相关静态页面。
+- `platform-admin/`：平台中间商管理端相关静态页面，用于后续承载审核、客服、运营、资金等管理页面。
+- `private-chef-merchant/`：私厨上门商户端或厨师端相关静态页面。
+- `takeout-merchant/`：外卖商户端相关静态页面。
+- `takeout-rider/`：外卖骑手端相关静态页面。
 
 当前各业务目录仅包含 `.gitkeep` 占位文件，用于让 Git 保留空目录；不代表业务页面已完成。
 
@@ -63,6 +70,7 @@ Kaizhou-Golden-Chef/
 - 交互逻辑应保持简单，优先使用原生 JavaScript。
 - 需要关注基础状态：空状态、加载态、失败态、用户操作反馈。
 - 真实业务接口、数据库写入、文件落盘、CSV 合并、下载路由等后端逻辑不得写入前端静态目录。
+- 不要默认创建 `customer`、`client`、`user` 等 C 端目录；如确需创建，必须由用户明确要求。
 
 ## 文档要求
 
