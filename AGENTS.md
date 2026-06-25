@@ -28,10 +28,6 @@ Kaizhou-Golden-Chef/
 ├── README.md
 ├── ecommerce-merchant/
 │   └── .gitkeep
-├── enterprise-services-admin/
-│   └── .gitkeep
-├── platform-admin/
-│   └── .gitkeep
 ├── private-chef-merchant/
 │   └── .gitkeep
 ├── takeout-merchant/
@@ -43,8 +39,6 @@ Kaizhou-Golden-Chef/
 ## 目录用途
 
 - `ecommerce-merchant/`：电商商户端相关静态页面。
-- `enterprise-services-admin/`：企业服务管理端相关静态页面。
-- `platform-admin/`：平台中间商管理端相关静态页面，用于后续承载审核、客服、运营、资金等管理页面。
 - `private-chef-merchant/`：私厨上门商户端或厨师端相关静态页面。
 - `takeout-merchant/`：外卖商户端相关静态页面。
 - `takeout-rider/`：外卖骑手端相关静态页面。
