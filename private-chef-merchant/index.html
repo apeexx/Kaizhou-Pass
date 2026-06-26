@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>上门私厨控制台 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div data-shell data-page="index" data-title="上门私厨控制台" data-search="搜索客户、预约、套餐、地址">
+    <main class="main">
+      <section class="page-header">
+        <div>
+          <p class="eyeline">今日上门服务概览</p>
+          <h1>上门私厨控制台</h1>
+          <p class="page-subtitle">查看今日上门预约、待确认需求、出发安排、服务中状态和收益概览。</p>
+        </div>
+        <div class="page-actions">
+          <a class="btn" href="orders.html">查看预约</a>
+          <a class="btn btn-primary" href="orders.html">新增预约</a>
+        </div>
+      </section>
+
+      <section class="grid stats-grid" aria-label="上门私厨核心指标">
+        <article class="metric-card" style="--metric-color: var(--chart-1)">
+          <div class="metric-head"><div><p class="metric-label">今日上门预约</p><div class="metric-value">5 单</div><p class="metric-note">较昨日 <span class="trend-up">+1</span></p></div><span class="metric-icon">约</span></div>
+        </article>
+        <article class="metric-card" style="--metric-color: var(--warm)">
+          <div class="metric-head"><div><p class="metric-label">待确认需求</p><div class="metric-value">3 单</div><p class="metric-note">需在 24h 内处理</p></div><span class="metric-icon">需</span></div>
+        </article>
+        <article class="metric-card" style="--metric-color: var(--chart-1)">
+          <div class="metric-head"><div><p class="metric-label">待出发服务</p><div class="metric-value">2 单</div><p class="metric-note">最早 16:30 出发</p></div><span class="metric-icon">发</span></div>
+        </article>
+        <article class="metric-card" style="--metric-color: var(--chart-2)">
+          <div class="metric-head"><div><p class="metric-label">服务中</p><div class="metric-value">2 单</div><p class="metric-note">现场烹饪进行中</p></div><span class="metric-icon">厨</span></div>
+        </article>
+        <article class="metric-card" style="--metric-color: var(--purple)">
+          <div class="metric-head"><div><p class="metric-label">今日已完成</p><div class="metric-value">3 单</div><p class="metric-note">服务回访完成</p></div><span class="metric-icon">完</span></div>
+        </article>
+      </section>
+
+      <section class="grid wide-col" style="margin-top: 22px;">
+        <article class="panel">
+          <div class="panel-header">
+            <h2>即将到来的预约</h2>
+            <div class="page-actions">
+              <a class="btn" href="orders.html">查看预约</a>
+              <a class="btn btn-primary" href="orders.html">新增预约</a>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="table-wrap">
+              <table class="data-table compact-table" id="dashboard-appointments">
+                <thead>
+                  <tr><th>即将时间</th><th>客户</th><th>服务地址</th><th>套餐</th><th>人数</th><th>服务状态</th><th>操作</th></tr>
+                </thead>
+                <tbody>
+                  <tr data-status="departed"><td><span class="item-title">今天 12:00</span><span class="item-subtitle">05-17 周六</span></td><td><div class="item"><span class="avatar">张</span><div><span class="item-title">张女士</span><span class="item-subtitle">儿童少辣备注</span></div></div></td><td>开州区新城逸景湾 3-2-1801</td><td>家庭尊享套餐</td><td>6 人</td><td><span class="badge badge-blue">厨师出发</span></td><td><a class="btn" href="orders.html">查看</a></td></tr>
+                  <tr data-status="confirmed"><td><span class="item-title">今天 16:30</span><span class="item-subtitle">05-17 周六</span></td><td><div class="item"><span class="avatar">王</span><div><span class="item-title">王先生</span><span class="item-subtitle">餐具需自带</span></div></div></td><td>开州区滨湖国际 8-1-2602</td><td>节日家宴套餐</td><td>8 人</td><td><span class="badge badge-yellow">待出发</span></td><td><a class="btn" href="orders.html">查看</a></td></tr>
+                  <tr data-status="serving"><td><span class="item-title">今天 18:30</span><span class="item-subtitle">05-17 周六</span></td><td><div class="item"><span class="avatar">刘</span><div><span class="item-title">刘女士</span><span class="item-subtitle">长辈清淡口味</span></div></div></td><td>开州区汉丰湖畔 5-3-1203</td><td>精致晚餐套餐</td><td>4 人</td><td><span class="badge badge-green">服务中</span></td><td><a class="btn" href="orders.html">查看</a></td></tr>
+                  <tr data-status="pending"><td><span class="item-title">明天 12:00</span><span class="item-subtitle">05-18 周日</span></td><td><div class="item"><span class="avatar">陈</span><div><span class="item-title">陈先生</span><span class="item-subtitle">需确认厨房条件</span></div></div></td><td>开州区山水华庭 2-1-901</td><td>健康轻食套餐</td><td>2 人</td><td><span class="badge badge-muted">待确认需求</span></td><td><a class="btn" href="orders.html">查看</a></td></tr>
+                  <tr data-status="pending"><td><span class="item-title">明天 18:00</span><span class="item-subtitle">05-18 周日</span></td><td><div class="item"><span class="avatar">赵</span><div><span class="item-title">赵女士</span><span class="item-subtitle">生日布置咨询</span></div></div></td><td>开州区金科世界城 7-2-1505</td><td>定制私宴套餐</td><td>10 人</td><td><span class="badge badge-muted">待确认需求</span></td><td><a class="btn" href="orders.html">查看</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-header">
+            <h2>今日日程安排</h2>
+            <a class="btn" href="batches.html">查看排班</a>
+          </div>
+          <div class="panel-body list">
+            <div class="list-row"><div class="item"><span class="mini-icon">09</span><div><span class="item-title">备餐准备</span><span class="item-subtitle">采买与食材处理</span></div></div><span class="badge badge-muted">准备中</span></div>
+            <div class="list-row"><div class="item"><span class="mini-icon">12</span><div><span class="item-title">张女士家庭宴</span><span class="item-subtitle">新城逸景湾 3-2-1801</span></div></div><span class="badge badge-blue">厨师出发</span></div>
+            <div class="list-row"><div class="item"><span class="mini-icon">16</span><div><span class="item-title">王先生家宴</span><span class="item-subtitle">滨湖国际 8-1-2602</span></div></div><span class="badge badge-yellow">待出发</span></div>
+            <div class="list-row"><div class="item"><span class="mini-icon">18</span><div><span class="item-title">刘女士晚餐</span><span class="item-subtitle">汉丰湖畔 5-3-1203</span></div></div><span class="badge badge-green">服务中</span></div>
+            <div class="list-row"><div class="item"><span class="mini-icon">21</span><div><span class="item-title">收尾清洁</span><span class="item-subtitle">餐具整理与厨房清洁</span></div></div><span class="badge badge-muted">待开始</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid three-col" style="margin-top: 22px;">
+        <article class="panel">
+          <div class="panel-header"><h2>客户需求</h2><a class="btn" href="orders.html">查看全部</a></div>
+          <div class="panel-body list">
+            <div class="list-row"><div class="item"><span class="mini-icon">忌</span><div><span class="item-title">忌口备注</span><span class="item-subtitle">张女士 · 不吃牛肉、海鲜过敏、少辣</span></div></div><span class="badge badge-red">待确认</span></div>
+            <div class="list-row"><div class="item"><span class="mini-icon">厨</span><div><span class="item-title">厨房条件</span><span class="item-subtitle">王先生 · 燃气可用，双灶具，蒸烤箱</span></div></div><span class="badge badge-green">已确认</span></div>
+            <div class="list-row"><div class="item"><span class="mini-icon">具</span><div><span class="item-title">餐具需求</span><span class="item-subtitle">刘女士 · 需自带精致餐具、汤碗、红酒杯</span></div></div><span class="badge badge-yellow">待准备</span></div>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="panel-header"><h2>今日收益概览</h2><a class="btn" href="earnings.html">查看明细</a></div>
+          <div class="panel-body">
+            <div class="mini-stats">
+              <div class="mini-stat"><span>服务费收入</span><strong>¥5,600</strong></div>
+              <div class="mini-stat"><span>食材代采</span><strong>¥1,250</strong></div>
+              <div class="mini-stat"><span>加时费用</span><strong>¥300</strong></div>
+            </div>
+            <div class="progress" style="margin-top: 22px;"><div class="progress-head"><span>预计总收入</span><span>¥7,150</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 86%; --progress-color: var(--chart-1)"></div></div></div>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="panel-header"><h2>客户沟通</h2><a class="btn" href="customers.html">进入沟通</a></div>
+          <div class="panel-body list">
+            <div class="list-row"><div class="item"><span class="avatar">张</span><div><span class="item-title">张女士</span><span class="item-subtitle">请问您预计几点到我家？地址是新城逸景湾。</span></div></div><span class="badge badge-red">2</span></div>
+            <div class="list-row"><div class="item"><span class="avatar">王</span><div><span class="item-title">王先生</span><span class="item-subtitle">菜单可以再调整一下，想增加一道清蒸鱼。</span></div></div><span>09:58</span></div>
+            <div class="list-row"><div class="item"><span class="avatar">陈</span><div><span class="item-title">陈先生</span><span class="item-subtitle">明天家里有小孩，需要清淡一点的菜品。</span></div></div><span>昨天</span></div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

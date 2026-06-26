@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>店铺设置 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div data-shell data-page="settings" data-title="店铺设置" data-search="搜索设置项">
+    <main class="main">
+      <section class="page-header">
+        <div>
+          <p class="eyeline">经营配置</p>
+          <h1>店铺设置</h1>
+          <p class="page-subtitle">维护私厨资料、服务范围、预约规则、通知偏好和账号安全。</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn" type="button" data-theme-toggle><span data-theme-label>深色模式</span></button>
+          <button class="btn btn-primary" type="button" data-toast="设置已保存为静态演示">保存设置</button>
+        </div>
+      </section>
+
+      <section class="settings-layout" data-tab-group>
+        <aside class="panel">
+          <div class="settings-menu" role="tablist" aria-label="店铺设置分组">
+            <button class="settings-link active" type="button" data-tab-target="profile-settings" aria-selected="true"><span class="mini-icon">资</span>基础资料</button>
+            <button class="settings-link" type="button" data-tab-target="service-settings" aria-selected="false"><span class="mini-icon">服</span>服务规则</button>
+            <button class="settings-link" type="button" data-tab-target="notice-settings" aria-selected="false"><span class="mini-icon">通</span>通知偏好</button>
+            <button class="settings-link" type="button" data-tab-target="security-settings" aria-selected="false"><span class="mini-icon">安</span>安全设置</button>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div class="tab-panel" id="profile-settings">
+            <div class="panel-header"><h2>基础资料</h2></div>
+            <div class="panel-body">
+              <form class="form-grid" data-demo-form="基础资料已保存为静态演示">
+                <div class="field"><label for="store-name">私厨名称</label><input id="store-name" class="form-control" value="金厨 · 李师傅私厨"></div>
+                <div class="field"><label for="chef-name">负责人</label><input id="chef-name" class="form-control" value="李师傅"></div>
+                <div class="field"><label for="phone">联系电话</label><input id="phone" class="form-control" value="138****8826"></div>
+                <div class="field"><label for="area">服务区域</label><input id="area" class="form-control" value="开州城区 8 公里内"></div>
+                <div class="field span-2"><label for="intro">店铺介绍</label><textarea id="intro">主打开州上门家宴、生日私宴、商务宴请和家庭聚餐，提供菜单沟通、食材代采、现场烹饪、餐桌摆台和厨房收尾服务。</textarea></div>
+                <div class="span-2"><button class="btn btn-primary" type="submit">保存基础资料</button></div>
+              </form>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="service-settings" hidden>
+            <div class="panel-header"><h2>服务规则</h2></div>
+            <div class="panel-body">
+              <form class="form-grid" data-demo-form="服务规则已保存为静态演示">
+                <div class="field"><label for="service-area">上门服务范围</label><input id="service-area" class="form-control" value="开州城区 8 公里内"></div>
+                <div class="field"><label for="travel-fee">超区交通费</label><input id="travel-fee" class="form-control" value="超出范围按 2 元/公里沟通确认"></div>
+                <div class="field"><label for="service-time">默认服务时段</label><select id="service-time" class="select"><option>午间 11:30-14:00</option><option selected>晚间 16:30-21:00</option><option>全天定制</option></select></div>
+                <div class="field"><label for="service-duration">默认服务时长</label><input id="service-duration" class="form-control" value="3 小时"></div>
+                <div class="span-2 list">
+                  <div class="toggle-row"><div><span class="item-title">预约确认后锁定档期</span><span class="item-subtitle">锁定后需商户确认才可改期</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                  <div class="toggle-row"><div><span class="item-title">服务前联系客户</span><span class="item-subtitle">出发前电话确认门禁、厨房和忌口</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                </div>
+                <div class="span-2"><button class="btn btn-primary" type="submit">保存服务规则</button></div>
+              </form>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="notice-settings" hidden>
+            <div class="panel-header"><h2>通知偏好</h2></div>
+            <div class="panel-body list">
+              <div class="toggle-row"><div><span class="item-title">新预约提醒</span><span class="item-subtitle">客户提交预约后立即通知</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="toggle-row"><div><span class="item-title">需求确认提醒</span><span class="item-subtitle">客户补充忌口、地址或厨房条件后提醒处理</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="toggle-row"><div><span class="item-title">服务前提醒客户</span><span class="item-subtitle">默认提前 2 小时发送准备事项</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+              <div class="toggle-row"><div><span class="item-title">评价回复提醒</span><span class="item-subtitle">收到评价后提醒商户回复</span></div><label class="switch"><input type="checkbox"><span class="slider"></span></label></div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="security-settings" hidden>
+            <div class="panel-header"><h2>安全设置</h2></div>
+            <div class="panel-body">
+              <div class="list">
+                <div class="toggle-row"><div><span class="item-title">登录保护</span><span class="item-subtitle">异地登录时发送验证提醒</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><span class="item-title">收款变更验证</span><span class="item-subtitle">修改收款账户时二次确认</span></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+                <div class="toggle-row"><div><span class="item-title">操作日志</span><span class="item-subtitle">记录套餐、预约和服务状态关键操作</span></div><button class="btn" type="button" data-toast="操作日志为静态演示">查看日志</button></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

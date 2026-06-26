@@ -26,7 +26,15 @@ Kaizhou-Golden-Chef/
 │   ├── styles.css
 │   └── app.js
 ├── private-chef-merchant/
-│   └── .gitkeep
+│   ├── index.html
+│   ├── menus.html
+│   ├── batches.html
+│   ├── orders.html
+│   ├── earnings.html
+│   ├── customers.html
+│   ├── settings.html
+│   ├── styles.css
+│   └── app.js
 ├── takeout-merchant/
 │   └── .gitkeep
 └── takeout-rider/
@@ -36,7 +44,7 @@ Kaizhou-Golden-Chef/
 ## 目录说明
 
 - `ecommerce-merchant/`：电商商户端相关静态页面目录，当前包含控制台、商品管理、订单管理、数据分析、收益结算、店铺设置页面。
-- `private-chef-merchant/`：私厨上门商户端或厨师端相关静态页面目录。
+- `private-chef-merchant/`：私厨上门商户端或厨师端相关静态页面目录，当前包含控制台、服务套餐、预约管理、日程排班、客户沟通、收益结算、店铺设置页面。
 - `takeout-merchant/`：外卖商户端相关静态页面目录。
 - `takeout-rider/`：外卖骑手端相关静态页面目录。
 
@@ -58,6 +66,26 @@ ecommerce-merchant/index.html
 - `settings.html`：店铺设置，提供基础资料、通知、经营偏好、安全设置和主题切换演示。
 - `styles.css`：共享主题、布局、卡片、表格、图表、表单、深色模式和响应式样式。
 - `app.js`：共享本地交互，包括移动端导航、主题切换、筛选搜索、tab 切换和提示反馈。
+
+## 私厨商户端页面
+
+当前私厨商户端为纯静态页面，不依赖后端、数据库、接口、构建工具或第三方前端框架。可直接在浏览器中打开：
+
+```text
+private-chef-merchant/index.html
+```
+
+页面说明：
+
+- `index.html`：上门私厨控制台，展示今日上门预约、待确认需求、待出发服务、服务中、今日已完成、客户沟通和收益概览。
+- `menus.html`：服务套餐，提供套餐方案、适用人数、服务时长、适用场景、食材代采、状态筛选和搜索演示。
+- `orders.html`：预约管理，提供预约列表、确认状态筛选、场景筛选、客户需求、服务地址和行操作演示。
+- `batches.html`：日程排班，展示厨师/助理排班、出发、到达、服务中、服务完成和时段筛选演示。
+- `customers.html`：客户沟通，展示沟通列表、上门前确认、快捷回复、客户分层和评价提醒演示。
+- `earnings.html`：收益结算，展示服务费、食材代采、加时费用、收入结构和结算记录筛选演示。
+- `settings.html`：店铺设置，提供基础资料、服务规则、通知偏好、安全设置和主题切换演示。
+- `styles.css`：共享主题、后台布局、套餐卡片、服务状态、表格、图表、沟通列表、表单、深色模式和响应式样式。
+- `app.js`：共享本地交互，包括公共侧栏/顶部栏注入、移动端导航、主题切换、筛选搜索、tab 切换、复制、表单阻止提交和提示反馈。
 
 ## 统一主题设定
 
@@ -193,7 +221,7 @@ ecommerce-merchant/index.html
 
 ## 开发注意事项
 
-- `private-chef-merchant/`、`takeout-merchant/`、`takeout-rider/` 当前仅包含 `.gitkeep`，用于让 Git 保留空目录；业务页面尚未开始编写。
+- `takeout-merchant/`、`takeout-rider/` 当前仅包含 `.gitkeep`，用于让 Git 保留空目录；业务页面尚未开始编写。
 - 不在本仓库创建 `customer`、`client`、`user` 等 C 端目录，除非后续任务明确要求。
 - 修改页面时优先保持最小必要改动，不做无关重构。
 - 如果新增 JavaScript 文件，优先运行 `node --check <file>` 检查语法。

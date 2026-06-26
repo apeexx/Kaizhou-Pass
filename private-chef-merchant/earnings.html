@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>收益结算 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div data-shell data-page="earnings" data-title="收益结算" data-search="搜索结算单、服务单、客户">
+    <main class="main">
+      <section class="page-header">
+        <div>
+          <p class="eyeline">上门服务收益</p>
+          <h1>收益结算</h1>
+          <p class="page-subtitle">查看上门服务费、食材代采、加时费用、平台补贴和服务单结算记录。</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn" type="button" data-toast="已导出收益流水演示">导出流水</button>
+          <button class="btn btn-primary" type="button" data-toast="提现申请为静态演示">申请提现</button>
+        </div>
+      </section>
+
+      <section class="grid four-col" aria-label="收益指标">
+        <article class="metric-card" style="--metric-color: var(--chart-2)"><div class="metric-head"><div><p class="metric-label">本周收益</p><div class="metric-value">¥18,560</div><p class="metric-note"><span class="trend-up">+12.6%</span> 较上周</p></div><span class="metric-icon">周</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--chart-1)"><div class="metric-head"><div><p class="metric-label">待结算</p><div class="metric-value">¥4,820</div><p class="metric-note">3 个服务单待完成</p></div><span class="metric-icon">待</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--warm)"><div class="metric-head"><div><p class="metric-label">食材代采</p><div class="metric-value">¥3,260</div><p class="metric-note">本周 12 次代采</p></div><span class="metric-icon">材</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--purple)"><div class="metric-head"><div><p class="metric-label">加时费用</p><div class="metric-value">¥680</div><p class="metric-note">4 次现场加时</p></div><span class="metric-icon">时</span></div></article>
+      </section>
+
+      <section class="grid two-col" style="margin-top: 22px;">
+        <article class="panel" data-tab-group>
+          <div class="panel-header">
+            <h2>收益趋势</h2>
+            <div class="tabs" role="tablist" aria-label="收益趋势维度">
+              <button class="tab-button active" type="button" data-tab-target="income-week" aria-selected="true">收入</button>
+              <button class="tab-button" type="button" data-tab-target="income-services" aria-selected="false">场次</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="tab-panel" id="income-week">
+              <div class="chart-wrap">
+                <svg class="chart-svg" viewBox="0 0 900 330" role="img" aria-label="近七日收益趋势">
+                  <path class="chart-grid" d="M70 40H860M70 100H860M70 160H860M70 220H860M70 280H860"/>
+                  <path d="M70 250 C150 230 210 210 285 218 S430 150 505 160 612 110 690 122 775 92 860 72" fill="none" stroke="var(--chart-1)" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M70 250 C150 230 210 210 285 218 S430 150 505 160 612 110 690 122 775 92 860 72 V280H70Z" fill="rgba(30,157,241,.12)"/>
+                  <path d="M70 268 C180 260 260 232 340 238 S490 202 580 196 720 160 860 150" fill="none" stroke="var(--chart-2)" stroke-width="4" stroke-linecap="round"/>
+                  <g class="axis-text"><text x="82" y="312">周一</text><text x="205" y="312">周二</text><text x="328" y="312">周三</text><text x="451" y="312">周四</text><text x="574" y="312">周五</text><text x="697" y="312">周六</text><text x="820" y="312">周日</text></g>
+                </svg>
+              </div>
+              <div class="legend"><span><i style="--legend-color: var(--chart-1)"></i>服务费收入</span><span><i style="--legend-color: var(--chart-2)"></i>净收入</span></div>
+            </div>
+            <div class="tab-panel" id="income-services" hidden>
+              <div class="chart-wrap">
+                <svg class="chart-svg" viewBox="0 0 900 330" role="img" aria-label="近七日服务场次柱状图">
+                  <path class="chart-grid" d="M70 60H860M70 120H860M70 180H860M70 240H860M70 280H860"/>
+                  <g fill="var(--chart-1)">
+                    <rect x="110" y="174" width="58" height="106" rx="12"/><rect x="230" y="140" width="58" height="140" rx="12"/><rect x="350" y="152" width="58" height="128" rx="12"/><rect x="470" y="100" width="58" height="180" rx="12"/><rect x="590" y="92" width="58" height="188" rx="12"/><rect x="710" y="58" width="58" height="222" rx="12"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="panel-header"><h2>收入结构</h2></div>
+          <div class="panel-body">
+            <div class="donut"><div class="donut-ring"><div class="donut-center"><span class="donut-value">¥18,560</span><span class="donut-label">本周总收入</span></div></div></div>
+            <div class="legend"><span><i style="--legend-color: var(--chart-1)"></i>服务费收入</span><span><i style="--legend-color: var(--chart-2)"></i>食材代采</span><span><i style="--legend-color: var(--chart-3)"></i>加时费用</span><span><i style="--legend-color: var(--chart-5)"></i>售后扣减</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" style="margin-top: 22px;">
+        <div class="panel-header"><h2>结算记录</h2><span class="badge badge-blue" data-count-for="earnings-table">0 条记录</span></div>
+        <div class="panel-body">
+          <div class="filters">
+            <div class="toolbar">
+              <select class="select" data-status-filter="earnings-table" aria-label="按结算状态筛选">
+                <option value="">全部状态</option>
+                <option value="settled">已结算</option>
+                <option value="pending">待结算</option>
+                <option value="review">审核中</option>
+              </select>
+              <select class="select" data-channel-filter="earnings-table" aria-label="按收款渠道筛选">
+                <option value="">全部渠道</option>
+                <option value="wechat">微信</option>
+                <option value="alipay">支付宝</option>
+                <option value="balance">余额</option>
+              </select>
+            </div>
+            <input class="form-control" type="search" placeholder="搜索结算单、服务单或客户..." data-table-search="earnings-table">
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="earnings-table">
+              <thead><tr><th>结算单</th><th>关联服务单</th><th>客户</th><th>收入构成</th><th>总收入</th><th>平台服务费</th><th>渠道</th><th>状态</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr data-status="settled" data-channel="wechat"><td><span class="item-title">JS2026062501</span><span class="item-subtitle">今天 20:10</span></td><td>YY2026062501</td><td>张女士</td><td>服务费 + 食材代采</td><td>¥1,860</td><td>¥93</td><td>微信</td><td><span class="badge badge-green">已结算</span></td><td><button class="action-button" data-row-action="view">⌕</button></td></tr>
+                <tr data-status="pending" data-channel="alipay"><td><span class="item-title">JS2026062502</span><span class="item-subtitle">待服务完成</span></td><td>YY2026062502</td><td>王先生</td><td>服务费 + 餐桌布置</td><td>¥2,380</td><td>¥119</td><td>支付宝</td><td><span class="badge badge-yellow">待结算</span></td><td><button class="action-button" data-row-action="settle">¥</button></td></tr>
+                <tr data-status="pending" data-channel="wechat"><td><span class="item-title">JS2026062503</span><span class="item-subtitle">尾款待确认</span></td><td>YY2026062503</td><td>刘女士</td><td>服务费 + 加时费用</td><td>¥1,180</td><td>¥59</td><td>微信</td><td><span class="badge badge-yellow">待结算</span></td><td><button class="action-button" data-row-action="view">⌕</button></td></tr>
+                <tr data-status="review" data-channel="balance"><td><span class="item-title">JS2026062404</span><span class="item-subtitle">昨天 21:00</span></td><td>YY2026062408</td><td>周女士</td><td>服务费</td><td>¥3,680</td><td>¥184</td><td>余额</td><td><span class="badge badge-blue">审核中</span></td><td><button class="action-button" data-row-action="view">⌕</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="empty-state" data-empty-for="earnings-table">没有匹配的结算记录</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

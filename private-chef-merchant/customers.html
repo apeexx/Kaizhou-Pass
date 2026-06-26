@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>客户沟通 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div data-shell data-page="customers" data-title="客户沟通" data-search="搜索客户、消息、预约">
+    <main class="main">
+      <section class="page-header">
+        <div>
+          <p class="eyeline">客户关系</p>
+          <h1>客户沟通</h1>
+          <p class="page-subtitle">集中处理客户咨询、上门前确认、需求变更、评价回复和复约关系。</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn" type="button" data-toast="上门前提醒为静态演示">发送提醒</button>
+          <a class="btn btn-primary" href="orders.html">查看关联预约</a>
+        </div>
+      </section>
+
+      <section class="grid four-col" aria-label="客户沟通指标">
+        <article class="metric-card" style="--metric-color: var(--chart-1)"><div class="metric-head"><div><p class="metric-label">未读消息</p><div class="metric-value">8</div><p class="metric-note">3 条需优先回复</p></div><span class="metric-icon">信</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--chart-2)"><div class="metric-head"><div><p class="metric-label">复约客户</p><div class="metric-value">126</div><p class="metric-note"><span class="trend-up">+18</span> 本月</p></div><span class="metric-icon">复</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--warm)"><div class="metric-head"><div><p class="metric-label">待评价回复</p><div class="metric-value">12</div><p class="metric-note">建议今日处理</p></div><span class="metric-icon">评</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--purple)"><div class="metric-head"><div><p class="metric-label">平均响应</p><div class="metric-value">4 分</div><p class="metric-note">近 7 日</p></div><span class="metric-icon">响</span></div></article>
+      </section>
+
+      <section class="customer-layout" style="margin-top: 22px;" data-message-group>
+        <aside class="panel">
+          <div class="panel-header"><h2>沟通列表</h2><span class="badge badge-red">8 未读</span></div>
+          <div class="panel-body message-list">
+            <button class="message-item active" type="button" data-message-target="张女士">
+              <span class="avatar">张</span><span class="message-main"><span class="item-title">张女士</span><span class="item-subtitle">请问您预计几点到我家？地址是新城逸景湾。</span></span><span class="message-time">10:24</span>
+            </button>
+            <button class="message-item" type="button" data-message-target="王先生">
+              <span class="avatar">王</span><span class="message-main"><span class="item-title">王先生</span><span class="item-subtitle">菜单可以再调整一下，想增加一道清蒸鱼。</span></span><span>09:58</span>
+            </button>
+            <button class="message-item" type="button" data-message-target="刘小姐">
+              <span class="avatar">刘</span><span class="message-main"><span class="item-title">刘小姐</span><span class="item-subtitle">厨房有双灶和蒸箱，需要提前准备什么吗？</span></span><span>昨天</span>
+            </button>
+            <button class="message-item" type="button" data-message-target="赵先生">
+              <span class="avatar">赵</span><span class="message-main"><span class="item-title">赵先生</span><span class="item-subtitle">餐具需要您们自带吗？明晚有 10 位客人。</span></span><span>周二</span>
+            </button>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div><h2>张女士 · 预约 YY2026062501</h2><p class="page-subtitle">家庭尊享套餐 · 今天 12:00 上门服务</p></div>
+            <button class="btn" type="button" data-copy="YY2026062501">复制预约号</button>
+          </div>
+          <div class="panel-body">
+            <div class="chat">
+              <div class="bubble">您好，请问您预计几点到我家？地址是新城逸景湾 3-2-1801。</div>
+              <div class="bubble out">您好，主厨预计 11:50 到达，会提前 20 分钟电话联系您确认门禁。</div>
+              <div class="bubble">好的，孩子不能吃辣，也对海鲜过敏。</div>
+            </div>
+            <form data-demo-form="回复内容已保存为静态演示" style="margin-top: 22px;">
+              <div class="field">
+                <label for="reply">快捷回复</label>
+                <textarea id="reply" placeholder="输入回复内容...">您好，已为您备注少辣和海鲜过敏，主厨到达前会再次确认厨房和餐具情况。</textarea>
+              </div>
+              <div class="page-actions" style="margin-top: 14px;">
+                <button class="btn" type="button" data-toast="已插入上门前确认模板">上门前确认</button>
+                <button class="btn btn-primary" type="submit">发送回复</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
+
+      <section class="grid three-col" style="margin-top: 22px;">
+        <article class="panel"><div class="panel-header"><h2>常见咨询</h2></div><div class="panel-body list"><div class="list-row"><span>上门时间能否调整</span><span class="badge badge-blue">38 次</span></div><div class="list-row"><span>是否需要自备餐具</span><span class="badge badge-yellow">24 次</span></div><div class="list-row"><span>厨房设备要求</span><span class="badge badge-green">19 次</span></div></div></article>
+        <article class="panel"><div class="panel-header"><h2>客户分层</h2></div><div class="panel-body list"><div class="progress"><div class="progress-head"><span>高频复约</span><span>42 人</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 68%;"></div></div></div><div class="progress"><div class="progress-head"><span>新客首约</span><span>58 人</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 82%; --progress-color: var(--chart-2)"></div></div></div><div class="progress"><div class="progress-head"><span>待唤醒客户</span><span>21 人</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 32%; --progress-color: var(--warm)"></div></div></div></div></article>
+        <article class="panel"><div class="panel-header"><h2>评价提醒</h2></div><div class="panel-body list"><div class="list-row"><span>五星好评待感谢</span><span class="badge badge-green">8 条</span></div><div class="list-row"><span>口味建议待回复</span><span class="badge badge-yellow">3 条</span></div><div class="list-row"><span>现场服务反馈待跟进</span><span class="badge badge-red">1 条</span></div></div></article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

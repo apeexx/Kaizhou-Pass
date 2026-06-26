@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>预约管理 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div data-shell data-page="orders" data-title="预约管理" data-search="搜索预约号、客户、套餐、地址">
+    <main class="main">
+      <section class="page-header">
+        <div>
+          <p class="eyeline">上门预约</p>
+          <h1>预约管理</h1>
+          <p class="page-subtitle">跟踪预约时间、服务地址、客户需求、套餐人数、确认状态和服务进度。</p>
+        </div>
+        <div class="page-actions">
+          <button class="btn" type="button" data-toast="已导出预约列表演示">导出预约</button>
+          <a class="btn btn-primary" href="batches.html">查看排班</a>
+        </div>
+      </section>
+
+      <section class="grid four-col" aria-label="预约指标">
+        <article class="metric-card" style="--metric-color: var(--chart-1)"><div class="metric-head"><div><p class="metric-label">今日预约</p><div class="metric-value">5</div><p class="metric-note">已确认 4 单</p></div><span class="metric-icon">约</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--warm)"><div class="metric-head"><div><p class="metric-label">待确认需求</p><div class="metric-value">3</div><p class="metric-note">含忌口与厨房条件</p></div><span class="metric-icon">需</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--purple)"><div class="metric-head"><div><p class="metric-label">待出发</p><div class="metric-value">2</div><p class="metric-note">需核对食材与餐具</p></div><span class="metric-icon">发</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--chart-2)"><div class="metric-head"><div><p class="metric-label">已完成</p><div class="metric-value">3</div><p class="metric-note">今日服务完成率 60%</p></div><span class="metric-icon">完</span></div></article>
+      </section>
+
+      <section class="panel" style="margin-top: 22px;">
+        <div class="panel-header">
+          <h2>预约列表</h2>
+          <span class="badge badge-blue" data-count-for="orders-table">0 条记录</span>
+        </div>
+        <div class="panel-body">
+          <div class="filters">
+            <div class="toolbar">
+              <select class="select" data-status-filter="orders-table" aria-label="按预约状态筛选">
+                <option value="">全部状态</option>
+                <option value="pending">待确认需求</option>
+                <option value="confirmed">已确认</option>
+                <option value="departed">厨师出发</option>
+                <option value="arrived">已到达</option>
+                <option value="serving">服务中</option>
+                <option value="done">已完成</option>
+                <option value="after">售后跟进</option>
+              </select>
+              <select class="select" data-type-filter="orders-table" aria-label="按场景筛选">
+                <option value="">全部场景</option>
+                <option value="family">家庭聚餐</option>
+                <option value="birthday">生日私宴</option>
+                <option value="business">商务宴请</option>
+                <option value="light">健康轻食</option>
+              </select>
+            </div>
+            <input class="form-control" type="search" placeholder="搜索预约号、客户、套餐或地址..." data-table-search="orders-table">
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="orders-table">
+              <thead>
+                <tr><th>预约单</th><th>客户</th><th>服务套餐</th><th>服务时间</th><th>服务地址</th><th>人数</th><th>客户需求</th><th>状态</th><th>操作</th></tr>
+              </thead>
+              <tbody>
+                <tr data-status="departed" data-type="family"><td><span class="item-title">YY2026062501</span><span class="item-subtitle">已支付定金 · 微信</span></td><td>张女士</td><td>家庭尊享套餐</td><td>今天 12:00</td><td>新城逸景湾 3-2-1801</td><td>6 人</td><td>儿童少辣、海鲜过敏</td><td><span class="badge badge-blue">厨师出发</span></td><td><span class="actions"><button class="action-button" data-row-action="arrive">✓</button><button class="action-button" data-row-action="view">⌕</button></span></td></tr>
+                <tr data-status="confirmed" data-type="family"><td><span class="item-title">YY2026062502</span><span class="item-subtitle">已支付定金 · 支付宝</span></td><td>王先生</td><td>节日家宴套餐</td><td>今天 16:30</td><td>滨湖国际 8-1-2602</td><td>8 人</td><td>增加清蒸鱼、餐具自带</td><td><span class="badge badge-yellow">待出发</span></td><td><span class="actions"><button class="action-button" data-row-action="depart">↗</button><button class="action-button" data-row-action="reply">↵</button></span></td></tr>
+                <tr data-status="serving" data-type="family"><td><span class="item-title">YY2026062503</span><span class="item-subtitle">尾款待确认</span></td><td>刘女士</td><td>精致晚餐套餐</td><td>今天 18:30</td><td>汉丰湖畔 5-3-1203</td><td>4 人</td><td>长辈清淡口味</td><td><span class="badge badge-green">服务中</span></td><td><span class="actions"><button class="action-button" data-row-action="complete">✓</button><button class="action-button" data-row-action="view">⌕</button></span></td></tr>
+                <tr data-status="pending" data-type="light"><td><span class="item-title">YY2026062601</span><span class="item-subtitle">需求待确认</span></td><td>陈先生</td><td>健康轻食套餐</td><td>明天 12:00</td><td>山水华庭 2-1-901</td><td>2 人</td><td>需确认厨房设备</td><td><span class="badge badge-muted">待确认需求</span></td><td><span class="actions"><button class="action-button" data-row-action="lock">✓</button><button class="action-button" data-row-action="remind">↗</button></span></td></tr>
+                <tr data-status="pending" data-type="birthday"><td><span class="item-title">YY2026062602</span><span class="item-subtitle">生日布置咨询</span></td><td>赵女士</td><td>生日私宴套餐</td><td>明天 18:00</td><td>金科世界城 7-2-1505</td><td>10 人</td><td>生日桌布置、少辣</td><td><span class="badge badge-muted">待确认需求</span></td><td><span class="actions"><button class="action-button" data-row-action="reply">↵</button><button class="action-button" data-row-action="view">⌕</button></span></td></tr>
+                <tr data-status="done" data-type="business"><td><span class="item-title">YY2026062408</span><span class="item-subtitle">已完成结算</span></td><td>周女士</td><td>商务宴请套餐</td><td>昨天 18:00</td><td>滨湖商务中心 12F</td><td>12 人</td><td>接待口味偏清淡</td><td><span class="badge badge-green">已完成</span></td><td><span class="actions"><button class="action-button" data-row-action="view">⌕</button><button class="action-button" data-row-action="settle">¥</button></span></td></tr>
+                <tr data-status="after" data-type="family"><td><span class="item-title">YY2026062316</span><span class="item-subtitle">回访跟进中</span></td><td>何先生</td><td>亲友团圆套餐</td><td>前天 18:00</td><td>月潭街道星悦府 9-1-801</td><td>8 人</td><td>餐后清洁建议</td><td><span class="badge badge-red">售后跟进</span></td><td><span class="actions"><button class="action-button" data-row-action="reply">↵</button><button class="action-button" data-row-action="view">⌕</button></span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="empty-state" data-empty-for="orders-table">没有匹配的预约记录</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

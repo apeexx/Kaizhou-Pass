@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>日程排班 - 开州金厨</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div data-shell data-page="batches" data-title="日程排班" data-search="搜索日程、厨师、客户、地址">
+    <main class="main">
+      <section class="page-header">
+        <div>
+          <p class="eyeline">上门服务日程</p>
+          <h1>日程排班</h1>
+          <p class="page-subtitle">安排厨师、助理、出发时间、到达确认、现场服务和收尾清洁。</p>
+        </div>
+        <div class="page-actions">
+          <a class="btn" href="menus.html">选择套餐</a>
+          <button class="btn btn-primary" type="button" data-toast="新增排班为静态演示">新增排班</button>
+        </div>
+      </section>
+
+      <section class="grid four-col" aria-label="排班指标">
+        <article class="metric-card" style="--metric-color: var(--chart-1)"><div class="metric-head"><div><p class="metric-label">今日服务</p><div class="metric-value">5 单</div><p class="metric-note">晚间服务 3 单</p></div><span class="metric-icon">今</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--warm)"><div class="metric-head"><div><p class="metric-label">待出发</p><div class="metric-value">2 单</div><p class="metric-note">需确认食材与餐具</p></div><span class="metric-icon">发</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--chart-2)"><div class="metric-head"><div><p class="metric-label">服务中</p><div class="metric-value">2 单</div><p class="metric-note">现场状态正常</p></div><span class="metric-icon">厨</span></div></article>
+        <article class="metric-card" style="--metric-color: var(--purple)"><div class="metric-head"><div><p class="metric-label">可预约时段</p><div class="metric-value">9 个</div><p class="metric-note">未来 7 天开放</p></div><span class="metric-icon">时</span></div></article>
+      </section>
+
+      <section class="grid two-col" style="margin-top: 22px;">
+        <article class="panel">
+          <div class="panel-header"><h2>厨师日程</h2><a class="btn" href="orders.html">查看预约</a></div>
+          <div class="panel-body list">
+            <div class="progress"><div class="progress-head"><span>李师傅 · 今日 3 单</span><span>已排满</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 100%; --progress-color: var(--chart-2)"></div></div></div>
+            <div class="progress"><div class="progress-head"><span>周师傅 · 今日 2 单</span><span>余 1 个时段</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 72%; --progress-color: var(--chart-1)"></div></div></div>
+            <div class="progress"><div class="progress-head"><span>王师傅 · 明日 1 单</span><span>余 3 个时段</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 38%; --progress-color: var(--warm)"></div></div></div>
+            <div class="progress"><div class="progress-head"><span>临时支援 · 待确认</span><span>2 人可用</span></div><div class="progress-track"><div class="progress-bar" style="--progress: 44%; --progress-color: var(--purple)"></div></div></div>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="panel-header"><h2>助理安排</h2><button class="btn" type="button" data-toast="助理日程已刷新演示">刷新</button></div>
+          <div class="panel-body list">
+            <div class="list-row"><div><span class="item-title">今天 11:00</span><span class="item-subtitle">小周 · 食材核对与餐具打包</span></div><span class="badge badge-blue">准备中</span></div>
+            <div class="list-row"><div><span class="item-title">今天 15:30</span><span class="item-subtitle">小赵 · 随行协助王先生家宴</span></div><span class="badge badge-yellow">待出发</span></div>
+            <div class="list-row"><div><span class="item-title">今天 18:00</span><span class="item-subtitle">小陈 · 协助刘女士晚餐摆台</span></div><span class="badge badge-green">服务中</span></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" style="margin-top: 22px;">
+        <div class="panel-header">
+          <h2>排班列表</h2>
+          <span class="badge badge-blue" data-count-for="batches-table">0 条记录</span>
+        </div>
+        <div class="panel-body">
+          <div class="filters">
+            <div class="toolbar">
+              <select class="select" data-status-filter="batches-table" aria-label="按状态筛选">
+                <option value="">全部状态</option>
+                <option value="ready">已准备</option>
+                <option value="departed">已出发</option>
+                <option value="arrived">已到达</option>
+                <option value="serving">服务中</option>
+                <option value="done">已完成</option>
+              </select>
+              <select class="select" data-time-filter="batches-table" aria-label="按时段筛选">
+                <option value="">全部时段</option>
+                <option value="noon">午间</option>
+                <option value="afternoon">下午</option>
+                <option value="evening">晚间</option>
+              </select>
+            </div>
+            <input class="form-control" type="search" placeholder="搜索客户、厨师、地址..." data-table-search="batches-table">
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="batches-table">
+              <thead>
+                <tr><th>服务时间</th><th>客户</th><th>服务地址</th><th>套餐</th><th>主厨</th><th>助理</th><th>状态</th><th>操作</th></tr>
+              </thead>
+              <tbody>
+                <tr data-status="departed" data-time="noon"><td><span class="item-title">今天 12:00</span><span class="item-subtitle">建议 11:10 出发</span></td><td>张女士</td><td>新城逸景湾 3-2-1801</td><td>家庭尊享套餐</td><td>李师傅</td><td>小周</td><td><span class="badge badge-blue">已出发</span></td><td><span class="actions"><button class="action-button" data-row-action="arrive">✓</button><button class="action-button" data-row-action="view">⌕</button></span></td></tr>
+                <tr data-status="ready" data-time="afternoon"><td><span class="item-title">今天 16:30</span><span class="item-subtitle">建议 15:40 出发</span></td><td>王先生</td><td>滨湖国际 8-1-2602</td><td>节日家宴套餐</td><td>周师傅</td><td>小赵</td><td><span class="badge badge-yellow">待出发</span></td><td><span class="actions"><button class="action-button" data-row-action="depart">↗</button><button class="action-button" data-row-action="edit">✎</button></span></td></tr>
+                <tr data-status="serving" data-time="evening"><td><span class="item-title">今天 18:30</span><span class="item-subtitle">预计 21:00 完成</span></td><td>刘女士</td><td>汉丰湖畔 5-3-1203</td><td>精致晚餐套餐</td><td>李师傅</td><td>小陈</td><td><span class="badge badge-green">服务中</span></td><td><span class="actions"><button class="action-button" data-row-action="complete">✓</button><button class="action-button" data-row-action="view">⌕</button></span></td></tr>
+                <tr data-status="ready" data-time="noon"><td><span class="item-title">明天 12:00</span><span class="item-subtitle">待电话确认</span></td><td>陈先生</td><td>山水华庭 2-1-901</td><td>健康轻食套餐</td><td>王师傅</td><td>待安排</td><td><span class="badge badge-muted">已准备</span></td><td><span class="actions"><button class="action-button" data-row-action="remind">↗</button><button class="action-button" data-row-action="edit">✎</button></span></td></tr>
+                <tr data-status="done" data-time="evening"><td><span class="item-title">昨天 18:00</span><span class="item-subtitle">回访已完成</span></td><td>何女士</td><td>金科世界城 6-2-1606</td><td>亲友团圆套餐</td><td>周师傅</td><td>小赵</td><td><span class="badge badge-green">已完成</span></td><td><span class="actions"><button class="action-button" data-row-action="view">⌕</button><button class="action-button" data-row-action="settle">¥</button></span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="empty-state" data-empty-for="batches-table">没有匹配的排班记录</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
