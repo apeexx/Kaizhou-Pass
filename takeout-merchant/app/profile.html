@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page" data-demo-app="merchant" data-demo-scenario="approved">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">我的店铺</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">店铺资料</h1>
+            <p class="page-subtitle">把商家认证状态、营业信息和常用设置集中放在一个真实感更强的“我的”页里。</p>
+          </header>
+          <main class="content">
+            <section class="hero-card">
+              <div class="hero-card__layout">
+                <div class="hero-card__content">
+                  <span class="eyebrow">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-store"></use></svg>
+                    已认证门店
+                  </span>
+                  <h2 class="hero-title" data-bind="displayName"></h2>
+                  <p class="hero-copy" data-bind="statusNote"></p>
+                </div>
+                <div class="hero-media hero-media--compact" data-media-fallback>
+                  <img
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="餐厅室内环境图"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  >
+                  <span class="media-fallback">
+                    <strong>门店展示位</strong>
+                    <span>我的页也保留真实门店氛围，但仍以信息为主。</span>
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section-card section">
+              <div class="profile-list">
+                <div class="profile-item">
+                  <div>
+                    <strong>联系人</strong>
+                    <span data-bind="contactName"></span>
+                  </div>
+                  <span data-bind="phoneMasked"></span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>主营品类</strong>
+                    <span data-bind="category"></span>
+                  </div>
+                  <span>平台专送</span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>门店地址</strong>
+                    <span data-bind="storeAddress"></span>
+                  </div>
+                  <span data-bind="city"></span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>营业时间</strong>
+                    <span data-bind="businessHours"></span>
+                  </div>
+                  <span>已生效</span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>结算账户</strong>
+                    <span data-bind="settleAccount"></span>
+                  </div>
+                  <span>尾号 <span data-bind="settleTail"></span></span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="soft-grid">
+                <div class="section-card">
+                  <div class="support-strip">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-phone"></use></svg>
+                    </span>
+                    <div class="support-copy">
+                      <strong>平台服务电话</strong>
+                      <span data-bind="supportPhone"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-card">
+                  <div class="support-strip">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-shield"></use></svg>
+                    </span>
+                    <div class="support-copy">
+                      <strong>认证状态</strong>
+                      <span data-bind="statusLabel"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="notice-card section">
+              <div class="card-title-row">
+                <h3>当前说明</h3>
+                <span class="status-pill">纯静态原型</span>
+              </div>
+              <p class="muted-note">这一版先聚焦真实的登录、认证和经营主流程。打印设置、复杂营销、退款和经营统计深页还没有展开。</p>
+            </section>
+
+            <section class="section button-row">
+              <button
+                class="button button--danger"
+                type="button"
+                data-demo-action="logout"
+                data-next="../index.html"
+                data-message="已退出商家演示账号"
+              >
+                退出演示账号
+              </button>
+              <a class="button button--secondary" href="./orders.html">返回订单列表</a>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="商家端底部导航">
+            <a class="tab-link" href="./home.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
+              <span>首页</span>
+            </a>
+            <a class="tab-link" href="./orders.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-orders"></use></svg>
+              <span>订单</span>
+            </a>
+            <a class="tab-link" href="./products.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>
+              <span>商品</span>
+            </a>
+            <a class="tab-link is-active" href="./profile.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>订单中心 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page" data-demo-app="merchant" data-demo-scenario="approved">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">订单中心</span>
+          </div>
+          <header class="topbar topbar--compact">
+            <span class="eyebrow">
+              <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-store"></use></svg>
+              开州金厨商家端
+            </span>
+            <h1 class="page-title">外卖订单</h1>
+            <p class="page-subtitle"><span data-bind="displayName"></span>，欢迎回来。今天的经营重点是先处理新订单，再关注备餐时效。</p>
+          </header>
+          <main class="content">
+            <section class="hero-card hero-card--ink">
+              <div class="hero-card__content">
+                <div class="split-row">
+                  <div>
+                    <span class="eyebrow">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-orders"></use></svg>
+                      今日经营概览
+                    </span>
+                    <h2 class="hero-title">先看待处理订单，再安排门店节奏</h2>
+                  </div>
+                  <span class="status-value">营业中</span>
+                </div>
+                <p class="hero-copy">页面组织方式更接近真实商家 App：登录后先看到订单总览，再进入订单详情、商品管理和店铺资料。</p>
+                <div class="summary-row">
+                  <div class="summary-pill">
+                    <strong>4</strong>
+                    <span>待接单</span>
+                  </div>
+                  <div class="summary-pill">
+                    <strong>2</strong>
+                    <span>待出餐</span>
+                  </div>
+                  <div class="summary-pill">
+                    <strong>3</strong>
+                    <span>配送中</span>
+                  </div>
+                  <div class="summary-pill">
+                    <strong>1</strong>
+                    <span>退款单</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section
+              class="section-card section"
+              data-cycle-control
+              data-cycle-values="营业中|休息中"
+              data-cycle-notes="当前可正常接单，建议优先处理待接单和备餐中的订单。|当前暂停接单，可用于演示午休、临时打烊或备餐缓冲状态。"
+              data-cycle-classes="status-live|status-off"
+            >
+              <div class="split-row">
+                <div>
+                  <h2>门店营业状态</h2>
+                  <p class="muted-note" data-cycle-note>当前可正常接单，建议优先处理待接单和备餐中的订单。</p>
+                </div>
+                <span class="status-value" data-cycle-value>营业中</span>
+              </div>
+              <div class="card-actions">
+                <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为休息中</button>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="metric-grid">
+                <div class="stat-card">
+                  <div class="stat-label">今日订单</div>
+                  <div class="stat-value">36</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">今日营业额</div>
+                  <div class="stat-value">¥1,286</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">预计超时</div>
+                  <div class="stat-value">1 单</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">好评率</div>
+                  <div class="stat-value">98%</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <h2>待优先处理</h2>
+                <span class="section-caption">更像真实订单工作流</span>
+              </div>
+              <div class="list-stack">
+                <article class="list-card list-card--media">
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="川渝家常菜餐品缩略图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>餐品图</strong>
+                      </span>
+                    </div>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>#JC20260625001</h3>
+                          <div class="meta-line">香辣回锅肉饭 ×1 · 冰粉 ×1</div>
+                        </div>
+                        <span class="status-pill status-waiting">待接单</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-clock"></use></svg>09:23 下单</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-message"></use></svg>少辣，多放青椒</span>
+                      </div>
+                      <div class="amount-line">实收 ¥34.00</div>
+                    </div>
+                  </div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./order-detail.html">查看详情</a>
+                    <a class="button button--small button--ghost" href="./orders.html">去订单列表</a>
+                  </div>
+                </article>
+
+                <article class="list-card">
+                  <div class="support-strip">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>
+                    </span>
+                    <div class="support-copy">
+                      <strong>热销商品库存提醒</strong>
+                      <span>招牌青椒肉丝盖饭剩余 6 份，建议及时补货或调整出餐节奏。</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <h2>常用入口</h2>
+                <span class="section-caption">只保留经营主流程</span>
+              </div>
+              <div class="quick-actions">
+                <a class="mini-link" href="./orders.html">
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-orders"></use></svg>
+                    </span>
+                    <div>
+                      <strong>订单列表</strong>
+                      <span>进入待接单、备餐中和待骑手取货的列表页。</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="mini-link" href="./products.html">
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>
+                    </span>
+                    <div>
+                      <strong>商品管理</strong>
+                      <span>查看餐品图片、分类和上下架状态。</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="mini-link" href="./profile.html">
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-store"></use></svg>
+                    </span>
+                    <div>
+                      <strong>店铺资料</strong>
+                      <span>查看门店认证状态、营业时间和结算信息。</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="mini-link" href="../onboarding/success.html">
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-check"></use></svg>
+                    </span>
+                    <div>
+                      <strong>入驻结果</strong>
+                      <span>回看审核通过后的门店开通结果页。</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="商家端底部导航">
+            <a class="tab-link is-active" href="./home.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
+              <span>首页</span>
+            </a>
+            <a class="tab-link" href="./orders.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-orders"></use></svg>
+              <span>订单</span>
+            </a>
+            <a class="tab-link" href="./products.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>
+              <span>商品</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.superpowers/
+.codex/
+.agents/
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+.hbuilderx/
+node_modules/
+dist/
+coverage/
+unpackage/
+*.log
+*.tmp
+*.temp

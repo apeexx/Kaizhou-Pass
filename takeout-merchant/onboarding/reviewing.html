@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>门店审核中 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page" data-demo-app="merchant" data-demo-scenario="reviewing">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">审核进度</span>
+          </div>
+          <header class="header">
+            <a class="back-link" href="./apply.html">返回资料页</a>
+            <h1 class="page-title">门店审核中</h1>
+            <p class="page-subtitle"><span data-bind="displayName"></span> 的资料已提交，平台正在审核营业资质、门店信息和出餐环境。</p>
+          </header>
+          <main class="content">
+            <div class="steps" aria-label="商家入驻进度">
+              <div class="step-item is-complete">
+                <span class="step-dot">1</span>
+                <span class="step-label">填写资料</span>
+              </div>
+              <div class="step-item is-active">
+                <span class="step-dot">2</span>
+                <span class="step-label">平台审核</span>
+              </div>
+              <div class="step-item">
+                <span class="step-dot">3</span>
+                <span class="step-label">开通门店</span>
+              </div>
+            </div>
+
+            <section class="hero-card">
+              <div class="support-strip">
+                <span class="support-strip__icon">
+                  <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-clock"></use></svg>
+                </span>
+                <div class="support-copy">
+                  <strong>预计 1 - 2 个工作日完成审核</strong>
+                  <span>当前阶段重点看营业执照、门店分类、门头照片与结算信息是否完整。</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="detail-card section">
+              <div class="detail-title">
+                <span class="icon-badge icon-badge--soft">
+                  <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-store"></use></svg>
+                </span>
+                <div>
+                  <h3>已提交资料</h3>
+                  <p class="muted-note">用于演示审核页里的资料回看区域</p>
+                </div>
+              </div>
+              <ul class="detail-list">
+                <li><span>门店名称</span><span data-bind="displayName"></span></li>
+                <li><span>联系人</span><span data-bind="contactName"></span></li>
+                <li><span>手机号</span><span data-bind="phoneMasked"></span></li>
+                <li><span>主营品类</span><span data-bind="category"></span></li>
+                <li><span>门店地址</span><span data-bind="storeAddress"></span></li>
+              </ul>
+            </section>
+
+            <section class="timeline-card section">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="timeline-pin"></span>
+                  <div>
+                    <strong>09:12 已提交基础资料</strong>
+                    <span class="meta-line">门店名称、联系人、手机号和门店地址已完成初步校验。</span>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-pin"></span>
+                  <div>
+                    <strong>09:18 平台正在审核门店环境</strong>
+                    <span class="meta-line">重点确认门头照片、后厨环境和外卖打包区域是否清晰可见。</span>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-pin"></span>
+                  <div>
+                    <strong>09:26 等待结算信息复核</strong>
+                    <span class="meta-line">审核通过后会开通接单权限，并进入正式商家 App 页面。</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="notice-card section">
+              <div class="card-title-row">
+                <h3>当前提醒</h3>
+                <span class="status-pill status-waiting">
+                  <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-message"></use></svg>
+                  留意补件通知
+                </span>
+              </div>
+              <p class="muted-note">如果后续需要演示更复杂的补件逻辑，可以在下一轮继续扩展，这一版先把“提交后等待审核”的真实节奏做对。</p>
+            </section>
+
+            <section class="section button-row">
+              <button
+                class="button button--primary"
+                type="button"
+                data-submit-next="./success.html"
+                data-submit-message="模拟审核通过，正在开通门店"
+                data-submit-scenario="approved"
+              >
+                模拟审核通过
+              </button>
+              <a class="button button--secondary" href="./apply.html">回看填写内容</a>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

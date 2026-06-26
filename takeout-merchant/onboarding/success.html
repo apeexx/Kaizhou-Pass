@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>门店开通成功 - 开州金厨商家端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page" data-demo-app="merchant" data-demo-scenario="approved">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">开通成功</span>
+          </div>
+          <header class="header">
+            <a class="back-link" href="./reviewing.html">返回审核页</a>
+            <h1 class="page-title">门店已开通</h1>
+            <p class="page-subtitle"><span data-bind="displayName"></span> 已完成平台审核，现在可以进入正式商家 App 查看订单、商品和店铺资料。</p>
+          </header>
+          <main class="content">
+            <div class="steps" aria-label="商家入驻进度">
+              <div class="step-item is-complete">
+                <span class="step-dot">1</span>
+                <span class="step-label">填写资料</span>
+              </div>
+              <div class="step-item is-complete">
+                <span class="step-dot">2</span>
+                <span class="step-label">平台审核</span>
+              </div>
+              <div class="step-item is-active">
+                <span class="step-dot">3</span>
+                <span class="step-label">开通门店</span>
+              </div>
+            </div>
+
+            <section class="hero-card">
+              <div class="hero-card__layout">
+                <div class="hero-card__content">
+                  <span class="eyebrow">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-check"></use></svg>
+                    认证完成
+                  </span>
+                  <h2 class="hero-title">现在可以开始接单</h2>
+                  <p class="hero-copy">平台已经为你的门店开通接单权限、商品维护入口和店铺资料页。首次进入后会先看到订单中心。</p>
+                  <div class="pill-row">
+                    <span class="pill-note">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-orders"></use></svg>
+                      订单已可接入
+                    </span>
+                    <span class="pill-note">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>
+                      商品可维护
+                    </span>
+                    <span class="pill-note">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-store"></use></svg>
+                      门店可营业
+                    </span>
+                  </div>
+                </div>
+                <div class="hero-media hero-media--compact" data-media-fallback>
+                  <img
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="餐品与堂食环境展示"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  >
+                  <span class="media-fallback">
+                    <strong>正式经营展示位</strong>
+                    <span>审核通过后会进入更像真实 App 的经营页面。</span>
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section-card section">
+              <div class="profile-list">
+                <div class="profile-item">
+                  <div>
+                    <strong>门店名称</strong>
+                    <span data-bind="displayName"></span>
+                  </div>
+                  <span>已开通</span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>联系人</strong>
+                    <span data-bind="contactName"></span>
+                  </div>
+                  <span data-bind="phoneMasked"></span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>主营品类</strong>
+                    <span data-bind="category"></span>
+                  </div>
+                  <span>平台专送</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section button-row">
+              <a class="button button--primary" href="../app/home.html">进入订单中心</a>
+              <a class="button button--secondary" href="../app/orders.html">先看订单列表</a>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

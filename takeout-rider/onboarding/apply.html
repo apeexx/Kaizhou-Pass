@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>填写骑手资料 - 开州金厨骑手端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page" data-demo-app="rider" data-demo-scenario="apply">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">骑手报名</span>
+          </div>
+          <header class="header">
+            <a class="back-link" href="../index.html">返回登录页</a>
+            <h1 class="page-title">填写骑手资料</h1>
+            <p class="page-subtitle">手机号 <span data-bind="phoneMasked"></span> 还没有骑手档案，请先完成身份、车辆和服务片区资料提交。</p>
+          </header>
+          <main class="content">
+            <div class="steps" aria-label="骑手入驻进度">
+              <div class="step-item is-active">
+                <span class="step-dot">1</span>
+                <span class="step-label">填写资料</span>
+              </div>
+              <div class="step-item">
+                <span class="step-dot">2</span>
+                <span class="step-label">平台审核</span>
+              </div>
+              <div class="step-item">
+                <span class="step-dot">3</span>
+                <span class="step-label">开通接单</span>
+              </div>
+            </div>
+
+            <section class="hero-card">
+              <div class="support-strip">
+                <span class="support-strip__icon">
+                  <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
+                </span>
+                <div class="support-copy">
+                  <strong>本页模拟真实骑手认证资料页</strong>
+                  <span>提交后会先进入审核中，再进入正式接单页面，而不是直接进入展示页。</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section-card section">
+              <div class="section-heading">
+                <h2>基础信息</h2>
+                <span class="section-caption">用于演示骑手开通前资料采集</span>
+              </div>
+              <div class="field-stack">
+                <label class="input-group">
+                  <span>真实姓名</span>
+                  <input class="input-control" type="text" value="陈宇">
+                </label>
+                <label class="input-group">
+                  <span>联系手机号</span>
+                  <input class="input-control" type="text" data-bind-value="phoneFull">
+                </label>
+                <label class="input-group">
+                  <span>配送片区</span>
+                  <select class="select-control">
+                    <option>开州老城 / 汉丰湖片区</option>
+                    <option>北环新区 / 云枫片区</option>
+                    <option>赵家街道 / 工业园片区</option>
+                  </select>
+                </label>
+                <label class="input-group">
+                  <span>配送工具</span>
+                  <select class="select-control">
+                    <option>两轮电动车</option>
+                    <option>摩托车</option>
+                    <option>步行 + 站点调度</option>
+                  </select>
+                </label>
+                <label class="input-group">
+                  <span>紧急联系人</span>
+                  <input class="input-control" type="text" value="陈建国 · 13600001234">
+                </label>
+              </div>
+            </section>
+
+            <section class="section-card section">
+              <div class="section-heading">
+                <h2>证件与装备</h2>
+                <span class="section-caption">保留真实上传位</span>
+              </div>
+              <div class="upload-grid">
+                <div class="upload-tile">
+                  <span class="icon-badge icon-badge--soft">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-id-card"></use></svg>
+                  </span>
+                  <strong>身份证正反面</strong>
+                  <span>上传身份证信息页与国徽页，用于实名认证审核</span>
+                </div>
+                <div class="upload-tile">
+                  <span class="icon-badge icon-badge--soft">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-camera"></use></svg>
+                  </span>
+                  <strong>健康证 / 装备照</strong>
+                  <span>上传健康证、头盔或配送箱照片，便于平台复核</span>
+                </div>
+              </div>
+              <p class="muted-note">这一版仍然是纯静态演示，但页面结构已经按真实骑手报名流程来组织。</p>
+            </section>
+
+            <section class="section button-row">
+              <button
+                class="button button--primary"
+                type="button"
+                data-submit-next="./reviewing.html"
+                data-submit-message="骑手资料已提交，正在进入审核流程"
+                data-submit-scenario="reviewing"
+              >
+                提交骑手资料
+              </button>
+              <a class="button button--secondary" href="../index.html">回到登录页</a>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>

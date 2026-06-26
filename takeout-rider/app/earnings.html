@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>收入统计 - 开州金厨骑手端</title>
+    <link rel="stylesheet" href="../../shared/theme.css">
+    <link rel="stylesheet" href="../../shared/mobile-app.css">
+  </head>
+  <body class="app-preview-page" data-demo-app="rider" data-demo-scenario="approved">
+    <div class="preview-layout">
+      <div class="mobile-frame">
+        <div class="screen">
+          <div class="status-bar">
+            <span>09:41</span>
+            <span class="status-bar__capsule">收入统计</span>
+          </div>
+          <header class="header">
+            <h1 class="page-title">收入页面</h1>
+            <p class="page-subtitle">保留真实骑手端常见的“时间筛选 + 数据概览 + 明细列表”结构，方便说明骑手经营视角。</p>
+          </header>
+          <main class="content">
+            <section class="chip-row" data-choice-group data-choice-initial="today">
+              <button class="chip-button" type="button" data-choice-item data-choice-value="today">今日</button>
+              <button class="chip-button" type="button" data-choice-item data-choice-value="week">本周</button>
+              <button class="chip-button" type="button" data-choice-item data-choice-value="month">本月</button>
+            </section>
+
+            <section class="section">
+              <div class="metric-grid">
+                <div class="stat-card">
+                  <div class="stat-label">今日收入</div>
+                  <div class="stat-value">¥138</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">已完成订单</div>
+                  <div class="stat-value">18 单</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">奖励补贴</div>
+                  <div class="stat-value">¥16</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">待提现</div>
+                  <div class="stat-value">¥428</div>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="list-stack">
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>午高峰配送收入</h3>
+                      <div class="meta-line">11:30 - 13:30 · 完成 7 单</div>
+                    </div>
+                    <span class="status-pill status-success">+ ¥56.4</span>
+                  </div>
+                  <div class="inline-meta">
+                    <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>基础配送费 ¥48.0</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-flash"></use></svg>高峰补贴 ¥8.4</span>
+                  </div>
+                </article>
+
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>上午配送收入</h3>
+                      <div class="meta-line">09:00 - 11:30 · 完成 6 单</div>
+                    </div>
+                    <span class="status-pill status-success">+ ¥42.2</span>
+                  </div>
+                  <div class="inline-meta">
+                    <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>基础配送费 ¥38.0</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-check"></use></svg>准时奖励 ¥4.2</span>
+                  </div>
+                </article>
+
+                <article class="list-card">
+                  <div class="card-title-row">
+                    <div>
+                      <h3>昨日待结算</h3>
+                      <div class="meta-line">系统次日 10:00 前自动结算</div>
+                    </div>
+                    <span class="status-pill">¥83.6</span>
+                  </div>
+                  <div class="inline-meta">
+                    <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-chart"></use></svg>本周累计 ¥628</span>
+                    <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>本月累计 ¥2,984</span>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="notice-card section">
+              <div class="card-title-row">
+                <h3>收入说明</h3>
+                <span class="status-pill">纯静态演示</span>
+              </div>
+              <p class="muted-note">本页先展示真实骑手端常见的收入结构，不做提现流程、银行卡管理和复杂账单筛选页。</p>
+            </section>
+          </main>
+          <nav class="tab-bar" aria-label="骑手端底部导航">
+            <a class="tab-link" href="./home.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
+              <span>首页</span>
+            </a>
+            <a class="tab-link" href="./hall.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
+              <span>接单</span>
+            </a>
+            <a class="tab-link is-active" href="./earnings.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
+              <span>收入</span>
+            </a>
+            <a class="tab-link" href="./profile.html">
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
+              <span>我的</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <script src="../../shared/common.js"></script>
+  </body>
+</html>
