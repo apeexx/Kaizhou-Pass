@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="rider" data-demo-scenario="approved">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
@@ -15,67 +15,130 @@
             <span>09:41</span>
             <span class="status-bar__capsule">配送详情</span>
           </div>
-          <header class="header header--compact">
+          <header class="header">
             <a class="back-link" href="./hall.html">返回接单大厅</a>
-            <h1 class="page-title">配送任务 #PS20260625018</h1>
-            <p class="page-subtitle">通过一个按钮在取货中、配送中、已送达之间循环切换。</p>
+            <h1 class="page-title">当前配送任务</h1>
+            <p class="page-subtitle">同一页面里循环切换“取货中 / 配送中 / 已送达”，模拟骑手单个任务的真实推进过程。</p>
           </header>
           <main class="content">
             <section
               class="hero-card"
               data-cycle-control
               data-cycle-values="取货中|配送中|已送达"
-              data-cycle-notes="正在前往商家取餐，建议核对订单号后再出发。|餐品已取到，当前路线以用户地址为主。|订单已送达，再次点击可回到取货中演示起始状态。"
-              data-cycle-classes="status-pickup|status-online|status-complete"
+              data-cycle-notes="请先到店核对餐品和订单号，再确认取货完成。|餐品已取到，当前以最快路线前往用户地址。|订单已送达，可再次点击回到取货中继续演示。"
+              data-cycle-classes="status-pickup|status-online|status-success"
             >
-              <span class="eyebrow">配送状态</span>
-              <h2 class="hero-title">当前为 <span class="status-value" data-cycle-value>取货中</span></h2>
-              <p class="hero-copy" data-cycle-note>正在前往商家取餐，建议核对订单号后再出发。</p>
+              <div class="hero-card__layout">
+                <div class="hero-card__content">
+                  <div class="split-row">
+                    <div>
+                      <span class="eyebrow">
+                        <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>
+                        任务状态
+                      </span>
+                      <h2 class="hero-title">开州江湖小馆 → 滨湖北路 603</h2>
+                    </div>
+                    <span class="status-value" data-cycle-value>取货中</span>
+                  </div>
+                  <p class="hero-copy" data-cycle-note>请先到店核对餐品和订单号，再确认取货完成。</p>
+                </div>
+                <div class="wide-thumb" data-media-fallback>
+                  <img
+                    src="https://images.unsplash.com/photo-1759301248268-b4ada0a5f964?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="骑手到店取餐与准备配送场景"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  >
+                  <span class="media-fallback">
+                    <strong>配送场景</strong>
+                    <span>骑手端详情页保持路线和执行感，而不是宣传封面感。</span>
+                  </span>
+                </div>
+              </div>
               <div class="card-actions">
-                <button class="button button--small button--primary" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为配送中</button>
+                <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为配送中</button>
+                <a class="button button--small button--ghost" href="./hall.html">返回大厅</a>
               </div>
             </section>
 
-            <section class="section">
-              <div class="detail-grid">
-                <div class="detail-card">
-                  <h3>商家信息</h3>
-                  <ul class="detail-list">
-                    <li><span>门店</span><span>开州金厨示范店</span></li>
-                    <li><span>取餐地址</span><span>开州大道 88 号一层</span></li>
-                    <li><span>联系电话</span><span>138 0000 6666</span></li>
-                  </ul>
+            <section class="detail-grid section">
+              <div class="detail-card">
+                <div class="detail-title">
+                  <span class="icon-badge icon-badge--soft">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-store"></use></svg>
+                  </span>
+                  <div>
+                    <h3>商家信息</h3>
+                    <p class="muted-note">先到店取餐</p>
+                  </div>
                 </div>
-                <div class="detail-card">
-                  <h3>用户信息</h3>
-                  <ul class="detail-list">
-                    <li><span>收货人</span><span>王女士</span></li>
-                    <li><span>送达地址</span><span>滨湖中路 18 号 2 栋</span></li>
-                    <li><span>配送时限</span><span>16 分钟</span></li>
-                  </ul>
-                </div>
-                <div class="detail-card">
-                  <h3>配送说明</h3>
-                  <p class="muted-note">当前原型不做地图与定位深度功能，只保留路线规则和状态切换的展示感。</p>
-                </div>
+                <ul class="detail-list">
+                  <li><span>门店</span><span>开州江湖小馆</span></li>
+                  <li><span>地址</span><span>文峰街道盛山路 188 号</span></li>
+                  <li><span>电话</span><span>136****5521</span></li>
+                </ul>
               </div>
+
+              <div class="detail-card">
+                <div class="detail-title">
+                  <span class="icon-badge icon-badge--soft">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
+                  </span>
+                  <div>
+                    <h3>用户信息</h3>
+                    <p class="muted-note">再送到用户地址</p>
+                  </div>
+                </div>
+                <ul class="detail-list">
+                  <li><span>收货人</span><span>周先生</span></li>
+                  <li><span>地址</span><span>汉丰街道滨湖北路 88 号 2 单元 603</span></li>
+                  <li><span>电话</span><span>138****2211</span></li>
+                </ul>
+              </div>
+
+              <div class="detail-card">
+                <div class="detail-title">
+                  <span class="icon-badge icon-badge--soft">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>
+                  </span>
+                  <div>
+                    <h3>路线与收益</h3>
+                    <p class="muted-note">配送执行核心信息</p>
+                  </div>
+                </div>
+                <ul class="detail-list">
+                  <li><span>距商家</span><span>0.6km</span></li>
+                  <li><span>距用户</span><span>1.8km</span></li>
+                  <li><span>预计收益</span><span>¥8.60</span></li>
+                  <li><span>预计送达</span><span>09:56 前</span></li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="notice-card section">
+              <div class="card-title-row">
+                <h3>配送说明</h3>
+                <span class="status-pill">尽量顺路</span>
+              </div>
+              <p class="muted-note">优先走滨湖东路，取餐时先核对订单号和饮品数量。后续若需要扩展异常上报、转单或拍照上传，可继续在下一轮 PR 中加入。</p>
             </section>
           </main>
           <nav class="tab-bar" aria-label="骑手端底部导航">
             <a class="tab-link" href="./home.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
               <span>首页</span>
             </a>
             <a class="tab-link is-active" href="./hall.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
               <span>接单</span>
             </a>
             <a class="tab-link" href="./earnings.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
               <span>收入</span>
             </a>
             <a class="tab-link" href="./profile.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
               <span>我的</span>
             </a>
           </nav>

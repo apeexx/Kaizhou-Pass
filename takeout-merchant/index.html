@@ -3,52 +3,70 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>开州金厨商家端</title>
+    <title>商家登录 - 开州金厨</title>
     <link rel="stylesheet" href="../shared/theme.css">
     <link rel="stylesheet" href="../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="merchant">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
           <div class="status-bar">
             <span>09:41</span>
-            <span class="status-bar__capsule">商家端展示</span>
+            <span class="status-bar__capsule">商家登录</span>
           </div>
-          <header class="header">
-            <h1 class="page-title">开州金厨商家端</h1>
-            <p class="page-subtitle">围绕日常接单、备餐、商品维护和门店信息展示的静态 H5 原型。</p>
-          </header>
           <main class="content content--cover">
-            <section class="hero-card">
-              <span class="eyebrow">门店经营体验</span>
-              <h2 class="hero-title">一部手机看清今日经营节奏</h2>
-              <p class="hero-copy">从提交入驻材料到正式接单，页面结构保持真实 App 的手机端浏览方式，适合直接展示平台体验。</p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="./onboarding/apply.html">体验入驻流程</a>
-                <a class="button button--secondary" href="./app/home.html">进入正式 App</a>
+            <section class="login-brand login-brand--compact">
+              <span class="brand-mark">
+                <svg class="icon" aria-hidden="true"><use href="../shared/icons.svg#icon-store"></use></svg>
+              </span>
+              <div class="brand-copy">
+                <strong>开州金厨商家端</strong>
+                <span>商家登录</span>
               </div>
             </section>
 
-            <section class="section">
-              <div class="section-heading">
-                <h2>首批展示重点</h2>
-                <span class="section-caption">只保留核心经营页面</span>
-              </div>
-              <div class="soft-grid">
-                <div class="section-card">
-                  <div class="card-title-row">
-                    <h3>入驻流程</h3>
-                    <span class="status-pill">申请 → 审核 → 开通</span>
+            <section class="auth-card" data-auth-form data-auth-app="merchant">
+              <div class="login-shell">
+                <label class="input-group">
+                  <span>手机号码</span>
+                  <input class="input-control" type="tel" inputmode="numeric" maxlength="11" placeholder="请选择或输入手机号" data-auth-phone list="merchant-account-list">
+                </label>
+                <datalist id="merchant-account-list">
+                  <option value="13800000001">已认证商家账号</option>
+                  <option value="13800000002">审核中商家账号</option>
+                </datalist>
+
+                <div class="input-group">
+                  <label>短信验证码</label>
+                  <div class="input-row">
+                    <input class="input-control" type="tel" inputmode="numeric" maxlength="6" placeholder="请输入 6 位验证码" data-auth-code>
+                    <button class="sms-button" type="button" data-send-code>获取验证码</button>
                   </div>
-                  <p class="muted-note">用三步页面展示从提交资料到开店成功的流程，不接真实接口。</p>
                 </div>
-                <div class="section-card">
-                  <div class="card-title-row">
-                    <h3>正式 App</h3>
-                    <span class="status-pill">工作台 / 订单 / 商品 / 我的</span>
-                  </div>
-                  <p class="muted-note">底部 Tab 保持真实使用感，订单和商品页都带轻交互，方便汇报演示。</p>
+
+                <div class="demo-grid">
+                  <button class="demo-option" type="button" data-auth-demo data-demo-phone="13800000001" data-demo-code="246810" aria-pressed="false">
+                    <strong>已认证商家</strong>
+                    <span>点击后直接填入手机号和验证码</span>
+                  </button>
+                  <button class="demo-option" type="button" data-auth-demo data-demo-phone="13800000002" data-demo-code="246810" aria-pressed="false">
+                    <strong>审核中商家</strong>
+                    <span>点击后直接填入手机号和验证码</span>
+                  </button>
+                </div>
+
+                <div class="login-note">手机号支持点击输入框后直接从下拉中选择，验证码固定为 `246810`。</div>
+
+                <div class="check-line">
+                  <button class="checkbox" type="button" data-agree-toggle data-checked="false" aria-checked="false">
+                    <svg class="icon" aria-hidden="true"><use href="../shared/icons.svg#icon-check"></use></svg>
+                  </button>
+                  <span>我已阅读并同意《开州金厨商家服务协议》与《隐私说明》。</span>
+                </div>
+
+                <div class="login-actions">
+                  <button class="button button--primary" type="button" data-auth-submit>登录</button>
                 </div>
               </div>
             </section>

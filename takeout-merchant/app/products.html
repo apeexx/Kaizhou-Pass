@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>商品 - 开州金厨商家端</title>
+    <title>商品管理 - 开州金厨商家端</title>
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="merchant" data-demo-scenario="approved">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
@@ -17,74 +17,141 @@
           </div>
           <header class="header">
             <h1 class="page-title">商品与分类</h1>
-            <p class="page-subtitle">用分类高亮和商品状态开关，展示核心维护场景。</p>
+            <p class="page-subtitle"><span data-bind="displayName"></span> 的商品页更接近真实商家 App，可以直接看到餐品图、月售和上下架状态。</p>
           </header>
           <main class="content">
-            <section class="section">
-              <div class="chip-row" data-choice-group data-choice-initial="hot">
-                <button class="chip-button" type="button" data-choice-item data-choice-value="hot">热销</button>
-                <button class="chip-button" type="button" data-choice-item data-choice-value="main">主食</button>
-                <button class="chip-button" type="button" data-choice-item data-choice-value="drink">饮品</button>
-                <button class="chip-button" type="button" data-choice-item data-choice-value="dessert">甜品</button>
-              </div>
+            <section class="chip-row" data-choice-group data-choice-initial="hot">
+              <button class="chip-button" type="button" data-choice-item data-choice-value="all">全部</button>
+              <button class="chip-button" type="button" data-choice-item data-choice-value="hot">热销</button>
+              <button class="chip-button" type="button" data-choice-item data-choice-value="rice">盖饭</button>
+              <button class="chip-button" type="button" data-choice-item data-choice-value="soup">汤品</button>
             </section>
 
             <section class="section">
               <div class="list-stack">
                 <article
-                  class="list-card"
+                  class="list-card list-card--media"
                   data-cycle-control
-                  data-cycle-values="上架中|已下架"
-                  data-cycle-classes="status-live|status-off"
+                  data-cycle-values="在售|已下架"
+                  data-cycle-notes="当前商品会在用户端正常展示，可继续接单。|当前商品暂时从用户端隐藏，可用于演示临时停售。"
+                  data-cycle-classes="status-success|status-off"
                 >
-                  <div class="switch-row">
-                    <div>
-                      <h3>香辣回锅肉饭</h3>
-                      <div class="meta-line">月售 186 · 库存充足 · 热销主食</div>
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="香辣回锅肉饭商品图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>餐品图</strong>
+                      </span>
                     </div>
-                    <span class="status-value" data-cycle-value>上架中</span>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>香辣回锅肉饭</h3>
+                          <div class="meta-line">热销主食 · 月售 186 份</div>
+                        </div>
+                        <span class="status-pill" data-cycle-value>在售</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>盖饭</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-box"></use></svg>库存充足</span>
+                      </div>
+                      <div class="amount-line">售价 ¥28.00</div>
+                      <p class="muted-note" data-cycle-note>当前商品会在用户端正常展示，可继续接单。</p>
+                    </div>
                   </div>
-                  <div class="amount-line">售价 ¥24.00</div>
                   <div class="card-actions">
-                    <button class="switch-button" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为已下架</button>
+                    <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为已下架</button>
+                    <a class="button button--small button--ghost" href="./orders.html">查看关联订单</a>
                   </div>
                 </article>
 
                 <article
-                  class="list-card"
+                  class="list-card list-card--media"
                   data-cycle-control
-                  data-cycle-values="上架中|已下架"
-                  data-cycle-classes="status-live|status-off"
+                  data-cycle-values="在售|已下架"
+                  data-cycle-notes="当前商品会在用户端正常展示，可继续接单。|当前商品暂时从用户端隐藏，可用于演示临时停售。"
+                  data-cycle-classes="status-success|status-off"
                 >
-                  <div class="switch-row">
-                    <div>
-                      <h3>青椒肉丝盖饭</h3>
-                      <div class="meta-line">月售 132 · 中午高峰出单较快</div>
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="青椒肉丝盖饭商品图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>餐品图</strong>
+                      </span>
                     </div>
-                    <span class="status-value" data-cycle-value>上架中</span>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>青椒肉丝盖饭</h3>
+                          <div class="meta-line">盖饭招牌款 · 月售 142 份</div>
+                        </div>
+                        <span class="status-pill" data-cycle-value>在售</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>盖饭</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-box"></use></svg>剩余 9 份</span>
+                      </div>
+                      <div class="amount-line">售价 ¥26.00</div>
+                      <p class="muted-note" data-cycle-note>当前商品会在用户端正常展示，可继续接单。</p>
+                    </div>
                   </div>
-                  <div class="amount-line">售价 ¥22.00</div>
                   <div class="card-actions">
-                    <button class="switch-button" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为已下架</button>
+                    <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为已下架</button>
+                    <a class="button button--small button--ghost" href="./profile.html">店铺资料</a>
                   </div>
                 </article>
 
                 <article
-                  class="list-card"
+                  class="list-card list-card--media"
                   data-cycle-control
-                  data-cycle-values="已下架|上架中"
-                  data-cycle-classes="status-off|status-live"
+                  data-cycle-values="在售|已下架"
+                  data-cycle-notes="当前商品会在用户端正常展示，可继续接单。|当前商品暂时从用户端隐藏，可用于演示临时停售。"
+                  data-cycle-classes="status-success|status-off"
                 >
-                  <div class="switch-row">
-                    <div>
-                      <h3>红糖冰粉</h3>
-                      <div class="meta-line">月售 96 · 适合作为搭配甜品</div>
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="番茄牛腩汤饭商品图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>餐品图</strong>
+                      </span>
                     </div>
-                    <span class="status-value" data-cycle-value>已下架</span>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>番茄牛腩汤饭</h3>
+                          <div class="meta-line">汤饭套餐 · 月售 95 份</div>
+                        </div>
+                        <span class="status-pill" data-cycle-value>在售</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>汤品</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-box"></use></svg>午市热卖</span>
+                      </div>
+                      <div class="amount-line">售价 ¥32.00</div>
+                      <p class="muted-note" data-cycle-note>当前商品会在用户端正常展示，可继续接单。</p>
+                    </div>
                   </div>
-                  <div class="amount-line">售价 ¥10.00</div>
                   <div class="card-actions">
-                    <button class="switch-button" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为上架中</button>
+                    <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为已下架</button>
+                    <a class="button button--small button--ghost" href="./home.html">返回首页</a>
                   </div>
                 </article>
               </div>
@@ -92,19 +159,19 @@
           </main>
           <nav class="tab-bar" aria-label="商家端底部导航">
             <a class="tab-link" href="./home.html">
-              <span class="tab-link__dot"></span>
-              <span>工作台</span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
+              <span>首页</span>
             </a>
             <a class="tab-link" href="./orders.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-orders"></use></svg>
               <span>订单</span>
             </a>
             <a class="tab-link is-active" href="./products.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-bowl"></use></svg>
               <span>商品</span>
             </a>
             <a class="tab-link" href="./profile.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
               <span>我的</span>
             </a>
           </nav>

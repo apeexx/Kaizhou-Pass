@@ -7,85 +7,148 @@
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="rider" data-demo-scenario="approved">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
           <div class="status-bar">
             <span>09:41</span>
-            <span class="status-bar__capsule">骑手中心</span>
+            <span class="status-bar__capsule">我的资料</span>
           </div>
           <header class="header">
-            <h1 class="page-title">我的资料</h1>
-            <p class="page-subtitle">用个人资料、配送偏好和演示说明组成骑手端的个人中心页面。</p>
+            <h1 class="page-title">骑手档案</h1>
+            <p class="page-subtitle">把骑手认证状态、配送片区、服务电话和演示账号操作集中放在一个更像真实 App 的“我的”页里。</p>
           </header>
           <main class="content">
-            <section class="hero-card hero-card--tight">
-              <span class="eyebrow">骑手账号</span>
-              <h2 class="hero-title">李骑手</h2>
-              <p class="hero-copy">本页只保留展示所需资料，不包含真实提现、站点和奖惩模块。</p>
+            <section class="hero-card">
+              <div class="hero-card__layout">
+                <div class="hero-card__content">
+                  <span class="eyebrow">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
+                    已认证骑手
+                  </span>
+                  <h2 class="hero-title" data-bind="displayName"></h2>
+                  <p class="hero-copy" data-bind="statusNote"></p>
+                </div>
+                <div class="hero-media hero-media--compact" data-media-fallback>
+                  <img
+                    src="https://images.unsplash.com/photo-1759301248268-b4ada0a5f964?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="骑手配送执行图"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  >
+                  <span class="media-fallback">
+                    <strong>骑手展示位</strong>
+                    <span>我的页也保留真实配送氛围，但仍以信息阅读优先。</span>
+                  </span>
+                </div>
+              </div>
             </section>
 
-            <section class="section">
-              <div class="section-card">
-                <div class="profile-list">
-                  <div class="profile-item">
-                    <div>
-                      <strong>常驻区域</strong>
-                      <span>配送范围</span>
-                    </div>
-                    <span>汉丰街道 / 滨湖片区</span>
+            <section class="section-card section">
+              <div class="profile-list">
+                <div class="profile-item">
+                  <div>
+                    <strong>骑手姓名</strong>
+                    <span data-bind="contactName"></span>
                   </div>
-                  <div class="profile-item">
-                    <div>
-                      <strong>交通工具</strong>
-                      <span>当前班次</span>
-                    </div>
-                    <span>电动车</span>
+                  <span data-bind="phoneMasked"></span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>配送片区</strong>
+                    <span data-bind="zone"></span>
                   </div>
-                  <div class="profile-item">
-                    <div>
-                      <strong>接单状态</strong>
-                      <span>页面演示状态</span>
-                    </div>
-                    <span>在线接单</span>
+                  <span data-bind="city"></span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>配送工具</strong>
+                    <span data-bind="vehicle"></span>
                   </div>
-                  <div class="profile-item">
-                    <div>
-                      <strong>资料状态</strong>
-                      <span>审核结果</span>
-                    </div>
-                    <span>已开通</span>
+                  <span>已登记</span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>认证状态</strong>
+                    <span data-bind="statusLabel"></span>
                   </div>
+                  <span>可接单</span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>平台服务电话</strong>
+                    <span data-bind="supportPhone"></span>
+                  </div>
+                  <span>7 × 14 在线</span>
                 </div>
               </div>
             </section>
 
             <section class="section">
-              <div class="notice-card">
-                <div class="card-title-row">
-                  <h3>首批保留范围</h3>
-                  <span class="status-pill">核心配送</span>
+              <div class="soft-grid">
+                <div class="section-card">
+                  <div class="support-strip">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-star"></use></svg>
+                    </span>
+                    <div class="support-copy">
+                      <strong>服务表现</strong>
+                      <span>本周好评率 98%，当前准时率 97%。</span>
+                    </div>
+                  </div>
                 </div>
-                <p class="muted-note">当前版本不延伸到站点管理、等级、打赏、异常规则和复杂运营页，只突出接单与配送主流程。</p>
+                <div class="section-card">
+                  <div class="support-strip">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
+                    </span>
+                    <div class="support-copy">
+                      <strong>账户余额</strong>
+                      <span>待提现 ¥428，本周已结算 ¥628。</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </section>
+
+            <section class="notice-card section">
+              <div class="card-title-row">
+                <h3>当前说明</h3>
+                <span class="status-pill">纯静态原型</span>
+              </div>
+              <p class="muted-note">这一版先聚焦真实的登录、认证和接单主流程。站点管理、等级体系、打赏和复杂异常规则还没有展开。</p>
+            </section>
+
+            <section class="section button-row">
+              <button
+                class="button button--danger"
+                type="button"
+                data-demo-action="logout"
+                data-next="../index.html"
+                data-message="已退出骑手演示账号"
+              >
+                退出演示账号
+              </button>
+              <a class="button button--secondary" href="./hall.html">返回接单大厅</a>
             </section>
           </main>
           <nav class="tab-bar" aria-label="骑手端底部导航">
             <a class="tab-link" href="./home.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
               <span>首页</span>
             </a>
             <a class="tab-link" href="./hall.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
               <span>接单</span>
             </a>
             <a class="tab-link" href="./earnings.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
               <span>收入</span>
             </a>
             <a class="tab-link is-active" href="./profile.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
               <span>我的</span>
             </a>
           </nav>

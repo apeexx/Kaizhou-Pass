@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>首页 - 开州金厨骑手端</title>
+    <title>骑手首页 - 开州金厨骑手端</title>
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="rider" data-demo-scenario="approved">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
@@ -15,26 +15,63 @@
             <span>09:41</span>
             <span class="status-bar__capsule">骑手首页</span>
           </div>
-          <header class="header">
-            <h1 class="page-title">接单状态</h1>
-            <p class="page-subtitle">首页主要展示在线状态、今日配送数据和快速进入接单大厅的入口。</p>
+          <header class="topbar topbar--compact">
+            <span class="eyebrow">
+              <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
+              开州金厨骑手端
+            </span>
+            <h1 class="page-title">接单首页</h1>
+            <p class="page-subtitle"><span data-bind="displayName"></span>，欢迎回来。今天先看在线状态、当前任务和接单大厅，再决定是否继续串联顺路单。</p>
           </header>
           <main class="content">
+            <section class="hero-card hero-card--ink">
+              <div class="hero-card__content">
+                <div class="split-row">
+                  <div>
+                    <span class="eyebrow">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>
+                      今日配送概览
+                    </span>
+                    <h2 class="hero-title">把在线状态和当前任务放在首页第一屏</h2>
+                  </div>
+                  <span class="status-value">在线接单</span>
+                </div>
+                <p class="hero-copy">页面组织方式更接近真实骑手 App：登录后先看到接单状态、当前配送和今日收入，再进入大厅或详情页。</p>
+                <div class="summary-row">
+                  <div class="summary-pill">
+                    <strong>18</strong>
+                    <span>今日完成</span>
+                  </div>
+                  <div class="summary-pill">
+                    <strong>2</strong>
+                    <span>待送订单</span>
+                  </div>
+                  <div class="summary-pill">
+                    <strong>¥138</strong>
+                    <span>今日收入</span>
+                  </div>
+                  <div class="summary-pill">
+                    <strong>97%</strong>
+                    <span>准时率</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <section
-              class="hero-card"
+              class="section-card section"
               data-cycle-control
               data-cycle-values="在线接单|暂时休息"
-              data-cycle-notes="当前可参与系统派单，也可以主动进入接单大厅抢单。|暂停接单展示休息状态，方便说明骑手端状态切换逻辑。"
+              data-cycle-notes="当前可参与系统派单，也可以主动进入接单大厅抢单。|当前暂停接单，适合演示骑手休息或临时离线状态。"
               data-cycle-classes="status-online|status-rest"
             >
               <div class="split-row">
                 <div>
-                  <span class="eyebrow">今日班次</span>
-                  <h2 class="hero-title">上午配送时段</h2>
+                  <h2>接单状态</h2>
+                  <p class="muted-note" data-cycle-note>当前可参与系统派单，也可以主动进入接单大厅抢单。</p>
                 </div>
                 <span class="status-value" data-cycle-value>在线接单</span>
               </div>
-              <p class="hero-copy" data-cycle-note>当前可参与系统派单，也可以主动进入接单大厅抢单。</p>
               <div class="card-actions">
                 <button class="button button--small button--accent" type="button" data-cycle-trigger data-cycle-prefix="切换为">切换为暂时休息</button>
               </div>
@@ -47,56 +84,130 @@
                   <div class="stat-value">18 单</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-label">当前待送</div>
-                  <div class="stat-value">2 单</div>
+                  <div class="stat-label">待取货</div>
+                  <div class="stat-value">1 单</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-label">今日收入</div>
-                  <div class="stat-value">¥138</div>
+                  <div class="stat-label">配送中</div>
+                  <div class="stat-value">1 单</div>
                 </div>
                 <div class="stat-card">
-                  <div class="stat-label">准时率</div>
-                  <div class="stat-value">97%</div>
+                  <div class="stat-label">平均时长</div>
+                  <div class="stat-value">26 分钟</div>
                 </div>
               </div>
             </section>
 
             <section class="section">
+              <div class="section-heading">
+                <h2>当前任务</h2>
+                <span class="section-caption">先看手上订单，再决定是否继续接单</span>
+              </div>
+              <div class="list-stack">
+                <article class="list-card list-card--media">
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1759301248268-b4ada0a5f964?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="骑手配送场景缩略图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>配送图</strong>
+                      </span>
+                    </div>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>开州江湖小馆 → 汉丰街道 603</h3>
+                          <div class="meta-line">当前为第一优先单，建议先完成送达再回大厅接顺路单。</div>
+                        </div>
+                        <span class="status-pill status-online">配送中</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-location"></use></svg>距用户 1.6km</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>预计 ¥8.6</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-actions">
+                    <a class="button button--small button--accent" href="./delivery-detail.html">查看配送详情</a>
+                    <a class="button button--small button--ghost" href="./hall.html">去接单大厅</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section-heading">
+                <h2>常用入口</h2>
+                <span class="section-caption">只保留骑手主流程</span>
+              </div>
               <div class="quick-actions">
                 <a class="mini-link" href="./hall.html">
-                  <strong>进入接单大厅</strong>
-                  <span>查看附近可接订单与筛选状态</span>
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
+                    </span>
+                    <div>
+                      <strong>接单大厅</strong>
+                      <span>查看新任务、待取货和待完成的订单池。</span>
+                    </div>
+                  </div>
                 </a>
                 <a class="mini-link" href="./delivery-detail.html">
-                  <strong>查看配送详情</strong>
-                  <span>演示取货中、配送中与已送达</span>
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>
+                    </span>
+                    <div>
+                      <strong>配送详情</strong>
+                      <span>演示取货中、配送中和已送达的循环状态。</span>
+                    </div>
+                  </div>
                 </a>
                 <a class="mini-link" href="./earnings.html">
-                  <strong>收入统计</strong>
-                  <span>切换今日、本周、本月收入视图</span>
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
+                    </span>
+                    <div>
+                      <strong>收入统计</strong>
+                      <span>查看今日、本周和本月的配送收入表现。</span>
+                    </div>
+                  </div>
                 </a>
                 <a class="mini-link" href="./profile.html">
-                  <strong>我的资料</strong>
-                  <span>查看骑手档案和演示说明</span>
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
+                    </span>
+                    <div>
+                      <strong>我的资料</strong>
+                      <span>查看骑手档案、配送片区和演示账号状态。</span>
+                    </div>
+                  </div>
                 </a>
               </div>
             </section>
           </main>
           <nav class="tab-bar" aria-label="骑手端底部导航">
             <a class="tab-link is-active" href="./home.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
               <span>首页</span>
             </a>
             <a class="tab-link" href="./hall.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
               <span>接单</span>
             </a>
             <a class="tab-link" href="./earnings.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
               <span>收入</span>
             </a>
             <a class="tab-link" href="./profile.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
               <span>我的</span>
             </a>
           </nav>

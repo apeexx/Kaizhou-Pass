@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="rider" data-demo-scenario="approved">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
@@ -16,10 +16,25 @@
             <span class="status-bar__capsule">接单大厅</span>
           </div>
           <header class="header">
-            <h1 class="page-title">附近可接订单</h1>
-            <p class="page-subtitle">筛选高亮只在本页切换，方便演示不同订单池关注方式。</p>
+            <h1 class="page-title">订单池</h1>
+            <p class="page-subtitle">参考真实骑手端的接单节奏，把新任务、待取货和待完成都集中在同一页的顶部切换区域里。</p>
           </header>
           <main class="content">
+            <section class="segment-row segment-row--3" data-choice-group data-choice-initial="new">
+              <button class="segment" type="button" data-choice-item data-choice-value="new">
+                <strong>6</strong>
+                <span>新任务</span>
+              </button>
+              <button class="segment" type="button" data-choice-item data-choice-value="pickup">
+                <strong>1</strong>
+                <span>待取货</span>
+              </button>
+              <button class="segment" type="button" data-choice-item data-choice-value="done">
+                <strong>1</strong>
+                <span>待完成</span>
+              </button>
+            </section>
+
             <section class="section">
               <div class="chip-row" data-choice-group data-choice-initial="nearby">
                 <button class="chip-button" type="button" data-choice-item data-choice-value="nearby">附近优先</button>
@@ -29,47 +44,115 @@
               </div>
             </section>
 
+            <section class="notice-card section">
+              <div class="card-title-row">
+                <h3>接单提醒</h3>
+                <span class="status-pill status-online">当前在线</span>
+              </div>
+              <p class="muted-note">建议优先处理距离近、取餐快、顺路程度高的订单。当前页面保留真实骑手端常见的“订单池筛选 + 列表卡片”结构。</p>
+            </section>
+
             <section class="section">
               <div class="list-stack">
-                <article class="list-card">
-                  <div class="card-title-row">
-                    <div>
-                      <h3>开州金厨示范店</h3>
-                      <div class="meta-line">距商家 0.6km · 距用户 1.8km</div>
+                <article class="list-card list-card--media">
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1769358471999-55213f905814?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="餐饮门店缩略图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>门店图</strong>
+                      </span>
                     </div>
-                    <span class="status-pill status-online">预计 ¥8.6</span>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>开州江湖小馆</h3>
+                          <div class="meta-line">香辣回锅肉饭 ×1 · 16 分钟内送达</div>
+                        </div>
+                        <span class="status-pill status-online">预计 ¥8.6</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-location"></use></svg>距商家 0.6km</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>距用户 1.8km</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-check"></use></svg>顺路优先</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="meta-line">香辣回锅肉饭 ×1 · 取餐后 16 分钟内送达</div>
                   <div class="card-actions">
                     <a class="button button--small button--accent" href="./delivery-detail.html">查看详情</a>
                     <a class="button button--small button--ghost" href="./home.html">返回首页</a>
                   </div>
                 </article>
 
-                <article class="list-card">
-                  <div class="card-title-row">
-                    <div>
-                      <h3>江湖小炒铺</h3>
-                      <div class="meta-line">距商家 1.2km · 距用户 2.4km</div>
+                <article class="list-card list-card--media">
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1780842815705-eede037a16f0?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="打包餐盒缩略图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>餐品图</strong>
+                      </span>
                     </div>
-                    <span class="status-pill status-online">预计 ¥10.2</span>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>江湖小炒铺</h3>
+                          <div class="meta-line">青椒牛柳双人餐 · 适合与同向订单拼送</div>
+                        </div>
+                        <span class="status-pill status-online">预计 ¥10.2</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-location"></use></svg>距商家 1.2km</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>距用户 2.4km</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>顺路单</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="meta-line">青椒牛柳双人餐 · 适合与同向订单拼送</div>
                   <div class="card-actions">
                     <a class="button button--small button--accent" href="./delivery-detail.html">查看详情</a>
                     <a class="button button--small button--ghost" href="./earnings.html">收入页</a>
                   </div>
                 </article>
 
-                <article class="list-card">
-                  <div class="card-title-row">
-                    <div>
-                      <h3>滨湖汤饭馆</h3>
-                      <div class="meta-line">距商家 0.9km · 距用户 1.1km</div>
+                <article class="list-card list-card--media">
+                  <div class="list-card__main">
+                    <div class="list-thumb" data-media-fallback>
+                      <img
+                        src="https://images.unsplash.com/photo-1734018959117-958913c85661?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="后厨出餐场景缩略图"
+                        loading="lazy"
+                        decoding="async"
+                        referrerpolicy="no-referrer"
+                      >
+                      <span class="media-fallback">
+                        <strong>出餐图</strong>
+                      </span>
                     </div>
-                    <span class="status-pill status-waiting">即将超时</span>
+                    <div class="list-card__body">
+                      <div class="card-title-row">
+                        <div>
+                          <h3>滨湖汤饭馆</h3>
+                          <div class="meta-line">牛肉汤饭 ×2 · 建议优先接单尽快到店</div>
+                        </div>
+                        <span class="status-pill status-waiting">即将超时</span>
+                      </div>
+                      <div class="inline-meta">
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-location"></use></svg>距商家 0.9km</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>距用户 1.1km</span>
+                        <span><svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-flash"></use></svg>建议优先</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="meta-line">牛肉汤饭 ×2 · 建议优先接单尽快到店</div>
                   <div class="card-actions">
                     <a class="button button--small button--accent" href="./delivery-detail.html">查看详情</a>
                     <a class="button button--small button--ghost" href="./profile.html">我的</a>
@@ -77,22 +160,49 @@
                 </article>
               </div>
             </section>
+
+            <section class="section">
+              <div class="quick-actions">
+                <a class="mini-link" href="./profile.html">
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-phone"></use></svg>
+                    </span>
+                    <div>
+                      <strong>接单设置</strong>
+                      <span>查看演示账号、配送片区和服务电话。</span>
+                    </div>
+                  </div>
+                </a>
+                <a class="mini-link" href="./hall.html">
+                  <div class="mini-link__row">
+                    <span class="icon-badge icon-badge--soft">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-refresh"></use></svg>
+                    </span>
+                    <div>
+                      <strong>刷新列表</strong>
+                      <span>本页不做实时接口，保持静态结构用于展示。</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </section>
           </main>
           <nav class="tab-bar" aria-label="骑手端底部导航">
             <a class="tab-link" href="./home.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-home"></use></svg>
               <span>首页</span>
             </a>
             <a class="tab-link is-active" href="./hall.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
               <span>接单</span>
             </a>
             <a class="tab-link" href="./earnings.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
               <span>收入</span>
             </a>
             <a class="tab-link" href="./profile.html">
-              <span class="tab-link__dot"></span>
+              <svg class="tab-link__icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-user"></use></svg>
               <span>我的</span>
             </a>
           </nav>

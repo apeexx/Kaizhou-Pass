@@ -3,87 +3,127 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>商家入驻申请 - 开州金厨商家端</title>
+    <title>填写门店资料 - 开州金厨商家端</title>
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="merchant" data-demo-scenario="apply">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
           <div class="status-bar">
             <span>09:41</span>
-            <span class="status-bar__capsule">商家入驻</span>
+            <span class="status-bar__capsule">门店入驻</span>
           </div>
-          <header class="header header--compact">
-            <a class="back-link" href="../index.html">返回封面</a>
-            <h1 class="page-title">提交入驻资料</h1>
-            <p class="page-subtitle">按真实手机端申请流程展示门店入驻所需的基础信息。</p>
+          <header class="header">
+            <a class="back-link" href="../index.html">返回登录页</a>
+            <h1 class="page-title">填写门店资料</h1>
+            <p class="page-subtitle">手机号 <span data-bind="phoneMasked"></span> 还没有商家档案，请先完成门店资料、证照和门头照片上传。</p>
           </header>
           <main class="content">
-            <div class="steps" aria-label="入驻步骤">
-              <span class="step-dot is-active">1</span>
-              <span class="step-line"></span>
-              <span class="step-dot">2</span>
-              <span class="step-line"></span>
-              <span class="step-dot">3</span>
+            <div class="steps" aria-label="商家入驻进度">
+              <div class="step-item is-active">
+                <span class="step-dot">1</span>
+                <span class="step-label">填写资料</span>
+              </div>
+              <div class="step-item">
+                <span class="step-dot">2</span>
+                <span class="step-label">平台审核</span>
+              </div>
+              <div class="step-item">
+                <span class="step-dot">3</span>
+                <span class="step-label">开通门店</span>
+              </div>
             </div>
 
-            <section class="hero-card hero-card--tight">
-              <span class="eyebrow">开店申请</span>
-              <h2 class="hero-title">让平台先了解你的门店</h2>
-              <p class="hero-copy">当前页面只展示资料结构和流程，不做真实上传与接口校验。</p>
-            </section>
-
-            <section class="section">
-              <div class="section-card">
-                <div class="form-grid">
-                  <div class="field">
-                    <label>门店名称</label>
-                    <span>开州金厨示范店</span>
-                  </div>
-                  <div class="field">
-                    <label>经营类目</label>
-                    <span>小炒快餐 / 川渝家常菜</span>
-                  </div>
-                  <div class="field">
-                    <label>营业地址</label>
-                    <span>开州区汉丰街道开州大道 88 号一层</span>
-                  </div>
-                  <div class="field">
-                    <label>联系人与电话</label>
-                    <span>张店长 · 138 0000 6666</span>
-                  </div>
-                  <div class="field">
-                    <label>资质材料</label>
-                    <span>营业执照、门头照、食品经营许可证、法人身份证</span>
-                  </div>
+            <section class="hero-card">
+              <div class="support-strip">
+                <span class="support-strip__icon">
+                  <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-shield"></use></svg>
+                </span>
+                <div class="support-copy">
+                  <strong>本页模拟真实开店资料页</strong>
+                  <span>提交后会先进入审核中，再进入正式商家 App，而不是直接跳到展示首页。</span>
                 </div>
               </div>
             </section>
 
-            <section class="section">
-              <div class="notice-card">
-                <div class="card-title-row">
-                  <h3>提交后会发生什么</h3>
-                  <span class="status-pill">预计 1 个工作日</span>
-                </div>
-                <p class="muted-note">平台会先审核门店资料完整性，再决定是否开通正式经营权限。</p>
+            <section class="section-card section">
+              <div class="section-heading">
+                <h2>基础信息</h2>
+                <span class="section-caption">示例内容用于演示流程</span>
+              </div>
+              <div class="field-stack">
+                <label class="input-group">
+                  <span>联系人姓名</span>
+                  <input class="input-control" type="text" value="刘春梅">
+                </label>
+                <label class="input-group">
+                  <span>联系手机号</span>
+                  <input class="input-control" type="text" data-bind-value="phoneFull">
+                </label>
+                <label class="input-group">
+                  <span>门店名称</span>
+                  <input class="input-control" type="text" value="开州江湖小馆">
+                </label>
+                <label class="input-group">
+                  <span>主营品类</span>
+                  <select class="select-control">
+                    <option>川渝家常菜 / 小炒 / 汤饭</option>
+                    <option>盖饭简餐 / 炒饭炒面</option>
+                    <option>火锅冒菜 / 麻辣烫</option>
+                  </select>
+                </label>
+                <label class="input-group">
+                  <span>门店地址</span>
+                  <input class="input-control" type="text" value="重庆市开州区文峰街道盛山路 188 号">
+                </label>
+                <label class="input-group">
+                  <span>营业时间</span>
+                  <select class="select-control">
+                    <option>09:00 - 22:30</option>
+                    <option>08:00 - 21:00</option>
+                    <option>10:00 - 24:00</option>
+                  </select>
+                </label>
               </div>
             </section>
 
-            <section class="section">
-              <div class="button-row">
-                <button
-                  class="button button--primary"
-                  type="button"
-                  data-submit-next="reviewing.html"
-                  data-submit-message="资料已提交，进入审核流程"
-                >
-                  提交申请
-                </button>
-                <a class="button button--secondary" href="../index.html">稍后再看</a>
+            <section class="section-card section">
+              <div class="section-heading">
+                <h2>资质与照片</h2>
+                <span class="section-caption">保留真实上传位</span>
               </div>
+              <div class="upload-grid">
+                <div class="upload-tile">
+                  <span class="icon-badge icon-badge--soft">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-id-card"></use></svg>
+                  </span>
+                  <strong>营业执照</strong>
+                  <span>上传营业执照或统一社会信用代码照片</span>
+                </div>
+                <div class="upload-tile">
+                  <span class="icon-badge icon-badge--soft">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-camera"></use></svg>
+                  </span>
+                  <strong>门头与出餐照</strong>
+                  <span>上传门店门头、后厨和打包环境照片</span>
+                </div>
+              </div>
+              <p class="muted-note">这一步故意保留真实商家端常见字段，让演示时更像正常入驻流程。</p>
+            </section>
+
+            <section class="section button-row">
+              <button
+                class="button button--primary"
+                type="button"
+                data-submit-next="./reviewing.html"
+                data-submit-message="门店资料已提交，正在进入审核流程"
+                data-submit-scenario="reviewing"
+              >
+                提交入驻申请
+              </button>
+              <a class="button button--secondary" href="../index.html">回到登录页</a>
             </section>
           </main>
         </div>

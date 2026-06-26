@@ -3,48 +3,70 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>开州金厨骑手端</title>
+    <title>骑手登录 - 开州金厨</title>
     <link rel="stylesheet" href="../shared/theme.css">
     <link rel="stylesheet" href="../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="rider">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
           <div class="status-bar">
             <span>09:41</span>
-            <span class="status-bar__capsule">骑手端展示</span>
+            <span class="status-bar__capsule">骑手登录</span>
           </div>
-          <header class="header">
-            <h1 class="page-title">开州金厨骑手端</h1>
-            <p class="page-subtitle">围绕接单、取货、配送和收入浏览设计的独立静态 H5 演示 App。</p>
-          </header>
           <main class="content content--cover">
-            <section class="hero-card">
-              <span class="eyebrow">配送执行体验</span>
-              <h2 class="hero-title">从入驻到送达都保持手机端节奏</h2>
-              <p class="hero-copy">骑手端和商家端完全独立打开，页面只展示各自流程，不提供跨端入口。</p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="./onboarding/apply.html">体验入驻流程</a>
-                <a class="button button--secondary" href="./app/home.html">进入正式 App</a>
+            <section class="login-brand login-brand--compact">
+              <span class="brand-mark">
+                <svg class="icon" aria-hidden="true"><use href="../shared/icons.svg#icon-rider"></use></svg>
+              </span>
+              <div class="brand-copy">
+                <strong>开州金厨骑手端</strong>
+                <span>骑手登录</span>
               </div>
             </section>
 
-            <section class="section">
-              <div class="soft-grid">
-                <div class="section-card">
-                  <div class="card-title-row">
-                    <h3>入驻展示</h3>
-                    <span class="status-pill">申请 / 审核 / 成功</span>
+            <section class="auth-card" data-auth-form data-auth-app="rider">
+              <div class="login-shell">
+                <label class="input-group">
+                  <span>手机号码</span>
+                  <input class="input-control" type="tel" inputmode="numeric" maxlength="11" placeholder="请选择或输入手机号" data-auth-phone list="rider-account-list">
+                </label>
+                <datalist id="rider-account-list">
+                  <option value="13900000001">已认证骑手账号</option>
+                  <option value="13900000002">审核中骑手账号</option>
+                </datalist>
+
+                <div class="input-group">
+                  <label>短信验证码</label>
+                  <div class="input-row">
+                    <input class="input-control" type="tel" inputmode="numeric" maxlength="6" placeholder="请输入 6 位验证码" data-auth-code>
+                    <button class="sms-button" type="button" data-send-code>获取验证码</button>
                   </div>
-                  <p class="muted-note">先展示骑手提交资料和等待审核，再衔接到正式配送场景。</p>
                 </div>
-                <div class="section-card">
-                  <div class="card-title-row">
-                    <h3>正式 App</h3>
-                    <span class="status-pill">首页 / 接单 / 收入 / 我的</span>
-                  </div>
-                  <p class="muted-note">重点展示在线状态、接单大厅、配送详情和收入筛选几个核心画面。</p>
+
+                <div class="demo-grid">
+                  <button class="demo-option" type="button" data-auth-demo data-demo-phone="13900000001" data-demo-code="246810" aria-pressed="false">
+                    <strong>已认证骑手</strong>
+                    <span>点击后直接填入手机号和验证码</span>
+                  </button>
+                  <button class="demo-option" type="button" data-auth-demo data-demo-phone="13900000002" data-demo-code="246810" aria-pressed="false">
+                    <strong>审核中骑手</strong>
+                    <span>点击后直接填入手机号和验证码</span>
+                  </button>
+                </div>
+
+                <div class="login-note">手机号支持点击输入框后直接从下拉中选择，验证码固定为 246810。</div>
+
+                <div class="check-line">
+                  <button class="checkbox" type="button" data-agree-toggle data-checked="false" aria-checked="false">
+                  <svg class="icon" aria-hidden="true"><use href="../shared/icons.svg#icon-check"></use></svg>
+                  </button>
+                  <span>我已阅读并同意《开州金厨骑手服务协议》与《隐私说明》。</span>
+                </div>
+
+                <div class="login-actions">
+                  <button class="button button--primary" type="button" data-auth-submit>登录</button>
                 </div>
               </div>
             </section>

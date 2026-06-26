@@ -3,40 +3,108 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>入驻成功 - 开州金厨骑手端</title>
+    <title>骑手开通成功 - 开州金厨骑手端</title>
     <link rel="stylesheet" href="../../shared/theme.css">
     <link rel="stylesheet" href="../../shared/mobile-app.css">
   </head>
-  <body class="app-preview-page">
+  <body class="app-preview-page" data-demo-app="rider" data-demo-scenario="approved">
     <div class="preview-layout">
       <div class="mobile-frame">
         <div class="screen">
           <div class="status-bar">
             <span>09:41</span>
-            <span class="status-bar__capsule">骑手开通</span>
+            <span class="status-bar__capsule">开通成功</span>
           </div>
-          <header class="header header--compact">
+          <header class="header">
             <a class="back-link" href="./reviewing.html">返回审核页</a>
             <h1 class="page-title">骑手账号已开通</h1>
-            <p class="page-subtitle">这一页负责把入驻流程衔接到正式接单与配送页面。</p>
+            <p class="page-subtitle"><span data-bind="displayName"></span> 已完成平台审核，现在可以进入正式骑手 App 查看接单、配送和收入页面。</p>
           </header>
           <main class="content">
-            <div class="steps" aria-label="入驻步骤">
-              <span class="step-dot is-complete">1</span>
-              <span class="step-line is-complete"></span>
-              <span class="step-dot is-complete">2</span>
-              <span class="step-line is-complete"></span>
-              <span class="step-dot is-active">3</span>
+            <div class="steps" aria-label="骑手入驻进度">
+              <div class="step-item is-complete">
+                <span class="step-dot">1</span>
+                <span class="step-label">填写资料</span>
+              </div>
+              <div class="step-item is-complete">
+                <span class="step-dot">2</span>
+                <span class="step-label">平台审核</span>
+              </div>
+              <div class="step-item is-active">
+                <span class="step-dot">3</span>
+                <span class="step-label">开通接单</span>
+              </div>
             </div>
 
             <section class="hero-card">
-              <span class="eyebrow">可以开始配送</span>
-              <h2 class="hero-title">李骑手已具备接单资格</h2>
-              <p class="hero-copy">在线状态、接单大厅、配送详情和收入页都已经准备好，可直接进入正式 App 查看演示效果。</p>
-              <div class="hero-actions">
-                <a class="button button--primary" href="../app/home.html">进入骑手首页</a>
-                <a class="button button--secondary" href="../index.html">回到封面页</a>
+              <div class="hero-card__layout">
+                <div class="hero-card__content">
+                  <span class="eyebrow">
+                    <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-check"></use></svg>
+                    骑手认证完成
+                  </span>
+                  <h2 class="hero-title">现在可以开始接单与配送</h2>
+                  <p class="hero-copy">平台已经为你的账号开通接单权限、配送详情页、收入统计和个人资料页。首次进入后会先看到骑手首页。</p>
+                  <div class="pill-row">
+                    <span class="pill-note">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-rider"></use></svg>
+                      接单功能已开通
+                    </span>
+                    <span class="pill-note">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-route"></use></svg>
+                      配送详情可查看
+                    </span>
+                    <span class="pill-note">
+                      <svg class="icon" aria-hidden="true"><use href="../../shared/icons.svg#icon-wallet"></use></svg>
+                      收入页面已可访问
+                    </span>
+                  </div>
+                </div>
+                <div class="hero-media hero-media--compact" data-media-fallback>
+                  <img
+                    src="https://images.unsplash.com/photo-1759301248268-b4ada0a5f964?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+                    alt="骑手准备配送的场景"
+                    loading="lazy"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
+                  >
+                  <span class="media-fallback">
+                    <strong>配送展示位</strong>
+                    <span>审核通过后会进入更像真实骑手 App 的执行页面。</span>
+                  </span>
+                </div>
               </div>
+            </section>
+
+            <section class="section-card section">
+              <div class="profile-list">
+                <div class="profile-item">
+                  <div>
+                    <strong>骑手姓名</strong>
+                    <span data-bind="contactName"></span>
+                  </div>
+                  <span>已开通</span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>配送片区</strong>
+                    <span data-bind="zone"></span>
+                  </div>
+                  <span data-bind="city"></span>
+                </div>
+                <div class="profile-item">
+                  <div>
+                    <strong>配送工具</strong>
+                    <span data-bind="vehicle"></span>
+                  </div>
+                  <span data-bind="phoneMasked"></span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section button-row">
+              <a class="button button--primary" href="../app/home.html">进入骑手首页</a>
+              <a class="button button--secondary" href="../app/hall.html">先看接单大厅</a>
             </section>
           </main>
         </div>
