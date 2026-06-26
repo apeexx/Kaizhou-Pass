@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>分配厨师 - 私厨上门商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="order-assign">
+  <div class="app-shell">
+    <header class="app-header"><div><h1 class="header-title">分配厨师</h1><p class="header-subtitle">商户将订单分配给店铺旗下厨师</p></div></header>
+    <main class="main app-main">
+      <section class="hero-panel"><p class="section-note">待派单订单</p><h2 class="section-title">周女士 · 今晚 18:30 · 家常四菜一汤</h2><p class="header-subtitle">滨湖壹号 3 栋 1802 · 6 人 · ¥688</p></section>
+      <section class="section">
+        <div class="section-header"><h2 class="section-title">选择可接单厨师</h2><span class="badge">店铺团队</span></div>
+        <article class="card is-selected" data-chef-choice="李师傅"><div class="card-top"><div class="item"><span class="avatar">李</span><div><strong class="item-title">李师傅</strong><span class="item-subtitle">川渝家常菜 · 今日 19:00 后可服务</span></div></div><span class="badge green">推荐</span></div></article>
+        <article class="card" data-chef-choice="王师傅"><div class="card-top"><div class="item"><span class="avatar">王</span><div><strong class="item-title">王师傅</strong><span class="item-subtitle">宴席菜 · 当前在路上，可备选</span></div></div><span class="badge amber">忙碌</span></div></article>
+        <article class="card" data-chef-choice="赵师傅"><div class="card-top"><div class="item"><span class="avatar">赵</span><div><strong class="item-title">赵师傅</strong><span class="item-subtitle">清淡家宴 · 今日已满 2 单</span></div></div><span class="badge">可沟通</span></div></article>
+      </section>
+      <section class="card">
+        <span class="item-subtitle">当前选择</span>
+        <strong class="item-title" data-selected-chef>李师傅</strong>
+        <div class="actions"><button class="btn" type="button" data-confirm-assign>确认分配</button><a class="btn secondary" href="order-progress.html">查看服务进度</a></div>
+      </section>
+    </main>
+    <nav class="bottom-nav"><a class="nav-item" data-nav="home" href="../dashboard/merchant-home.html"><span>首</span><span>首页</span></a><a class="nav-item" data-nav="orders" href="order-list.html"><span>单</span><span>订单</span></a><a class="nav-item" data-nav="menu" href="../menu/package-list.html"><span>套</span><span>套餐</span></a><a class="nav-item" data-nav="data" href="../data/data-overview.html"><span>数</span><span>数据</span></a><a class="nav-item" data-nav="mine" href="../mine/profile.html"><span>我</span><span>我的</span></a></nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
+

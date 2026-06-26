@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>验证码确认 - 私厨上门商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="verify-code">
+  <div class="app-shell">
+    <header class="app-header"><div><h1 class="header-title">验证码确认</h1><p class="header-subtitle">验证商户负责人手机号后完善店铺资料</p></div></header>
+    <main class="main app-main">
+      <section class="hero-panel"><p class="section-note">已发送到 138****6688</p><h2 class="section-title">输入验证码继续店铺入驻流程</h2></section>
+      <section class="section">
+        <form class="form-card form-grid" data-demo-form data-success="验证码通过" data-redirect="../verify/shop-info.html">
+          <div class="field"><label for="code">6 位验证码</label><input id="code" inputmode="numeric" placeholder="请输入 123456"></div>
+          <button class="btn secondary" type="button" data-toast="验证码重新发送静态演示">重新发送</button>
+          <button class="btn" type="submit">继续完善店铺资料</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
+

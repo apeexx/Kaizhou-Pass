@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商户注册 - 私厨上门商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="register">
+  <div class="app-shell">
+    <header class="app-header"><div class="header-row"><div><h1 class="header-title">商户注册</h1><p class="header-subtitle">创建店铺负责人账号</p></div><a class="text-btn" href="login.html">去登录</a></div></header>
+    <main class="main app-main">
+      <section class="section">
+        <form class="form-card form-grid" data-demo-form data-success="注册信息已提交" data-redirect="verify-code.html">
+          <div class="field"><label for="merchant">商户负责人</label><input id="merchant" placeholder="例如：周经理"></div>
+          <div class="field"><label for="phone">联系电话</label><input id="phone" inputmode="tel" placeholder="用于接收入驻验证码"></div>
+          <div class="field"><label for="shop">拟入驻店铺名称</label><input id="shop" placeholder="例如：开州金厨私宴团队"></div>
+          <label class="agreement"><input type="checkbox"><span>确认以商户身份入驻，后续提交店铺资质和收款资料。</span></label>
+          <button class="btn" type="submit">下一步，验证手机号</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>菜品库 - 私厨上门商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="dish-list">
+  <div class="app-shell">
+    <header class="app-header"><div><h1 class="header-title">菜品库</h1><p class="header-subtitle">商户自己的菜品库，用于组合套餐</p></div></header>
+    <main class="main app-main">
+      <section class="section">
+        <article class="menu-row"><span class="row-left"><span class="food-thumb">鱼</span><span><strong class="item-title">麻辣水煮鱼</strong><span class="item-subtitle">川菜 · ¥128 · 已上架</span></span></span><span class="badge green">可选</span></article>
+        <article class="menu-row"><span class="row-left"><span class="food-thumb">汤</span><span><strong class="item-title">菌菇老鸡汤</strong><span class="item-subtitle">家常菜 · ¥88 · 已上架</span></span></span><span class="badge green">可选</span></article>
+        <article class="menu-row"><span class="row-left"><span class="food-thumb">虾</span><span><strong class="item-title">蒜蓉粉丝虾</strong><span class="item-subtitle">宴席菜 · ¥168 · 已下架</span></span></span><span class="badge amber">暂停</span></article>
+        <article class="menu-row"><span class="row-left"><span class="food-thumb">蔬</span><span><strong class="item-title">时令清炒双蔬</strong><span class="item-subtitle">家常菜 · ¥48 · 已上架</span></span></span><span class="badge green">可选</span></article>
+      </section>
+      <section class="actions"><button class="btn" type="button" data-toast="新增菜品静态演示">新增菜品</button><a class="btn secondary" href="package-list.html">返回套餐</a></section>
+    </main>
+    <nav class="bottom-nav"><a class="nav-item" data-nav="home" href="../dashboard/merchant-home.html"><span>首</span><span>首页</span></a><a class="nav-item" data-nav="orders" href="../orders/order-list.html"><span>单</span><span>订单</span></a><a class="nav-item" data-nav="menu" href="package-list.html"><span>套</span><span>套餐</span></a><a class="nav-item" data-nav="data" href="../data/data-overview.html"><span>数</span><span>数据</span></a><a class="nav-item" data-nav="mine" href="../mine/profile.html"><span>我</span><span>我的</span></a></nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
+

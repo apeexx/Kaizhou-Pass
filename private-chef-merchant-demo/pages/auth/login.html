@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商户登录 - 私厨上门商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="login">
+  <div class="app-shell">
+    <header class="app-header is-plain">
+      <div class="brand-lockup"><span class="brand-mark">金</span><div><h1 class="header-title">商户登录</h1><p class="header-subtitle">进入店铺经营工作台</p></div></div>
+    </header>
+    <main class="main app-main">
+      <section class="hero-panel"><p class="section-note">私厨上门商户端</p><h2 class="section-title">管理订单、厨师团队、套餐和店铺结算</h2></section>
+      <section class="section">
+        <form class="form-card form-grid" data-demo-form data-success="登录成功，进入商户首页" data-redirect="../dashboard/merchant-home.html">
+          <div class="field"><label for="phone">商户手机号</label><input id="phone" inputmode="tel" placeholder="请输入商户负责人手机号"></div>
+          <div class="field"><label for="code">验证码</label><input id="code" inputmode="numeric" placeholder="请输入验证码"></div>
+          <button class="btn secondary" type="button" data-toast="验证码发送静态演示">获取验证码</button>
+          <label class="agreement"><input type="checkbox"><span>我已阅读并同意商户入驻协议，本页面仅用于静态演示。</span></label>
+          <button class="btn" type="submit">登录</button>
+        </form>
+      </section>
+      <section class="section">
+        <a class="menu-row" href="register.html"><span class="row-left"><span class="row-icon">入</span><span><strong class="item-title">新店铺入驻</strong><span class="item-subtitle">注册商户账号并提交店铺资料</span></span></span><span class="chevron">›</span></a>
+        <a class="menu-row" href="../../index.html"><span class="row-left"><span class="row-icon">返</span><span><strong class="item-title">返回演示入口</strong><span class="item-subtitle">查看全部静态页面</span></span></span><span class="chevron">›</span></a>
+      </section>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
+

@@ -30,6 +30,12 @@ Kaizhou-Golden-Chef/
 │   └── .gitkeep
 ├── private-chef-merchant/
 │   └── .gitkeep
+├── private-chef-merchant-demo/
+│   ├── index.html
+│   ├── AGENTS.md
+│   ├── README.md
+│   ├── assets/
+│   └── pages/
 ├── takeout-merchant/
 │   └── .gitkeep
 └── takeout-rider/
@@ -40,6 +46,7 @@ Kaizhou-Golden-Chef/
 
 - `ecommerce-merchant/`：电商商户端相关静态页面。
 - `private-chef-merchant/`：私厨上门商户端或厨师端相关静态页面。
+- `private-chef-merchant-demo/`：私厨上门商户端手机静态演示页面，面向入驻店铺、私厨团队和商家负责人。
 - `takeout-merchant/`：外卖商户端相关静态页面。
 - `takeout-rider/`：外卖骑手端相关静态页面。
 

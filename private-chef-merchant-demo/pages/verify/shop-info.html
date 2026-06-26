@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>店铺资料 - 私厨上门商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="shop-info">
+  <div class="app-shell">
+    <header class="app-header"><div><h1 class="header-title">店铺资料</h1><p class="header-subtitle">用于商户入驻审核和展示经营主体</p></div></header>
+    <main class="main app-main">
+      <form class="form-card form-grid" data-demo-form data-success="店铺资料已保存" data-redirect="license-upload.html">
+        <div class="field"><label for="shop">店铺名称</label><input id="shop" value="开州金厨私宴团队"></div>
+        <div class="field"><label for="contact">联系人</label><input id="contact" value="周经理"></div>
+        <div class="field"><label for="phone">联系电话</label><input id="phone" value="138****6688"></div>
+        <div class="field"><label for="city">服务城市</label><input id="city" value="重庆市开州区"></div>
+        <div class="field"><label for="intro">店铺简介</label><textarea id="intro">本店提供家庭宴、生日宴、商务宴和乔迁家宴上门私厨服务，由商户统一管理厨师团队、菜单和服务标准。</textarea></div>
+        <button class="btn" type="submit">下一步，上传资质</button>
+      </form>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
+

@@ -48,6 +48,27 @@ Kaizhou-Golden-Chef/
 │   ├── profile.html
 │   ├── styles.css
 │   └── app.js
+├── private-chef-merchant-demo/
+│   ├── index.html
+│   ├── AGENTS.md
+│   ├── README.md
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── base.css
+│   │   │   └── app.css
+│   │   ├── js/
+│   │   │   └── mock.js
+│   │   └── images/
+│   └── pages/
+│       ├── auth/
+│       ├── verify/
+│       ├── dashboard/
+│       ├── orders/
+│       ├── chefs/
+│       ├── menu/
+│       ├── finance/
+│       ├── data/
+│       └── mine/
 ├── takeout-merchant/
 │   └── .gitkeep
 └── takeout-rider/
@@ -59,6 +80,7 @@ Kaizhou-Golden-Chef/
 - `ecommerce-merchant/`：电商商户端相关静态页面目录，当前包含控制台、商品管理、订单管理、数据分析、收益结算、店铺设置页面。
 - `private-chef-admin/`：私厨上门后台管理端静态页面目录，当前包含控制台、服务套餐、预约管理、日程排班、客户沟通、收益结算、店铺设置页面。
 - `private-chef-app/`：私厨厨师手机前台管理端静态页面目录，当前包含指定预约、登录、认证、消息、菜品、分类、收钱和个人页面。
+- `private-chef-merchant-demo/`：私厨上门商户端手机静态演示目录，面向入驻店铺、私厨团队和商家负责人，当前包含登录入驻、审核、商户首页、订单、厨师、套餐、财务、数据和我的页面。
 - `takeout-merchant/`：预留商户端目录。
 - `takeout-rider/`：预留骑手端目录。
 
@@ -123,6 +145,40 @@ private-chef-app/index.html
 - `profile.html`：我的，展示个人资料、认证状态、服务范围、菜品分类、消息和帮助入口。
 - `styles.css`：共享移动端 App shell、底部导航、状态 tabs、卡片、表单、消息、钱包、认证和响应式样式。
 - `app.js`：共享本地交互，包括底部导航高亮、tab 筛选、服务单状态推进、消息输入动画、菜品状态切换、认证步骤切换、表单阻止提交、Toast 和静态演示反馈。
+
+## 私厨上门商户端手机演示页面
+
+当前私厨上门商户端为纯前端静态 H5 演示，不依赖后端、数据库、真实接口、真实登录鉴权、真实上传、构建工具或第三方前端框架。可直接在浏览器中打开：
+
+```text
+private-chef-merchant-demo/index.html
+```
+
+推荐演示流程：
+
+1. 从 `private-chef-merchant-demo/index.html` 查看全部页面导航。
+2. 进入 `pages/auth/login.html`，点击登录进入 `pages/dashboard/merchant-home.html`。
+3. 从 `pages/auth/register.html` 进入 `pages/auth/verify-code.html`，再进入店铺资料、资质上传和审核结果。
+4. 在 `pages/dashboard/merchant-home.html` 查看店铺 Logo、店铺名称、认证状态、营业状态、订单指标、快捷入口、最新订单和底部导航。
+5. 进入订单列表、订单详情、分配厨师和服务进度，演示商户把订单分配给店铺旗下厨师的流程。
+6. 查看厨师团队、套餐管理、菜品库、钱包结算、经营数据和我的店铺。
+
+页面说明：
+
+- `index.html`：演示入口，提供主要页面导航。
+- `pages/auth/`：商户登录、注册和验证码确认。
+- `pages/verify/`：店铺资料、资质上传和审核结果。
+- `pages/dashboard/merchant-home.html`：商户首页。
+- `pages/orders/`：订单列表、订单详情、订单派单和服务进度。
+- `pages/chefs/`：店铺旗下厨师团队和厨师详情。
+- `pages/menu/`：商户自己的私厨套餐和菜品库。
+- `pages/finance/`：钱包和订单结算记录。
+- `pages/data/data-overview.html`：经营数据概览。
+- `pages/mine/profile.html`：我的店铺入口。
+- `assets/css/base.css`、`assets/css/app.css`：移动端静态页面基础样式和业务样式。
+- `assets/js/mock.js`：本地静态交互，包括 tab 筛选、toast、上传卡片状态、厨师选择和表单演示跳转。
+
+本项目根目录当前没有 `package.json`，因此没有可运行的 `npm run lint`、`npm run test` 或 `npm run build` 脚本。新增或修改 JavaScript 文件时，优先使用 `node --check <file>` 检查语法。
 
 ## 统一主题设定
 

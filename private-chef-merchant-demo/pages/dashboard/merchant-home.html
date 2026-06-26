@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商户首页 - 私厨上门商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="merchant-home">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row"><div class="brand-lockup"><span class="brand-mark">厨</span><div><h1 class="header-title">开州金厨私宴团队</h1><p class="header-subtitle">已认证商户 · 重庆开州</p></div></div><button class="badge green" type="button" data-business-toggle>营业中</button></div>
+    </header>
+    <main class="main app-main">
+      <section class="hero-panel">
+        <div class="header-row"><div><p class="section-note">今日经营概览</p><h2 class="section-title">12 单待跟进，待派单 3 单</h2></div><span class="badge green">认证通过</span></div>
+        <div class="hero-grid">
+          <div class="metric"><strong>8</strong><span>今日订单</span></div><div class="metric"><strong>¥6.8k</strong><span>今日营业额</span></div><div class="metric"><strong>5</strong><span>待处理</span></div><div class="metric"><strong>3</strong><span>待派单</span></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="quick-grid">
+          <a class="menu-row" href="../orders/order-list.html"><span class="row-left"><span class="row-icon">单</span><strong class="item-title">订单管理</strong></span></a>
+          <a class="menu-row" href="../chefs/chef-list.html"><span class="row-left"><span class="row-icon">厨</span><strong class="item-title">厨师团队</strong></span></a>
+          <a class="menu-row" href="../menu/package-list.html"><span class="row-left"><span class="row-icon">套</span><strong class="item-title">套餐管理</strong></span></a>
+          <a class="menu-row" href="../finance/wallet.html"><span class="row-left"><span class="row-icon">钱</span><strong class="item-title">钱包结算</strong></span></a>
+          <a class="menu-row" href="../data/data-overview.html"><span class="row-left"><span class="row-icon">数</span><strong class="item-title">经营数据</strong></span></a>
+          <a class="menu-row" href="../mine/profile.html"><span class="row-left"><span class="row-icon">店</span><strong class="item-title">店铺资料</strong></span></a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header"><h2 class="section-title">最新订单</h2><a class="text-btn" href="../orders/order-list.html">全部</a></div>
+        <article class="order-card" data-status="待派单"><div class="card-top"><div><strong class="item-title">周女士 · 今晚 18:30</strong><span class="item-subtitle">滨湖壹号 3 栋 1802 · 6 人 · 家常四菜一汤</span></div><span class="badge amber">待派单</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥688</strong></div><div class="detail"><span>地址</span><strong>开州区汉丰街道</strong></div></div><div class="actions"><a class="btn" href="../orders/order-assign.html">分配厨师</a><a class="btn secondary" href="../orders/order-detail.html">查看</a></div></article>
+        <article class="order-card" data-status="待确认"><div class="card-top"><div><strong class="item-title">陈先生 · 明天 12:00</strong><span class="item-subtitle">山水华庭 2-1-901 · 8 人 · 生日宴套餐</span></div><span class="badge">待确认</span></div><div class="actions"><a class="btn" href="../orders/order-detail.html">确认接单</a><a class="btn secondary" href="../orders/order-progress.html">进度</a></div></article>
+      </section>
+    </main>
+    <nav class="bottom-nav"><a class="nav-item" data-nav="home" href="merchant-home.html"><span>首</span><span>首页</span></a><a class="nav-item" data-nav="orders" href="../orders/order-list.html"><span>单</span><span>订单</span></a><a class="nav-item" data-nav="menu" href="../menu/package-list.html"><span>套</span><span>套餐</span></a><a class="nav-item" data-nav="data" href="../data/data-overview.html"><span>数</span><span>数据</span></a><a class="nav-item" data-nav="mine" href="../mine/profile.html"><span>我</span><span>我的</span></a></nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
+
