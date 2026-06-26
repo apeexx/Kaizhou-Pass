@@ -25,7 +25,7 @@ Kaizhou-Golden-Chef/
 │   ├── settings.html
 │   ├── styles.css
 │   └── app.js
-├── private-chef-merchant/
+├── private-chef-admin/
 │   ├── index.html
 │   ├── menus.html
 │   ├── batches.html
@@ -33,6 +33,17 @@ Kaizhou-Golden-Chef/
 │   ├── earnings.html
 │   ├── customers.html
 │   ├── settings.html
+│   ├── styles.css
+│   └── app.js
+├── private-chef-app/
+│   ├── index.html
+│   ├── login.html
+│   ├── certification.html
+│   ├── messages.html
+│   ├── dishes.html
+│   ├── categories.html
+│   ├── wallet.html
+│   ├── profile.html
 │   ├── styles.css
 │   └── app.js
 ├── takeout-merchant/
@@ -44,9 +55,10 @@ Kaizhou-Golden-Chef/
 ## 目录说明
 
 - `ecommerce-merchant/`：电商商户端相关静态页面目录，当前包含控制台、商品管理、订单管理、数据分析、收益结算、店铺设置页面。
-- `private-chef-merchant/`：私厨上门商户端或厨师端相关静态页面目录，当前包含控制台、服务套餐、预约管理、日程排班、客户沟通、收益结算、店铺设置页面。
-- `takeout-merchant/`：外卖商户端相关静态页面目录。
-- `takeout-rider/`：外卖骑手端相关静态页面目录。
+- `private-chef-admin/`：私厨上门后台管理端静态页面目录，当前包含控制台、服务套餐、预约管理、日程排班、客户沟通、收益结算、店铺设置页面。
+- `private-chef-app/`：私厨厨师手机前台管理端静态页面目录，当前包含指定预约、登录、认证、消息、菜品、分类、收钱和个人页面。
+- `takeout-merchant/`：预留商户端目录。
+- `takeout-rider/`：预留骑手端目录。
 
 ## 电商商户端页面
 
@@ -67,12 +79,12 @@ ecommerce-merchant/index.html
 - `styles.css`：共享主题、布局、卡片、表格、图表、表单、深色模式和响应式样式。
 - `app.js`：共享本地交互，包括移动端导航、主题切换、筛选搜索、tab 切换和提示反馈。
 
-## 私厨商户端页面
+## 私厨后台管理端页面
 
-当前私厨商户端为纯静态页面，不依赖后端、数据库、接口、构建工具或第三方前端框架。可直接在浏览器中打开：
+当前私厨后台管理端为纯静态页面，不依赖后端、数据库、接口、构建工具或第三方前端框架。可直接在浏览器中打开：
 
 ```text
-private-chef-merchant/index.html
+private-chef-admin/index.html
 ```
 
 页面说明：
@@ -86,6 +98,27 @@ private-chef-merchant/index.html
 - `settings.html`：店铺设置，提供基础资料、服务规则、通知偏好、安全设置和主题切换演示。
 - `styles.css`：共享主题、后台布局、套餐卡片、服务状态、表格、图表、沟通列表、表单、深色模式和响应式样式。
 - `app.js`：共享本地交互，包括公共侧栏/顶部栏注入、移动端导航、主题切换、筛选搜索、tab 切换、复制、表单阻止提交和提示反馈。
+
+## 私厨手机前台管理端页面
+
+当前私厨手机前台管理端为厨师本人使用的纯静态 H5 页面，不依赖后端、数据库、接口、构建工具或第三方前端框架。可直接在浏览器中打开：
+
+```text
+private-chef-app/index.html
+```
+
+页面说明：
+
+- `index.html`：今日指定预约，展示待确认、待上门、服务中、已完成等状态和客户沟通入口。
+- `login.html`：登录 / 注册，提供验证码登录、密码登录、协议勾选和静态提交反馈。
+- `certification.html`：厨师认证，展示身份信息、资质证件、服务能力和提交审核演示。
+- `messages.html`：消息，展示预约提醒、客户沟通、系统通知和快捷回复演示。
+- `dishes.html`：我的菜品，展示菜品分类筛选、菜品上下架、编辑和新增演示。
+- `categories.html`：菜品分类，展示分类排序、新增分类和保存排序演示。
+- `wallet.html`：收钱，展示今日收入、可提现、待结算、收款码、提现和账单明细演示。
+- `profile.html`：我的，展示个人资料、认证状态、服务范围、菜品分类、消息和帮助入口。
+- `styles.css`：共享移动端 App shell、底部导航、状态 tabs、卡片、表单、消息、钱包、认证和响应式样式。
+- `app.js`：共享本地交互，包括底部导航高亮、tab 筛选、消息切换、表单阻止提交、Toast 和静态演示反馈。
 
 ## 统一主题设定
 

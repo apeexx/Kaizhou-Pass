@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>菜品分类 - 开州金厨</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="categories">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row">
+        <div>
+          <h1 class="header-title">菜品分类</h1>
+          <p class="header-subtitle">分类会展示在你的菜品管理页</p>
+        </div>
+        <a class="text-btn" href="dishes.html">返回</a>
+      </div>
+    </header>
+
+    <main class="main app-main">
+      <section class="category-list">
+        <div class="category-row">
+          <span class="row-left"><span class="drag-handle">≡</span><span><strong class="item-title">家常菜</strong><span class="item-subtitle">12 道菜品 · 已启用</span></span></span>
+          <button class="text-btn" type="button" data-toast="编辑分类演示">编辑</button>
+        </div>
+        <div class="category-row">
+          <span class="row-left"><span class="drag-handle">≡</span><span><strong class="item-title">宴席菜</strong><span class="item-subtitle">8 道菜品 · 已启用</span></span></span>
+          <button class="text-btn" type="button" data-toast="编辑分类演示">编辑</button>
+        </div>
+        <div class="category-row">
+          <span class="row-left"><span class="drag-handle">≡</span><span><strong class="item-title">川渝菜</strong><span class="item-subtitle">16 道菜品 · 已启用</span></span></span>
+          <button class="text-btn" type="button" data-toast="编辑分类演示">编辑</button>
+        </div>
+        <div class="category-row">
+          <span class="row-left"><span class="drag-handle">≡</span><span><strong class="item-title">养生汤</strong><span class="item-subtitle">5 道菜品 · 已启用</span></span></span>
+          <button class="text-btn" type="button" data-toast="编辑分类演示">编辑</button>
+        </div>
+        <div class="category-row">
+          <span class="row-left"><span class="drag-handle">≡</span><span><strong class="item-title">儿童餐</strong><span class="item-subtitle">3 道菜品 · 待完善</span></span></span>
+          <button class="text-btn" type="button" data-toast="编辑分类演示">编辑</button>
+        </div>
+        <div class="category-row">
+          <span class="row-left"><span class="drag-handle">≡</span><span><strong class="item-title">素食</strong><span class="item-subtitle">2 道菜品 · 待完善</span></span></span>
+          <button class="text-btn" type="button" data-toast="编辑分类演示">编辑</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <button class="btn" type="button" data-toast="新增分类演示">新增分类</button>
+        <button class="btn secondary" type="button" data-toast="排序保存演示">保存排序</button>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <a class="nav-item" data-nav="index" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span>首页</span></a>
+      <a class="nav-item" data-nav="messages" href="messages.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 13h5"/></svg><span>消息</span></a>
+      <a class="nav-item" data-nav="dishes" href="dishes.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v8M10 3v8M6 7h4"/><path d="M8 11v10"/><path d="M16 3c2 2 3 4 3 7v11"/><path d="M15 10h4"/></svg><span>菜品</span></a>
+      <a class="nav-item" data-nav="wallet" href="wallet.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4z"/><path d="M16 11h4v4h-4z"/><path d="M6 7l2-3h8l2 3"/></svg><span>收钱</span></a>
+      <a class="nav-item" data-nav="profile" href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

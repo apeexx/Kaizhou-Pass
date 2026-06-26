@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的 - 开州金厨</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="profile">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row">
+        <div>
+          <h1 class="header-title">我的</h1>
+          <p class="header-subtitle">管理个人资料、认证和服务设置</p>
+        </div>
+        <a class="text-btn" href="login.html">登录设置</a>
+      </div>
+    </header>
+
+    <main class="main app-main">
+      <section class="profile-card">
+        <span class="avatar">李</span>
+        <div style="min-width:0; flex:1;">
+          <div class="item-top">
+            <strong class="item-title">李师傅</strong>
+            <span class="badge green">已认证</span>
+          </div>
+          <span class="item-subtitle">擅长川渝家常菜、宴席菜、养生汤 · 开州区</span>
+        </div>
+      </section>
+
+      <section class="section quick-grid">
+        <a class="stat-card" href="index.html"><span class="stat-label">今日服务</span><strong class="stat-value">4</strong><span class="stat-trend">查看进度</span></a>
+        <a class="stat-card" href="wallet.html"><span class="stat-label">可提现</span><strong class="stat-value">¥8,420</strong><span class="stat-trend">进入收钱</span></a>
+      </section>
+
+      <section class="section menu-list">
+        <a class="menu-row" href="certification.html">
+          <span class="row-left"><span class="row-icon">证</span><span><strong class="item-title">厨师认证</strong><span class="item-subtitle">身份、资质和服务能力</span></span></span>
+          <span class="chevron">›</span>
+        </a>
+        <a class="menu-row" href="dishes.html">
+          <span class="row-left"><span class="row-icon">菜</span><span><strong class="item-title">菜品管理</strong><span class="item-subtitle">维护上门服务可选菜品</span></span></span>
+          <span class="chevron">›</span>
+        </a>
+        <a class="menu-row" href="categories.html">
+          <span class="row-left"><span class="row-icon">类</span><span><strong class="item-title">菜品分类</strong><span class="item-subtitle">分类排序和展示名称</span></span></span>
+          <span class="chevron">›</span>
+        </a>
+        <a class="menu-row" href="messages.html">
+          <span class="row-left"><span class="row-icon">信</span><span><strong class="item-title">我的消息</strong><span class="item-subtitle">客户沟通和系统通知</span></span></span>
+          <span class="chevron">›</span>
+        </a>
+      </section>
+
+      <section class="section menu-list">
+        <button class="menu-row toggle-row is-on" type="button" data-toggle-row>
+          <span class="row-left"><span class="row-icon">城</span><span><strong class="item-title">服务范围</strong><span class="item-subtitle">开州城区及周边 15 公里</span></span></span>
+          <span class="switch-dot" aria-hidden="true"></span>
+        </button>
+        <button class="menu-row toggle-row is-on" type="button" data-toggle-row>
+          <span class="row-left"><span class="row-icon">铃</span><span><strong class="item-title">预约提醒</strong><span class="item-subtitle">新指定服务单实时提醒</span></span></span>
+          <span class="switch-dot" aria-hidden="true"></span>
+        </button>
+        <button class="menu-row" type="button" data-toast="帮助中心演示">
+          <span class="row-left"><span class="row-icon">帮</span><span><strong class="item-title">帮助中心</strong><span class="item-subtitle">常见问题、协议和反馈</span></span></span>
+          <span class="chevron">›</span>
+        </button>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <a class="nav-item" data-nav="index" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span>首页</span></a>
+      <a class="nav-item" data-nav="messages" href="messages.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 13h5"/></svg><span>消息</span></a>
+      <a class="nav-item" data-nav="dishes" href="dishes.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v8M10 3v8M6 7h4"/><path d="M8 11v10"/><path d="M16 3c2 2 3 4 3 7v11"/><path d="M15 10h4"/></svg><span>菜品</span></a>
+      <a class="nav-item" data-nav="wallet" href="wallet.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4z"/><path d="M16 11h4v4h-4z"/><path d="M6 7l2-3h8l2 3"/></svg><span>收钱</span></a>
+      <a class="nav-item" data-nav="profile" href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

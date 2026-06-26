@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>消息 - 开州金厨</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="messages">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row">
+        <div>
+          <h1 class="header-title">消息</h1>
+          <p class="header-subtitle">处理预约提醒、客户沟通和系统通知</p>
+        </div>
+        <button class="icon-btn" type="button" data-toast="全部已读演示" aria-label="全部已读">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="main app-main">
+      <section class="tabs" data-message-tabs>
+        <button class="tab is-active" type="button" data-message-filter="all">全部</button>
+        <button class="tab" type="button" data-message-filter="预约提醒">预约提醒</button>
+        <button class="tab" type="button" data-message-filter="客户沟通">客户沟通</button>
+        <button class="tab" type="button" data-message-filter="系统通知">系统通知</button>
+      </section>
+
+      <section class="message-layout">
+        <div class="message-list">
+          <button class="message-item is-active" type="button" data-message-item data-type="客户沟通" data-chat-title="周女士 · 今晚家宴" data-chat-meta="18:30 · 滨湖壹号" data-chat-body="客户确认家里有老人，希望整体少辣，鱼类菜品需要去刺，餐具已准备。">
+            <div class="item-top">
+              <span><strong class="item-title">周女士 · 今晚家宴</strong><span class="item-subtitle">确认地址、口味和老人餐需求</span></span>
+              <span class="unread">2</span>
+            </div>
+          </button>
+          <button class="message-item" type="button" data-message-item data-type="预约提醒" data-chat-title="明天生日宴提醒" data-chat-meta="明天 11:20 · 金科府" data-chat-body="生日宴服务单已进入待上门状态，请在出发前再次确认食材清单和到达时间。">
+            <div class="item-top">
+              <span><strong class="item-title">明天生日宴提醒</strong><span class="item-subtitle">服务前准备事项待确认</span></span>
+              <span class="badge amber">提醒</span>
+            </div>
+          </button>
+          <button class="message-item" type="button" data-message-item data-type="系统通知" data-chat-title="认证资料已通过" data-chat-meta="系统通知" data-chat-body="你的厨师认证资料已通过展示审核，可继续完善菜品和服务范围。">
+            <div class="item-top">
+              <span><strong class="item-title">认证资料已通过</strong><span class="item-subtitle">完善菜品后更容易被客户指定</span></span>
+              <span class="badge green">系统</span>
+            </div>
+          </button>
+        </div>
+
+        <article class="chat-panel">
+          <div class="item-top">
+            <div>
+              <strong class="item-title" data-chat-title-view>周女士 · 今晚家宴</strong>
+              <span class="item-subtitle" data-chat-meta-view>18:30 · 滨湖壹号</span>
+            </div>
+            <a class="text-btn" href="index.html">看服务单</a>
+          </div>
+          <p class="chat-bubble" data-chat-body-view>客户确认家里有老人，希望整体少辣，鱼类菜品需要去刺，餐具已准备。</p>
+          <div class="actions">
+            <button class="btn" type="button" data-toast="快捷回复已发送演示">发送回复</button>
+            <button class="btn secondary" type="button" data-toast="电话联系演示">电话联系</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <a class="nav-item" data-nav="index" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span>首页</span></a>
+      <a class="nav-item" data-nav="messages" href="messages.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 13h5"/></svg><span>消息</span></a>
+      <a class="nav-item" data-nav="dishes" href="dishes.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v8M10 3v8M6 7h4"/><path d="M8 11v10"/><path d="M16 3c2 2 3 4 3 7v11"/><path d="M15 10h4"/></svg><span>菜品</span></a>
+      <a class="nav-item" data-nav="wallet" href="wallet.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4z"/><path d="M16 11h4v4h-4z"/><path d="M6 7l2-3h8l2 3"/></svg><span>收钱</span></a>
+      <a class="nav-item" data-nav="profile" href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

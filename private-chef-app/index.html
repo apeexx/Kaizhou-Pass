@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>今日指定预约 - 开州金厨</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="index">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row">
+        <div>
+          <h1 class="header-title">今日指定预约</h1>
+          <p class="header-subtitle">客户指定你本人后的上门服务安排</p>
+        </div>
+        <a class="icon-btn" href="certification.html" aria-label="厨师认证">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3l7 4v5c0 4.2-2.8 7.5-7 9-4.2-1.5-7-4.8-7-9V7l7-4Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 12l2 2 4-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <main class="main app-main">
+      <section class="hero-panel">
+        <div class="header-row">
+          <div>
+            <p class="section-note">开州金厨 · 李师傅</p>
+            <h2 class="section-title">4 场上门服务待跟进</h2>
+          </div>
+          <span class="badge green">已认证</span>
+        </div>
+        <div class="hero-grid" aria-label="今日概览">
+          <div class="metric"><strong>2</strong><span>待确认</span></div>
+          <div class="metric"><strong>1</strong><span>待上门</span></div>
+          <div class="metric"><strong>1</strong><span>服务中</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">服务进度</h2>
+            <p class="section-note">按状态查看今天和明天的服务单</p>
+          </div>
+          <a class="text-btn" href="messages.html">客户沟通</a>
+        </div>
+        <div class="tabs" data-filter-group data-filter-target="[data-appointment-card]" data-empty-target="#appointment-empty">
+          <button class="tab is-active" type="button" data-filter="all">全部</button>
+          <button class="tab" type="button" data-filter="待确认">待确认</button>
+          <button class="tab" type="button" data-filter="待上门">待上门</button>
+          <button class="tab" type="button" data-filter="服务中">服务中</button>
+          <button class="tab" type="button" data-filter="已完成">已完成</button>
+        </div>
+      </section>
+
+      <section class="appointment-list" aria-label="指定预约列表">
+        <article class="appointment-card" data-appointment-card data-status="待确认">
+          <div class="card-top">
+            <div>
+              <span class="item-title">今晚 18:30 · 家宴 6 人</span>
+              <span class="item-subtitle">周女士 · 滨湖壹号 3 栋 1802</span>
+            </div>
+            <span class="badge amber">待确认</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><span>套餐</span><strong>川渝家宴</strong></div>
+            <div class="detail"><span>需求</span><strong>少辣，含老人餐</strong></div>
+          </div>
+          <div class="actions">
+            <button class="btn" type="button" data-toast="预约确认演示">确认预约</button>
+            <a class="btn secondary" href="messages.html">联系客户</a>
+          </div>
+        </article>
+
+        <article class="appointment-card" data-appointment-card data-status="待上门">
+          <div class="card-top">
+            <div>
+              <span class="item-title">明天 11:20 · 生日宴 8 人</span>
+              <span class="item-subtitle">陈先生 · 文峰街道金科府 12 栋</span>
+            </div>
+            <span class="badge">待上门</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><span>套餐</span><strong>宴席小桌</strong></div>
+            <div class="detail"><span>准备</span><strong>食材清单已确认</strong></div>
+          </div>
+          <div class="actions">
+            <button class="btn green" type="button" data-toast="出发状态已更新演示">标记出发</button>
+            <a class="btn secondary" href="messages.html">确认地址</a>
+          </div>
+        </article>
+
+        <article class="appointment-card" data-appointment-card data-status="服务中">
+          <div class="card-top">
+            <div>
+              <span class="item-title">今日 12:00 · 商务小聚 5 人</span>
+              <span class="item-subtitle">王女士 · 开州大道中段 9 号</span>
+            </div>
+            <span class="badge green">服务中</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><span>套餐</span><strong>清爽午宴</strong></div>
+            <div class="detail"><span>备注</span><strong>现场加一道汤品</strong></div>
+          </div>
+          <div class="actions">
+            <button class="btn" type="button" data-toast="服务完成演示">服务完成</button>
+            <a class="btn secondary" href="wallet.html">记录收钱</a>
+          </div>
+        </article>
+
+        <article class="appointment-card" data-appointment-card data-status="已完成">
+          <div class="card-top">
+            <div>
+              <span class="item-title">今日 09:30 · 家庭早午餐 4 人</span>
+              <span class="item-subtitle">刘女士 · 汉丰湖畔 2 栋</span>
+            </div>
+            <span class="badge coral">已完成</span>
+          </div>
+          <div class="detail-grid">
+            <div class="detail"><span>收入</span><strong>¥468</strong></div>
+            <div class="detail"><span>评价</span><strong>待客户确认</strong></div>
+          </div>
+          <div class="actions">
+            <button class="btn secondary" type="button" data-toast="评价提醒已发送演示">提醒评价</button>
+            <a class="btn ghost" href="wallet.html">查看收入</a>
+          </div>
+        </article>
+      </section>
+      <div id="appointment-empty" class="empty-state" hidden>当前状态暂无服务单</div>
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <a class="nav-item" data-nav="index" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span>首页</span></a>
+      <a class="nav-item" data-nav="messages" href="messages.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 13h5"/></svg><span>消息</span></a>
+      <a class="nav-item" data-nav="dishes" href="dishes.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v8M10 3v8M6 7h4"/><path d="M8 11v10"/><path d="M16 3c2 2 3 4 3 7v11"/><path d="M15 10h4"/></svg><span>菜品</span></a>
+      <a class="nav-item" data-nav="wallet" href="wallet.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4z"/><path d="M16 11h4v4h-4z"/><path d="M6 7l2-3h8l2 3"/></svg><span>收钱</span></a>
+      <a class="nav-item" data-nav="profile" href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
