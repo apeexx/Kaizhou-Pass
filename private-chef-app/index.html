@@ -31,9 +31,10 @@
           <span class="badge green">已认证</span>
         </div>
         <div class="hero-grid" aria-label="今日概览">
-          <div class="metric"><strong>2</strong><span>待确认</span></div>
-          <div class="metric"><strong>1</strong><span>待上门</span></div>
-          <div class="metric"><strong>1</strong><span>服务中</span></div>
+          <div class="metric"><strong data-status-count="待确认">2</strong><span>待确认</span></div>
+          <div class="metric"><strong data-status-count="待上门">1</strong><span>待上门</span></div>
+          <div class="metric"><strong data-status-count="服务中">1</strong><span>服务中</span></div>
+          <div class="metric"><strong data-status-count="已完成">1</strong><span>已完成</span></div>
         </div>
       </section>
 
@@ -46,11 +47,11 @@
           <a class="text-btn" href="messages.html">客户沟通</a>
         </div>
         <div class="tabs" data-filter-group data-filter-target="[data-appointment-card]" data-empty-target="#appointment-empty">
-          <button class="tab is-active" type="button" data-filter="all">全部</button>
-          <button class="tab" type="button" data-filter="待确认">待确认</button>
-          <button class="tab" type="button" data-filter="待上门">待上门</button>
-          <button class="tab" type="button" data-filter="服务中">服务中</button>
-          <button class="tab" type="button" data-filter="已完成">已完成</button>
+          <button class="tab is-active" type="button" data-filter="all">全部 <span data-tab-count="all">4</span></button>
+          <button class="tab" type="button" data-filter="待确认">待确认 <span data-tab-count="待确认">2</span></button>
+          <button class="tab" type="button" data-filter="待上门">待上门 <span data-tab-count="待上门">1</span></button>
+          <button class="tab" type="button" data-filter="服务中">服务中 <span data-tab-count="服务中">1</span></button>
+          <button class="tab" type="button" data-filter="已完成">已完成 <span data-tab-count="已完成">1</span></button>
         </div>
       </section>
 
@@ -61,14 +62,14 @@
               <span class="item-title">今晚 18:30 · 家宴 6 人</span>
               <span class="item-subtitle">周女士 · 滨湖壹号 3 栋 1802</span>
             </div>
-            <span class="badge amber">待确认</span>
+            <span class="badge amber" data-status-badge>待确认</span>
           </div>
           <div class="detail-grid">
             <div class="detail"><span>套餐</span><strong>川渝家宴</strong></div>
             <div class="detail"><span>需求</span><strong>少辣，含老人餐</strong></div>
           </div>
           <div class="actions">
-            <button class="btn" type="button" data-toast="预约确认演示">确认预约</button>
+            <button class="btn" type="button" data-advance-status>确认预约</button>
             <a class="btn secondary" href="messages.html">联系客户</a>
           </div>
         </article>
@@ -79,14 +80,14 @@
               <span class="item-title">明天 11:20 · 生日宴 8 人</span>
               <span class="item-subtitle">陈先生 · 文峰街道金科府 12 栋</span>
             </div>
-            <span class="badge">待上门</span>
+            <span class="badge" data-status-badge>待上门</span>
           </div>
           <div class="detail-grid">
             <div class="detail"><span>套餐</span><strong>宴席小桌</strong></div>
             <div class="detail"><span>准备</span><strong>食材清单已确认</strong></div>
           </div>
           <div class="actions">
-            <button class="btn green" type="button" data-toast="出发状态已更新演示">标记出发</button>
+            <button class="btn green" type="button" data-advance-status>标记出发</button>
             <a class="btn secondary" href="messages.html">确认地址</a>
           </div>
         </article>
@@ -97,14 +98,14 @@
               <span class="item-title">今日 12:00 · 商务小聚 5 人</span>
               <span class="item-subtitle">王女士 · 开州大道中段 9 号</span>
             </div>
-            <span class="badge green">服务中</span>
+            <span class="badge green" data-status-badge>服务中</span>
           </div>
           <div class="detail-grid">
             <div class="detail"><span>套餐</span><strong>清爽午宴</strong></div>
             <div class="detail"><span>备注</span><strong>现场加一道汤品</strong></div>
           </div>
           <div class="actions">
-            <button class="btn" type="button" data-toast="服务完成演示">服务完成</button>
+            <button class="btn" type="button" data-advance-status>服务完成</button>
             <a class="btn secondary" href="wallet.html">记录收钱</a>
           </div>
         </article>
@@ -115,14 +116,14 @@
               <span class="item-title">今日 09:30 · 家庭早午餐 4 人</span>
               <span class="item-subtitle">刘女士 · 汉丰湖畔 2 栋</span>
             </div>
-            <span class="badge coral">已完成</span>
+            <span class="badge coral" data-status-badge>已完成</span>
           </div>
           <div class="detail-grid">
             <div class="detail"><span>收入</span><strong>¥468</strong></div>
             <div class="detail"><span>评价</span><strong>待客户确认</strong></div>
           </div>
           <div class="actions">
-            <button class="btn secondary" type="button" data-toast="评价提醒已发送演示">提醒评价</button>
+            <button class="btn secondary" type="button" data-advance-status>提醒评价</button>
             <a class="btn ghost" href="wallet.html">查看收入</a>
           </div>
         </article>

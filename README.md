@@ -41,7 +41,9 @@ Kaizhou-Golden-Chef/
 │   ├── certification.html
 │   ├── messages.html
 │   ├── dishes.html
+│   ├── dish-edit.html
 │   ├── categories.html
+│   ├── category-edit.html
 │   ├── wallet.html
 │   ├── profile.html
 │   ├── styles.css
@@ -109,16 +111,18 @@ private-chef-app/index.html
 
 页面说明：
 
-- `index.html`：今日指定预约，展示待确认、待上门、服务中、已完成等状态和客户沟通入口。
+- `index.html`：今日指定预约，展示待确认、待上门、服务中、已完成等状态；按钮可在前端演示服务单状态推进并同步统计。
 - `login.html`：登录 / 注册，提供验证码登录、密码登录、协议勾选和静态提交反馈。
-- `certification.html`：厨师认证，展示身份信息、资质证件、服务能力和提交审核演示。
-- `messages.html`：消息，展示预约提醒、客户沟通、系统通知和快捷回复演示。
-- `dishes.html`：我的菜品，展示菜品分类筛选、菜品上下架、编辑和新增演示。
-- `categories.html`：菜品分类，展示分类排序、新增分类和保存排序演示。
+- `certification.html`：厨师认证，提供身份信息、资质证件、服务能力、提交审核四步静态向导。
+- `messages.html`：消息，展示预约提醒、系统通知和客户私聊；客户私聊支持输入追加消息、快捷回复和复制手机号提示。
+- `dishes.html`：我的菜品，展示菜品分类筛选、菜品上下架状态切换、编辑和新增入口。
+- `dish-edit.html`：菜品编辑，提供菜品名称、基础介绍、标价、单位、分类、状态和图标切换演示。
+- `categories.html`：菜品分类，展示分类排序、新增分类、编辑分类和保存排序演示。
+- `category-edit.html`：分类编辑，提供分类名称、介绍、图标、数量和展示状态演示。
 - `wallet.html`：收钱，展示今日收入、可提现、待结算、收款码、提现和账单明细演示。
 - `profile.html`：我的，展示个人资料、认证状态、服务范围、菜品分类、消息和帮助入口。
 - `styles.css`：共享移动端 App shell、底部导航、状态 tabs、卡片、表单、消息、钱包、认证和响应式样式。
-- `app.js`：共享本地交互，包括底部导航高亮、tab 筛选、消息切换、表单阻止提交、Toast 和静态演示反馈。
+- `app.js`：共享本地交互，包括底部导航高亮、tab 筛选、服务单状态推进、消息输入动画、菜品状态切换、认证步骤切换、表单阻止提交、Toast 和静态演示反馈。
 
 ## 统一主题设定
 

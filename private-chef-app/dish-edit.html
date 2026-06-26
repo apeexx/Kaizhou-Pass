@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>编辑菜品 - 开州金厨</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="dishes">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row">
+        <div>
+          <h1 class="header-title" data-edit-title>编辑菜品</h1>
+          <p class="header-subtitle">完善菜品基础介绍、标价和展示图标</p>
+        </div>
+        <a class="text-btn" href="dishes.html">返回</a>
+      </div>
+    </header>
+
+    <main class="main app-main">
+      <form class="form-card form-grid" data-demo-form data-success="菜品信息保存演示">
+        <div class="dish-editor-head">
+          <button class="food-thumb large" type="button" data-icon-target aria-label="当前菜品图标"></button>
+          <div>
+            <strong class="item-title">菜品图标</strong>
+            <span class="item-subtitle">点击下方色块可改变图标样式</span>
+          </div>
+        </div>
+
+        <div class="icon-picker" data-icon-picker>
+          <button class="food-thumb is-picked" type="button" data-icon-class="" aria-label="橙色图标"></button>
+          <button class="food-thumb feast" type="button" data-icon-class="feast" aria-label="蓝红图标"></button>
+          <button class="food-thumb soup" type="button" data-icon-class="soup" aria-label="绿色图标"></button>
+          <button class="food-thumb berry" type="button" data-icon-class="berry" aria-label="紫色图标"></button>
+        </div>
+
+        <div class="field">
+          <label for="dish-name">菜品名称</label>
+          <input id="dish-name" value="开州酸菜鱼">
+        </div>
+        <div class="field">
+          <label for="dish-intro">菜基础介绍</label>
+          <textarea id="dish-intro">适合 4-8 人，酸辣可调，支持老人少辣版本。上门前可按客户忌口调整配菜。</textarea>
+        </div>
+        <div class="form-two">
+          <div class="field">
+            <label for="dish-price">标价</label>
+            <input id="dish-price" inputmode="decimal" value="168">
+          </div>
+          <div class="field">
+            <label for="dish-unit">单位</label>
+            <select id="dish-unit">
+              <option>道</option>
+              <option>组</option>
+              <option>盅</option>
+              <option>份</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-two">
+          <div class="field">
+            <label for="dish-category">分类</label>
+            <select id="dish-category">
+              <option>川渝菜</option>
+              <option>家常菜</option>
+              <option>宴席菜</option>
+              <option>养生汤</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="dish-status">状态</label>
+            <select id="dish-status">
+              <option>已上架</option>
+              <option>待完善</option>
+              <option>已下架</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="dish-note">服务说明</label>
+          <textarea id="dish-note">建议提前 2 小时确认口味、人数、厨房条件和是否需要代采食材。</textarea>
+        </div>
+        <button class="btn" type="submit">保存菜品</button>
+      </form>
+    </main>
+
+    <nav class="bottom-nav" aria-label="底部导航">
+      <a class="nav-item" data-nav="index" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg><span>首页</span></a>
+      <a class="nav-item" data-nav="messages" href="messages.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8M8 13h5"/></svg><span>消息</span></a>
+      <a class="nav-item" data-nav="dishes" href="dishes.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v8M10 3v8M6 7h4"/><path d="M8 11v10"/><path d="M16 3c2 2 3 4 3 7v11"/><path d="M15 10h4"/></svg><span>菜品</span></a>
+      <a class="nav-item" data-nav="wallet" href="wallet.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v12H4z"/><path d="M16 11h4v4h-4z"/><path d="M6 7l2-3h8l2 3"/></svg><span>收钱</span></a>
+      <a class="nav-item" data-nav="profile" href="profile.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

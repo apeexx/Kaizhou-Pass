@@ -182,7 +182,7 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
   margin-top: 14px;
 }
@@ -291,6 +291,10 @@ a {
 .profile-card,
 .card {
   padding: 14px;
+}
+
+.appointment-card.is-updated {
+  animation: statePulse 0.42s ease;
 }
 
 .card-top,
@@ -457,6 +461,24 @@ a {
     linear-gradient(135deg, #1e9df1, #f25f5c);
 }
 
+.food-thumb.berry {
+  background:
+    radial-gradient(circle at 70% 28%, rgba(255, 255, 255, 0.78) 0 12%, transparent 13%),
+    linear-gradient(135deg, #7c6ee6, #f25f5c);
+}
+
+.food-thumb.large {
+  width: 92px;
+  height: 92px;
+  border: 0;
+}
+
+.food-thumb.is-picked,
+.category-icon.is-picked {
+  outline: 3px solid rgba(30, 157, 241, 0.26);
+  outline-offset: 2px;
+}
+
 .dish-card {
   display: flex;
   gap: 12px;
@@ -555,19 +577,89 @@ a {
   border: 1px solid var(--line);
 }
 
-.chat-bubble {
+.chat-thread {
+  display: grid;
+  max-height: 330px;
+  gap: 7px;
   margin-top: 12px;
-  padding: 12px;
-  border-radius: var(--radius);
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.chat-time {
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.chat-message {
+  max-width: 82%;
+  padding: 10px 12px;
+  border-radius: 12px;
   background: #fff;
   color: var(--ink);
-  line-height: 1.6;
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+.chat-message.from-customer {
+  justify-self: start;
+  border-top-left-radius: 4px;
+}
+
+.chat-message.from-me {
+  justify-self: end;
+  color: #fff;
+  background: var(--primary);
+  border-top-right-radius: 4px;
+}
+
+.chat-message.from-system {
+  max-width: 100%;
+  justify-self: stretch;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.chat-message.is-sending {
+  animation: sendBubble 0.24s ease;
+}
+
+.chat-composer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 82px;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chat-composer input {
+  min-width: 0;
+  min-height: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0 12px;
+  outline: none;
+}
+
+.phone-copy {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  color: var(--primary-strong);
+  background: rgba(30, 157, 241, 0.1);
+  border: 1px solid rgba(30, 157, 241, 0.2);
   font-size: 13px;
 }
 
 .form-grid {
   display: grid;
   gap: 12px;
+}
+
+.form-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .field {
@@ -623,6 +715,7 @@ a {
 }
 
 .step {
+  border: 0;
   padding: 10px 6px;
   border-radius: var(--radius);
   color: var(--muted);
@@ -649,6 +742,62 @@ a {
   border: 1px dashed rgba(30, 157, 241, 0.45);
   border-radius: var(--radius);
   background: rgba(30, 157, 241, 0.07);
+}
+
+.upload-card.is-uploaded {
+  border-style: solid;
+  color: #077b56;
+  background:
+    linear-gradient(135deg, rgba(0, 184, 122, 0.16), rgba(30, 157, 241, 0.08));
+}
+
+.summary-card,
+.dish-editor-head {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+.dish-editor-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-picker,
+.category-icon-picker,
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.icon-picker .food-thumb {
+  border: 0;
+  cursor: pointer;
+}
+
+.category-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--primary);
+  background: rgba(30, 157, 241, 0.08);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cert-panel {
+  display: grid;
+  gap: 12px;
+}
+
+.cert-actions {
+  margin-top: 0;
 }
 
 .wallet-summary {
@@ -845,5 +994,31 @@ a {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+}
+
+@keyframes statePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 12px 28px rgba(16, 65, 108, 0.08);
+  }
+  50% {
+    transform: scale(1.012);
+    box-shadow: 0 18px 34px rgba(30, 157, 241, 0.16);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 12px 28px rgba(16, 65, 108, 0.08);
+  }
+}
+
+@keyframes sendBubble {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

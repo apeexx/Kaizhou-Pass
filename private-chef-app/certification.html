@@ -20,54 +20,94 @@
     </header>
 
     <main class="main app-main">
-      <section class="steps" aria-label="认证步骤">
-        <span class="step is-active">身份信息</span>
-        <span class="step">资质证件</span>
-        <span class="step">服务能力</span>
-        <span class="step">提交审核</span>
+      <section class="steps" aria-label="认证步骤" data-cert-steps>
+        <button class="step is-active" type="button" data-cert-step="0">身份信息</button>
+        <button class="step" type="button" data-cert-step="1">资质证件</button>
+        <button class="step" type="button" data-cert-step="2">服务能力</button>
+        <button class="step" type="button" data-cert-step="3">提交审核</button>
       </section>
 
-      <form class="section form-card form-grid" data-demo-form data-success="认证提交演示">
-        <div class="field">
-          <label for="real-name">真实姓名</label>
-          <input id="real-name" value="李师傅">
-        </div>
-        <div class="field">
-          <label for="cert-phone">手机号</label>
-          <input id="cert-phone" inputmode="tel" value="138****6688">
-        </div>
-        <div class="field">
-          <label for="city">服务城市</label>
-          <select id="city">
-            <option>重庆市开州区</option>
-            <option>重庆市万州区</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="specialty">擅长菜系</label>
-          <textarea id="specialty">川渝家常菜、宴席菜、养生汤、儿童餐</textarea>
-        </div>
+      <form class="section form-card form-grid" data-cert-wizard>
+        <section class="cert-panel" data-cert-panel>
+          <div class="field">
+            <label for="real-name">真实姓名</label>
+            <input id="real-name" value="李师傅">
+          </div>
+          <div class="field">
+            <label for="cert-phone">手机号</label>
+            <input id="cert-phone" inputmode="tel" value="138****6688">
+          </div>
+          <div class="field">
+            <label for="city">服务城市</label>
+            <select id="city">
+              <option>重庆市开州区</option>
+              <option>重庆市万州区</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="specialty">擅长菜系</label>
+            <textarea id="specialty">川渝家常菜、宴席菜、养生汤、儿童餐</textarea>
+          </div>
+        </section>
 
-        <div class="upload-grid">
-          <button class="upload-card" type="button" data-toast="身份证明上传演示">
-            <strong class="item-title">身份证明</strong>
-            <span class="item-subtitle">点击上传照片</span>
-          </button>
-          <button class="upload-card" type="button" data-toast="健康证上传演示">
-            <strong class="item-title">健康证</strong>
-            <span class="item-subtitle">点击上传照片</span>
-          </button>
-          <button class="upload-card" type="button" data-toast="厨师证上传演示">
-            <strong class="item-title">厨师证</strong>
-            <span class="item-subtitle">可选上传</span>
-          </button>
-          <button class="upload-card" type="button" data-toast="作品照片上传演示">
-            <strong class="item-title">作品照片</strong>
-            <span class="item-subtitle">展示成品菜</span>
-          </button>
-        </div>
+        <section class="cert-panel" data-cert-panel hidden>
+          <div class="upload-grid">
+            <button class="upload-card" type="button" data-upload-demo>
+              <strong class="item-title">身份证明</strong>
+              <span class="item-subtitle">点击贴图</span>
+            </button>
+            <button class="upload-card" type="button" data-upload-demo>
+              <strong class="item-title">健康证</strong>
+              <span class="item-subtitle">点击贴图</span>
+            </button>
+            <button class="upload-card" type="button" data-upload-demo>
+              <strong class="item-title">厨师证</strong>
+              <span class="item-subtitle">可选贴图</span>
+            </button>
+            <button class="upload-card" type="button" data-upload-demo>
+              <strong class="item-title">作品照片</strong>
+              <span class="item-subtitle">展示成品菜</span>
+            </button>
+          </div>
+        </section>
 
-        <button class="btn" type="submit">提交认证</button>
+        <section class="cert-panel" data-cert-panel hidden>
+          <div class="field">
+            <label for="service-area">服务范围</label>
+            <textarea id="service-area">开州城区及周边 15 公里，可承接家庭聚餐、生日宴、商务小聚。</textarea>
+          </div>
+          <div class="field">
+            <label for="service-time">可服务时间</label>
+            <select id="service-time">
+              <option>午餐和晚餐均可预约</option>
+              <option>仅晚餐可预约</option>
+              <option>周末优先</option>
+            </select>
+          </div>
+          <div class="chips service-tags">
+            <button class="chip is-active" type="button" data-toast="服务标签已选择演示">家宴</button>
+            <button class="chip is-active" type="button" data-toast="服务标签已选择演示">宴席</button>
+            <button class="chip" type="button" data-toast="服务标签已选择演示">儿童餐</button>
+            <button class="chip" type="button" data-toast="服务标签已选择演示">养生汤</button>
+          </div>
+        </section>
+
+        <section class="cert-panel" data-cert-panel hidden>
+          <div class="summary-card">
+            <strong class="item-title">提交前确认</strong>
+            <span class="item-subtitle">李师傅 · 重庆市开州区 · 川渝家常菜、宴席菜、养生汤、儿童餐</span>
+            <div class="detail-grid">
+              <div class="detail"><span>资料</span><strong data-upload-count>0/4 已贴图</strong></div>
+              <div class="detail"><span>服务</span><strong>城区 15 公里</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="actions cert-actions">
+          <button class="btn ghost" type="button" data-cert-prev hidden>上一步</button>
+          <button class="btn" type="button" data-cert-next>下一步</button>
+          <button class="btn" type="submit" data-cert-submit hidden>提交认证</button>
+        </div>
       </form>
     </main>
 

@@ -31,19 +31,19 @@
 
       <section class="message-layout">
         <div class="message-list">
-          <button class="message-item is-active" type="button" data-message-item data-type="客户沟通" data-chat-title="周女士 · 今晚家宴" data-chat-meta="18:30 · 滨湖壹号" data-chat-body="客户确认家里有老人，希望整体少辣，鱼类菜品需要去刺，餐具已准备。">
+          <button class="message-item is-active" type="button" data-message-item data-thread="zhou" data-type="客户沟通" data-chat-title="周女士 · 今晚家宴" data-chat-meta="18:30 · 滨湖壹号" data-phone="138****6688">
             <div class="item-top">
               <span><strong class="item-title">周女士 · 今晚家宴</strong><span class="item-subtitle">确认地址、口味和老人餐需求</span></span>
               <span class="unread">2</span>
             </div>
           </button>
-          <button class="message-item" type="button" data-message-item data-type="预约提醒" data-chat-title="明天生日宴提醒" data-chat-meta="明天 11:20 · 金科府" data-chat-body="生日宴服务单已进入待上门状态，请在出发前再次确认食材清单和到达时间。">
+          <button class="message-item" type="button" data-message-item data-thread="birthday" data-type="预约提醒" data-chat-title="明天生日宴提醒" data-chat-meta="明天 11:20 · 金科府">
             <div class="item-top">
               <span><strong class="item-title">明天生日宴提醒</strong><span class="item-subtitle">服务前准备事项待确认</span></span>
               <span class="badge amber">提醒</span>
             </div>
           </button>
-          <button class="message-item" type="button" data-message-item data-type="系统通知" data-chat-title="认证资料已通过" data-chat-meta="系统通知" data-chat-body="你的厨师认证资料已通过展示审核，可继续完善菜品和服务范围。">
+          <button class="message-item" type="button" data-message-item data-thread="system" data-type="系统通知" data-chat-title="认证资料已通过" data-chat-meta="系统通知">
             <div class="item-top">
               <span><strong class="item-title">认证资料已通过</strong><span class="item-subtitle">完善菜品后更容易被客户指定</span></span>
               <span class="badge green">系统</span>
@@ -51,7 +51,7 @@
           </button>
         </div>
 
-        <article class="chat-panel">
+        <article class="chat-panel" data-chat-panel>
           <div class="item-top">
             <div>
               <strong class="item-title" data-chat-title-view>周女士 · 今晚家宴</strong>
@@ -59,10 +59,20 @@
             </div>
             <a class="text-btn" href="index.html">看服务单</a>
           </div>
-          <p class="chat-bubble" data-chat-body-view>客户确认家里有老人，希望整体少辣，鱼类菜品需要去刺，餐具已准备。</p>
-          <div class="actions">
-            <button class="btn" type="button" data-toast="快捷回复已发送演示">发送回复</button>
-            <button class="btn secondary" type="button" data-toast="电话联系演示">电话联系</button>
+          <div class="chat-thread" data-chat-thread aria-live="polite">
+            <div class="chat-time">今天 09:42</div>
+            <div class="chat-message from-customer">李师傅您好，今晚家宴确认一下地址和口味。</div>
+            <div class="chat-message from-me">您好，地址是滨湖壹号 3 栋 1802，对吗？</div>
+            <div class="chat-message from-customer">对，家里有老人，希望整体少辣，鱼类菜品需要去刺，餐具已准备。</div>
+          </div>
+          <div class="phone-copy" data-phone-copy hidden>已经复制对方手机号：138****6688</div>
+          <form class="chat-composer" data-chat-form>
+            <input data-chat-input type="text" placeholder="输入回复内容">
+            <button class="btn" type="submit">发送</button>
+          </form>
+          <div class="actions" data-chat-actions>
+            <button class="btn secondary" type="button" data-quick-reply>快速回复</button>
+            <button class="btn ghost" type="button" data-copy-phone>电话联系</button>
           </div>
         </article>
       </section>
