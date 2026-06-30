@@ -81,3 +81,9 @@ takeout-merchant/
 - `pages/data/data-overview.html`：经营数据页，使用静态卡片和 CSS 条形图模拟数据。
 - `pages/mine/profile.html`：我的/店铺资料页，提供店铺资料、营业时间、配送设置、账户安全和客服入口。
 - `assets/js/mock.js`：本地静态交互，包括 tab 筛选、toast、上传占位状态、营业状态切换和表单演示跳转。
+
+## 图片资产说明
+
+- `assets/images/` 中图片仅用于静态演示，来自公开图库或可引用来源。正式商用前应替换为项目自有或已确认授权素材。
+- 当前商品管理页使用 `fish-dish.jpg`、`soup-dish.jpg`、`takeout-packaging.jpg`、`private-dinner.jpg`、`family-banquet.jpg` 作为真实餐品/打包图示。
+- 图片来源以 Pexels / Unsplash 免费图库为主，根目录 README 已记录同批静态演示图片来源；页面中不包含真实客户、员工、订单或商户资质图片。

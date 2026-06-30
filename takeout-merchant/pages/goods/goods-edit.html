@@ -15,7 +15,10 @@
       <form class="form-card form-grid" data-demo-form data-success="商品资料保存静态演示" data-redirect="goods-list.html">
         <div class="field"><label for="name">商品名称</label><input id="name" value="招牌鸡腿饭"></div>
         <div class="field"><label for="category">商品分类</label><select id="category"><option>热销</option><option>主食</option><option>小吃</option><option>饮品</option><option>套餐</option></select></div>
-        <button class="upload-card" type="button" data-upload-demo><strong class="item-title">商品图片上传占位</strong><span class="item-subtitle">点击后仅显示静态选择状态</span></button>
+        <button class="upload-card upload-card-with-preview" type="button" data-upload-demo>
+          <img src="../../assets/images/fish-dish.jpg" alt="当前商品图片预览">
+          <span><strong class="item-title">商品图片</strong><span class="item-subtitle">已使用真实餐品图；点击后仅显示静态选择状态</span></span>
+        </button>
         <div class="field"><label for="price">商品价格</label><input id="price" inputmode="decimal" value="32.00"></div>
         <div class="field"><label for="stock">库存</label><input id="stock" inputmode="numeric" value="82"></div>
         <div class="field"><label for="packing">打包费</label><input id="packing" inputmode="decimal" value="2.00"></div>
