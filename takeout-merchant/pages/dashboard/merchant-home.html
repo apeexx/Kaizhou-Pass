@@ -13,7 +13,7 @@
     <header class="app-header">
       <div class="header-row">
         <div class="brand-lockup">
-          <span class="brand-mark shop-avatar is-warm">金</span>
+          <span class="brand-mark shop-avatar has-image"><img src="../../assets/images/restaurant-store.jpg" alt="金厨快餐外卖店门店头像"></span>
           <div>
             <h1 class="header-title">金厨快餐外卖店</h1>
             <p class="header-subtitle">评分 4.8 · 已认证商户 · 重庆开州</p>
@@ -28,6 +28,7 @@
           <div><p class="section-note">今日经营概览</p><h2 class="section-title">待接单 6 单，配送中 12 单</h2></div>
           <button class="badge" type="button" data-toast="消息中心静态演示">消息 3</button>
         </div>
+        <img class="hero-photo" src="../../assets/images/takeout-packaging.jpg" alt="今日外卖打包出餐">
         <div class="hero-grid">
           <div class="metric"><strong>38</strong><span>今日订单</span></div>
           <div class="metric"><strong>¥2.6k</strong><span>今日营业额</span></div>
@@ -51,15 +52,21 @@
       </section>
       <section class="section">
         <div class="section-header"><h2 class="section-title">最新订单</h2><a class="text-btn" href="../orders/order-list.html">全部</a></div>
-        <article class="order-card">
-          <div class="card-top"><div><strong class="item-title">小周 · 11:42 下单</strong><span class="item-subtitle">3 件商品 · 渝中小区 5 栋 1203</span></div><span class="badge amber">待接单</span></div>
-          <div class="detail-grid"><div class="detail"><span>订单金额</span><strong>¥48.80</strong></div><div class="detail"><span>配送地址</span><strong>汉丰街道</strong></div></div>
-          <div class="actions"><a class="btn" href="../orders/order-detail.html">处理订单</a><a class="btn secondary" href="../orders/order-list.html">查看列表</a></div>
+        <article class="order-card with-thumb">
+          <img class="order-thumb" src="../../assets/images/fish-dish.jpg" alt="招牌鸡腿饭订单">
+          <div>
+            <div class="card-top"><div><strong class="item-title">小周 · 11:42 下单</strong><span class="item-subtitle">3 件商品 · 渝中小区 5 栋 1203</span></div><span class="badge amber">待接单</span></div>
+            <div class="detail-grid"><div class="detail"><span>订单金额</span><strong>¥48.80</strong></div><div class="detail"><span>配送地址</span><strong>汉丰街道</strong></div></div>
+            <div class="actions"><a class="btn" href="../orders/order-detail.html">处理订单</a><a class="btn secondary" href="../orders/order-list.html">查看列表</a></div>
+          </div>
         </article>
-        <article class="order-card">
-          <div class="card-top"><div><strong class="item-title">陈先生 · 11:28 下单</strong><span class="item-subtitle">5 件商品 · 新世纪广场 B 座</span></div><span class="badge green">备餐中</span></div>
-          <div class="detail-grid"><div class="detail"><span>订单金额</span><strong>¥86.20</strong></div><div class="detail"><span>预计出餐</span><strong>12:05</strong></div></div>
-          <div class="actions"><a class="btn secondary" href="../orders/order-detail.html">查看详情</a><button class="btn ghost" type="button" data-toast="已提醒后厨备餐静态演示">提醒备餐</button></div>
+        <article class="order-card with-thumb">
+          <img class="order-thumb" src="../../assets/images/family-banquet.jpg" alt="双人套餐订单">
+          <div>
+            <div class="card-top"><div><strong class="item-title">陈先生 · 11:28 下单</strong><span class="item-subtitle">5 件商品 · 新世纪广场 B 座</span></div><span class="badge green">备餐中</span></div>
+            <div class="detail-grid"><div class="detail"><span>订单金额</span><strong>¥86.20</strong></div><div class="detail"><span>预计出餐</span><strong>12:05</strong></div></div>
+            <div class="actions"><a class="btn secondary" href="../orders/order-detail.html">查看详情</a><button class="btn ghost" type="button" data-toast="已提醒后厨备餐静态演示">提醒备餐</button></div>
+          </div>
         </article>
       </section>
     </main>

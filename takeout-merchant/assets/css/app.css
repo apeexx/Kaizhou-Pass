@@ -140,11 +140,11 @@
 }
 
 .auth-hero {
+  position: relative;
+  overflow: hidden;
   min-height: 188px;
   padding: 28px 18px 18px;
-  background:
-    linear-gradient(135deg, rgba(255, 246, 203, 0.9), rgba(227, 247, 255, 0.9)),
-    #fff;
+  background: #fff;
 }
 
 .auth-hero h1 {
@@ -162,15 +162,14 @@
 }
 
 .mascot {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 74px;
   height: 74px;
   margin-left: auto;
   border-radius: 24px;
-  background: linear-gradient(145deg, #ffe45c, #a7e9ff);
+  object-fit: cover;
+  background: var(--soft);
   box-shadow: 0 14px 30px rgba(245, 185, 40, 0.2);
-  font-size: 34px;
 }
 
 .compliance-banner {
@@ -199,6 +198,7 @@
 }
 
 .hero-panel {
+  overflow: hidden;
   padding: 16px;
   color: #fff;
   background: linear-gradient(135deg, rgba(255, 75, 26, 0.96), rgba(255, 122, 26, 0.92));
@@ -208,6 +208,101 @@
 .hero-panel .section-note,
 .hero-panel .header-subtitle {
   color: rgba(255, 255, 255, 0.82);
+}
+
+.media-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.media-card img,
+.hero-photo,
+.profile-photo,
+.order-thumb {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  background: var(--soft);
+}
+
+.hero-photo {
+  height: 132px;
+  border-radius: var(--radius);
+}
+
+.hero-panel > .hero-photo {
+  margin-top: 12px;
+}
+
+.media-card img {
+  height: 148px;
+}
+
+.media-body {
+  padding: 14px;
+}
+
+.hero-panel.has-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 104px;
+  gap: 12px;
+  align-items: center;
+}
+
+.hero-panel.has-photo .hero-photo {
+  height: 104px;
+  margin-top: 0;
+  border: 2px solid rgba(255, 255, 255, 0.42);
+}
+
+.brand-mark.has-image,
+.shop-avatar.has-image,
+.profile-photo {
+  overflow: hidden;
+  padding: 0;
+  background: var(--soft);
+}
+
+.brand-mark.has-image img,
+.shop-avatar.has-image img,
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.order-card.with-thumb,
+.menu-row.with-thumb {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.order-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius);
+}
+
+.upload-card.has-media {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  background: #fff;
+}
+
+.upload-card.has-media img {
+  width: 76px;
+  height: 76px;
+  display: block;
+  border-radius: var(--radius);
+  object-fit: cover;
 }
 
 .card,

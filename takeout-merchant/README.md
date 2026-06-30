@@ -8,6 +8,7 @@
 - 不包含后端、接口、数据库、真实登录鉴权、真实支付结算或真实上传能力。
 - 所有订单、商品、财务和经营数据均为静态演示数据。
 - 页面宽度按移动端 375px 优先设计，桌面浏览器中以手机端容器居中显示。
+- 当前视觉按项目主题统一为轻电商 + 本地生活特卖风格：白底、浅灰背景、大圆角白卡、橙红主按钮和真实餐饮/门店图片。
 
 ## 本地查看
 
@@ -85,5 +86,5 @@ takeout-merchant/
 ## 图片资产说明
 
 - `assets/images/` 中图片仅用于静态演示，来自公开图库或可引用来源。正式商用前应替换为项目自有或已确认授权素材。
-- 当前商品管理页使用 `fish-dish.jpg`、`soup-dish.jpg`、`takeout-packaging.jpg`、`private-dinner.jpg`、`family-banquet.jpg` 作为真实餐品/打包图示。
+- 当前入口、登录注册、入驻审核、商户首页、订单、商品、财务、数据和我的页面均复用本目录既有图片资产，主要包括 `restaurant-store.jpg`、`chef-kitchen.jpg`、`takeout-packaging.jpg`、`fish-dish.jpg`、`soup-dish.jpg`、`private-dinner.jpg`、`family-banquet.jpg`。
 - 图片来源以 Pexels / Unsplash 免费图库为主，根目录 README 已记录同批静态演示图片来源；页面中不包含真实客户、员工、订单或商户资质图片。

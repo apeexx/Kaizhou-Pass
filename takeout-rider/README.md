@@ -8,6 +8,7 @@
 - 不包含后端、接口、数据库、真实登录鉴权、真实提现、真实上传或真实地图能力。
 - 所有订单、路线、收入和消息数据均为静态演示数据。
 - 页面宽度按移动端 375px 优先设计，桌面浏览器中以手机端容器居中显示。
+- 当前视觉按项目主题统一为轻电商 + 本地生活特卖风格：白底、浅灰背景、大圆角白卡、橙红主按钮和真实配送/门店/餐品图片。
 
 ## 本地查看
 
@@ -74,5 +75,6 @@ takeout-rider/
 - `current-order.html`、`order-detail.html`、`pickup-confirm.html`、`delivery-confirm.html` 为重点改版页面，文案仍保持骑手配送端场景。
 - `rider-home.html`、`order-hall.html`、`route-map.html` 已同步为同一套原型风格，方便从首页进入订单配送链路。
 - `assets/images/` 中图片仅用于静态演示，来自公开图库或可引用来源。正式商用前应替换为项目自有或已确认授权素材。
-- 当前本地演示素材包括 `red-braised-pork.jpg`、`noodle-bowl.jpg`、`restaurant-kitchen.jpg`，来源类型分别为 Wikimedia Commons 红烧肉图片和 Unsplash 面食 / 餐饮场景图片。
+- 当前入口、登录注册、入驻审核、骑手首页、订单配送、收入、消息和我的页面均复用本目录既有图片资产，主要包括 `delivery-rider.jpg`、`restaurant-store.jpg`、`restaurant-kitchen.jpg`、`takeout-packaging.jpg`、`red-braised-pork.jpg`、`noodle-bowl.jpg`、`chef-kitchen.jpg`。
+- 证件和健康证上传位只使用配送、打包、厨房等通用图片做资料准备占位，不展示真实身份证或健康证样张。
 - 本目录仍不包含真实电话、地图 SDK、定位、支付、提现、上传、接口请求或后端逻辑。

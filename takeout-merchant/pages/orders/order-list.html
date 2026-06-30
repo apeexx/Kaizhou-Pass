@@ -12,6 +12,13 @@
   <div class="app-shell">
     <header class="app-header"><div><h1 class="header-title">订单管理</h1><p class="header-subtitle">按状态查看外卖订单并处理商家操作</p></div></header>
     <main class="main app-main">
+      <section class="media-card">
+        <img src="../../assets/images/chef-kitchen.jpg" alt="商家后厨订单处理">
+        <div class="media-body">
+          <div class="card-top"><strong class="item-title">订单处理台</strong><span class="badge amber">待接单 6</span></div>
+          <span class="item-subtitle">商家员工在这里按状态处理待接单、备餐、待骑手取餐、配送中和退款售后。</span>
+        </div>
+      </section>
       <section class="section">
         <div class="tabs" data-filter-group data-filter-target="[data-order-card]" data-empty-target="#order-empty">
           <button class="tab is-active" type="button" data-filter="all">全部</button>
@@ -24,10 +31,10 @@
         </div>
       </section>
       <section class="section">
-        <article class="order-card" data-order-card data-status="待接单"><div class="card-top"><div><strong class="item-title">WM20260626001 · 小周</strong><span class="item-subtitle">招牌鸡腿饭 x1、柠檬茶 x1 · 11:42</span></div><span class="badge amber">待接单</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥48.80</strong></div><div class="detail"><span>客户</span><strong>小周</strong></div></div><div class="actions"><a class="btn" href="order-detail.html">查看详情</a></div></article>
+        <article class="order-card with-thumb" data-order-card data-status="待接单"><img class="order-thumb" src="../../assets/images/fish-dish.jpg" alt="招牌鸡腿饭订单"><div><div class="card-top"><div><strong class="item-title">WM20260626001 · 小周</strong><span class="item-subtitle">招牌鸡腿饭 x1、柠檬茶 x1 · 11:42</span></div><span class="badge amber">待接单</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥48.80</strong></div><div class="detail"><span>客户</span><strong>小周</strong></div></div><div class="actions"><a class="btn" href="order-detail.html">查看详情</a></div></div></article>
         <article class="order-card" data-order-card data-status="备餐中"><div class="card-top"><div><strong class="item-title">WM20260626002 · 陈先生</strong><span class="item-subtitle">双人套餐、卤蛋、酸梅汤 · 11:28</span></div><span class="badge green">备餐中</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥86.20</strong></div><div class="detail"><span>商品摘要</span><strong>5 件商品</strong></div></div><div class="actions"><a class="btn secondary" href="order-detail.html">查看详情</a></div></article>
         <article class="order-card" data-order-card data-status="待骑手取餐"><div class="card-top"><div><strong class="item-title">WM20260626003 · 李女士</strong><span class="item-subtitle">牛肉面 x2、小吃拼盘 x1 · 11:12</span></div><span class="badge">待骑手取餐</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥62.00</strong></div><div class="detail"><span>状态</span><strong>已出餐</strong></div></div><div class="actions"><a class="btn secondary" href="order-detail.html">查看详情</a></div></article>
-        <article class="order-card" data-order-card data-status="配送中"><div class="card-top"><div><strong class="item-title">WM20260626004 · 刘先生</strong><span class="item-subtitle">烧烤套餐 x1、饮品 x2 · 10:58</span></div><span class="badge green">配送中</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥118.00</strong></div><div class="detail"><span>状态</span><strong>骑手配送中</strong></div></div><div class="actions"><a class="btn secondary" href="order-detail.html">查看详情</a></div></article>
+        <article class="order-card with-thumb" data-order-card data-status="配送中"><img class="order-thumb" src="../../assets/images/takeout-packaging.jpg" alt="配送中外卖订单"><div><div class="card-top"><div><strong class="item-title">WM20260626004 · 刘先生</strong><span class="item-subtitle">烧烤套餐 x1、饮品 x2 · 10:58</span></div><span class="badge green">配送中</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥118.00</strong></div><div class="detail"><span>状态</span><strong>骑手配送中</strong></div></div><div class="actions"><a class="btn secondary" href="order-detail.html">查看详情</a></div></div></article>
         <article class="order-card" data-order-card data-status="已完成"><div class="card-top"><div><strong class="item-title">WM20260625019 · 王女士</strong><span class="item-subtitle">工作餐 x3 · 昨日 18:20</span></div><span class="badge green">已完成</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥96.00</strong></div><div class="detail"><span>状态</span><strong>已送达</strong></div></div><div class="actions"><a class="btn secondary" href="order-detail.html">查看详情</a></div></article>
         <article class="order-card" data-order-card data-status="退款售后"><div class="card-top"><div><strong class="item-title">WM20260625016 · 赵先生</strong><span class="item-subtitle">饮品漏送售后 · 昨日 13:05</span></div><span class="badge coral">退款售后</span></div><div class="detail-grid"><div class="detail"><span>金额</span><strong>¥22.00</strong></div><div class="detail"><span>状态</span><strong>待商家处理</strong></div></div><div class="actions"><a class="btn secondary" href="order-detail.html">查看详情</a></div></article>
       </section>
