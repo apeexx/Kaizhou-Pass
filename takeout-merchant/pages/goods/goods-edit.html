@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商品编辑 - 外卖商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="goods-edit">
+  <div class="app-shell">
+    <header class="app-header"><div class="header-row"><a class="back-link" href="goods-list.html" aria-label="返回">‹</a><div style="flex:1"><h1 class="header-title">商品编辑</h1><p class="header-subtitle">静态维护菜品资料，不会真实保存</p></div></div></header>
+    <main class="main app-main">
+      <form class="form-card form-grid" data-demo-form data-success="商品资料保存静态演示" data-redirect="goods-list.html">
+        <div class="field"><label for="name">商品名称</label><input id="name" value="招牌鸡腿饭"></div>
+        <div class="field"><label for="category">商品分类</label><select id="category"><option>热销</option><option>主食</option><option>小吃</option><option>饮品</option><option>套餐</option></select></div>
+        <button class="upload-card" type="button" data-upload-demo><strong class="item-title">商品图片上传占位</strong><span class="item-subtitle">点击后仅显示静态选择状态</span></button>
+        <div class="field"><label for="price">商品价格</label><input id="price" inputmode="decimal" value="32.00"></div>
+        <div class="field"><label for="stock">库存</label><input id="stock" inputmode="numeric" value="82"></div>
+        <div class="field"><label for="packing">打包费</label><input id="packing" inputmode="decimal" value="2.00"></div>
+        <div class="field"><label for="desc">商品描述</label><textarea id="desc">鸡腿现卤现烤，搭配青菜、卤蛋和米饭，适合作为午晚餐外卖主食。</textarea></div>
+        <div class="field"><label for="status">上架状态</label><select id="status"><option>上架</option><option>下架</option></select></div>
+        <button class="btn" type="submit">保存</button>
+      </form>
+    </main>
+    <nav class="bottom-nav">
+      <a class="nav-item" data-nav="home" href="../dashboard/merchant-home.html"><span class="nav-icon">首</span><span>首页</span></a>
+      <a class="nav-item" data-nav="orders" href="../orders/order-list.html"><span class="nav-icon">单</span><span>订单</span></a>
+      <a class="nav-item" data-nav="goods" href="goods-list.html"><span class="nav-icon">品</span><span>商品</span></a>
+      <a class="nav-item" data-nav="data" href="../data/data-overview.html"><span class="nav-icon">数</span><span>数据</span></a>
+      <a class="nav-item" data-nav="mine" href="../mine/profile.html"><span class="nav-icon">我</span><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

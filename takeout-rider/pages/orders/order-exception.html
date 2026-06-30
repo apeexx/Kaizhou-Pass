@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>异常上报 - 外卖骑手端</title><link rel="stylesheet" href="../../assets/css/base.css"><link rel="stylesheet" href="../../assets/css/app.css"><link rel="icon" href="data:,"></head>
+<body data-page="order-exception">
+  <div class="app-shell">
+    <header class="app-header"><div class="header-row"><a class="back-link" href="current-order.html" aria-label="返回">‹</a><div style="flex:1"><h1 class="header-title">异常上报</h1><p class="header-subtitle">仅静态展示，不会真实提交</p></div></div></header>
+    <main class="main app-main">
+      <form class="form-card form-grid" data-demo-form data-redirect="current-order.html" data-success="异常上报已记录为静态演示">
+        <label class="check-item"><input type="radio" name="reason" checked> 联系不上顾客</label><label class="check-item"><input type="radio" name="reason"> 商家未出餐</label><label class="check-item"><input type="radio" name="reason"> 地址异常</label><label class="check-item"><input type="radio" name="reason"> 车辆故障</label><label class="check-item"><input type="radio" name="reason"> 餐品损坏</label><label class="check-item"><input type="radio" name="reason"> 其他原因</label>
+        <div class="field"><label>备注</label><textarea>已电话联系用户 2 次，暂未接通。</textarea></div>
+        <button class="btn coral" type="submit">提交异常</button>
+      </form>
+    </main>
+    <nav class="bottom-nav"><a class="nav-item" data-nav="home" href="../dashboard/rider-home.html"><span class="nav-icon">首</span><span>首页</span></a><a class="nav-item" data-nav="orders" href="order-hall.html"><span class="nav-icon">单</span><span>订单</span></a><a class="nav-item" data-nav="route" href="../route/route-map.html"><span class="nav-icon">图</span><span>地图</span></a><a class="nav-item" data-nav="income" href="../income/income-home.html"><span class="nav-icon">收</span><span>收入</span></a><a class="nav-item" data-nav="mine" href="../mine/profile.html"><span class="nav-icon">我</span><span>我的</span></a></nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div><script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

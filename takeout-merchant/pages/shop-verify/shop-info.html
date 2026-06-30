@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>店铺入驻资料 - 外卖商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="shop-info">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row">
+        <a class="back-link" href="../auth/register.html" aria-label="返回">‹</a>
+        <div style="flex:1"><h1 class="header-title">店铺入驻资料</h1><p class="header-subtitle">用于外卖商户开店审核和经营展示</p></div>
+      </div>
+    </header>
+    <div class="compliance-banner">请提前准备门脸图、营业执照和食品经营许可资料；本页面只做静态资料展示。</div>
+    <main class="main app-main">
+      <form class="form-card form-grid" data-demo-form data-success="店铺资料已保存" data-redirect="verify-result.html">
+        <div class="field"><label for="shop">店铺名称</label><input id="shop" value="金厨快餐外卖店"></div>
+        <div class="field"><label for="type">店铺类型</label><select id="type"><option>快餐</option><option>小吃</option><option>饮品</option><option>烧烤</option><option>私房菜</option></select></div>
+        <div class="field"><label for="contact">联系人</label><input id="contact" value="周店长"></div>
+        <div class="field"><label for="phone">联系电话</label><input id="phone" value="138****6688"></div>
+        <div class="field"><label for="address">门店地址</label><input id="address" value="重庆市开州区汉丰街道滨湖路 88 号"></div>
+        <div class="field"><label for="hours">营业时间</label><input id="hours" value="10:00-22:00"></div>
+        <div class="field"><label for="intro">店铺简介</label><textarea id="intro">主营工作餐、盖饭、小吃和饮品，由商家员工在外卖商户端统一处理订单、商品、结算和经营数据。</textarea></div>
+        <button class="btn yellow" type="submit">下一步</button>
+      </form>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>商户首页 - 外卖商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="merchant-home">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row">
+        <div class="brand-lockup">
+          <span class="brand-mark shop-avatar is-warm">金</span>
+          <div>
+            <h1 class="header-title">金厨快餐外卖店</h1>
+            <p class="header-subtitle">评分 4.8 · 已认证商户 · 重庆开州</p>
+          </div>
+        </div>
+        <button class="badge green" type="button" data-business-toggle>营业中</button>
+      </div>
+    </header>
+    <main class="main app-main">
+      <section class="hero-panel">
+        <div class="header-row">
+          <div><p class="section-note">今日经营概览</p><h2 class="section-title">待接单 6 单，配送中 12 单</h2></div>
+          <button class="badge" type="button" data-toast="消息中心静态演示">消息 3</button>
+        </div>
+        <div class="hero-grid">
+          <div class="metric"><strong>38</strong><span>今日订单</span></div>
+          <div class="metric"><strong>¥2.6k</strong><span>今日营业额</span></div>
+          <div class="metric"><strong>6</strong><span>待接单</span></div>
+          <div class="metric"><strong>12</strong><span>配送中</span></div>
+        </div>
+      </section>
+      <section class="stats-grid">
+        <article class="stat-card"><span class="stat-label">退款售后</span><strong class="stat-value">2</strong><span class="stat-trend">需店长跟进</span></article>
+        <article class="stat-card"><span class="stat-label">店铺评分</span><strong class="stat-value">4.8</strong><span class="stat-trend">近 30 日稳定</span></article>
+      </section>
+      <section class="section">
+        <div class="quick-grid">
+          <a class="menu-row" href="../orders/order-list.html"><span class="row-left"><span class="row-icon">单</span><strong class="item-title">订单管理</strong></span></a>
+          <a class="menu-row" href="../goods/goods-list.html"><span class="row-left"><span class="row-icon">品</span><strong class="item-title">商品管理</strong></span></a>
+          <a class="menu-row" href="../finance/wallet.html"><span class="row-left"><span class="row-icon">财</span><strong class="item-title">财务结算</strong></span></a>
+          <a class="menu-row" href="../data/data-overview.html"><span class="row-left"><span class="row-icon">数</span><strong class="item-title">经营数据</strong></span></a>
+          <a class="menu-row" href="../mine/profile.html"><span class="row-left"><span class="row-icon">店</span><strong class="item-title">店铺资料</strong></span></a>
+          <button class="menu-row" type="button" data-toast="配送设置静态演示"><span class="row-left"><span class="row-icon">配</span><strong class="item-title">配送设置</strong></span></button>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header"><h2 class="section-title">最新订单</h2><a class="text-btn" href="../orders/order-list.html">全部</a></div>
+        <article class="order-card">
+          <div class="card-top"><div><strong class="item-title">小周 · 11:42 下单</strong><span class="item-subtitle">3 件商品 · 渝中小区 5 栋 1203</span></div><span class="badge amber">待接单</span></div>
+          <div class="detail-grid"><div class="detail"><span>订单金额</span><strong>¥48.80</strong></div><div class="detail"><span>配送地址</span><strong>汉丰街道</strong></div></div>
+          <div class="actions"><a class="btn" href="../orders/order-detail.html">处理订单</a><a class="btn secondary" href="../orders/order-list.html">查看列表</a></div>
+        </article>
+        <article class="order-card">
+          <div class="card-top"><div><strong class="item-title">陈先生 · 11:28 下单</strong><span class="item-subtitle">5 件商品 · 新世纪广场 B 座</span></div><span class="badge green">备餐中</span></div>
+          <div class="detail-grid"><div class="detail"><span>订单金额</span><strong>¥86.20</strong></div><div class="detail"><span>预计出餐</span><strong>12:05</strong></div></div>
+          <div class="actions"><a class="btn secondary" href="../orders/order-detail.html">查看详情</a><button class="btn ghost" type="button" data-toast="已提醒后厨备餐静态演示">提醒备餐</button></div>
+        </article>
+      </section>
+    </main>
+    <nav class="bottom-nav">
+      <a class="nav-item" data-nav="home" href="merchant-home.html"><span class="nav-icon">首</span><span>首页</span></a>
+      <a class="nav-item" data-nav="orders" href="../orders/order-list.html"><span class="nav-icon">单</span><span>订单</span></a>
+      <a class="nav-item" data-nav="goods" href="../goods/goods-list.html"><span class="nav-icon">品</span><span>商品</span></a>
+      <a class="nav-item" data-nav="data" href="../data/data-overview.html"><span class="nav-icon">数</span><span>数据</span></a>
+      <a class="nav-item" data-nav="mine" href="../mine/profile.html"><span class="nav-icon">我</span><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>外卖骑手端静态演示入口 - 开州金厨</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="demo-index">
+  <div class="app-shell">
+    <header class="app-header is-plain">
+      <div class="brand-lockup"><span class="brand-mark is-warm">骑</span><div><h1 class="header-title">外卖骑手端</h1><p class="header-subtitle">接单、取餐、送达、收入和我的静态演示</p></div></div>
+    </header>
+    <main class="main app-main">
+      <section class="hero-panel"><p class="section-note">纯前端 H5 静态演示</p><h2 class="section-title">面向配送骑手的移动端工作台</h2><p class="header-subtitle">不包含后端、接口、数据库、真实登录或真实地图。</p></section>
+      <section class="section">
+        <div class="section-header"><h2 class="section-title">推荐演示流程</h2><span class="badge green">配送端</span></div>
+        <a class="menu-row" href="pages/auth/login.html"><span class="row-left"><span class="row-icon is-warm">登</span><span><strong class="item-title">登录进入骑手首页</strong><span class="item-subtitle">登录 → 首页 → 订单大厅 → 配送任务</span></span></span><span class="chevron">›</span></a>
+        <a class="menu-row" href="pages/auth/register.html"><span class="row-left"><span class="row-icon is-warm">注</span><span><strong class="item-title">注册与骑手入驻</strong><span class="item-subtitle">注册 → 资料认证 → 审核结果</span></span></span><span class="chevron">›</span></a>
+        <a class="menu-row" href="pages/dashboard/rider-home.html"><span class="row-left"><span class="row-icon">首</span><span><strong class="item-title">骑手首页工作台</strong><span class="item-subtitle">接单状态、今日指标和附近订单</span></span></span><span class="chevron">›</span></a>
+      </section>
+      <section class="section">
+        <h2 class="section-title">全部页面</h2>
+        <div class="quick-grid">
+          <a class="card" href="pages/auth/login.html"><strong class="item-title">骑手登录</strong><span class="item-subtitle">手机号、密码/验证码</span></a>
+          <a class="card" href="pages/auth/register.html"><strong class="item-title">骑手注册</strong><span class="item-subtitle">创建配送账号</span></a>
+          <a class="card" href="pages/rider-verify/rider-info.html"><strong class="item-title">基础资料</strong><span class="item-subtitle">城市、区域、交通工具</span></a>
+          <a class="card" href="pages/rider-verify/id-card-upload.html"><strong class="item-title">身份认证</strong><span class="item-subtitle">证件和人脸占位</span></a>
+          <a class="card" href="pages/rider-verify/health-card.html"><strong class="item-title">健康证</strong><span class="item-subtitle">上传卡片和有效期</span></a>
+          <a class="card" href="pages/rider-verify/verify-result.html"><strong class="item-title">审核结果</strong><span class="item-subtitle">审核中、通过、失败</span></a>
+          <a class="card" href="pages/dashboard/rider-home.html"><strong class="item-title">骑手首页</strong><span class="item-subtitle">当前任务与可抢订单</span></a>
+          <a class="card" href="pages/orders/order-hall.html"><strong class="item-title">订单大厅</strong><span class="item-subtitle">附近可抢订单</span></a>
+          <a class="card" href="pages/orders/order-detail.html"><strong class="item-title">订单详情</strong><span class="item-subtitle">商家、顾客、费用</span></a>
+          <a class="card" href="pages/orders/current-order.html"><strong class="item-title">当前订单</strong><span class="item-subtitle">取餐码和配送操作</span></a>
+          <a class="card" href="pages/orders/pickup-confirm.html"><strong class="item-title">确认取餐</strong><span class="item-subtitle">餐品核对 checklist</span></a>
+          <a class="card" href="pages/orders/delivery-confirm.html"><strong class="item-title">确认送达</strong><span class="item-subtitle">用户地址和送达状态</span></a>
+          <a class="card" href="pages/orders/order-exception.html"><strong class="item-title">异常上报</strong><span class="item-subtitle">配送异常静态选择</span></a>
+          <a class="card" href="pages/orders/order-history.html"><strong class="item-title">历史订单</strong><span class="item-subtitle">今日和本周订单</span></a>
+          <a class="card" href="pages/route/route-map.html"><strong class="item-title">路线地图</strong><span class="item-subtitle">静态路线占位</span></a>
+          <a class="card" href="pages/income/income-home.html"><strong class="item-title">收入中心</strong><span class="item-subtitle">收入、奖励和扣款</span></a>
+          <a class="card" href="pages/income/income-detail.html"><strong class="item-title">收入明细</strong><span class="item-subtitle">每日收入记录</span></a>
+          <a class="card" href="pages/message/message-center.html"><strong class="item-title">消息中心</strong><span class="item-subtitle">订单、系统、审核通知</span></a>
+          <a class="card" href="pages/mine/profile.html"><strong class="item-title">我的</strong><span class="item-subtitle">资料、评分、常用入口</span></a>
+          <a class="card" href="pages/mine/work-setting.html"><strong class="item-title">工作设置</strong><span class="item-subtitle">接单区域和开关</span></a>
+          <a class="card" href="pages/mine/settings.html"><strong class="item-title">设置</strong><span class="item-subtitle">账号、通知、隐私</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="assets/js/mock.js" defer></script>
+</body>
+</html>

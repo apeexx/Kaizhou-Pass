@@ -17,6 +17,8 @@ Kaizhou-Golden-Chef/
 ├── AGENTS.md
 ├── README.md
 ├── ecommerce-merchant/
+│   ├── assets/
+│   │   └── images/
 │   ├── index.html
 │   ├── products.html
 │   ├── orders.html
@@ -26,6 +28,8 @@ Kaizhou-Golden-Chef/
 │   ├── styles.css
 │   └── app.js
 ├── private-chef-admin/
+│   ├── assets/
+│   │   └── images/
 │   ├── index.html
 │   ├── menus.html
 │   ├── batches.html
@@ -36,6 +40,8 @@ Kaizhou-Golden-Chef/
 │   ├── styles.css
 │   └── app.js
 ├── private-chef-app/
+│   ├── assets/
+│   │   └── images/
 │   ├── index.html
 │   ├── login.html
 │   ├── certification.html
@@ -70,9 +76,17 @@ Kaizhou-Golden-Chef/
 │       ├── data/
 │       └── mine/
 ├── takeout-merchant/
-│   └── .gitkeep
+│   ├── index.html
+│   ├── AGENTS.md
+│   ├── README.md
+│   ├── assets/
+│   └── pages/
 └── takeout-rider/
-    └── .gitkeep
+    ├── index.html
+    ├── AGENTS.md
+    ├── README.md
+    ├── assets/
+    └── pages/
 ```
 
 ## 目录说明
@@ -81,8 +95,8 @@ Kaizhou-Golden-Chef/
 - `private-chef-admin/`：私厨上门后台管理端静态页面目录，当前包含控制台、服务套餐、预约管理、日程排班、客户沟通、收益结算、店铺设置页面。
 - `private-chef-app/`：私厨厨师手机前台管理端静态页面目录，当前包含指定预约、登录、认证、消息、菜品、分类、收钱和个人页面。
 - `private-chef-merchant-demo/`：私厨上门商户端手机静态演示目录，面向入驻店铺、私厨团队和商家负责人，当前包含登录入驻、审核、商户首页、订单、厨师、套餐、财务、数据和我的页面。
-- `takeout-merchant/`：预留商户端目录。
-- `takeout-rider/`：预留骑手端目录。
+- `takeout-merchant/`：外卖商户端手机静态演示目录，面向店铺老板、店长和商家员工，当前包含入驻登录、商户首页、订单、商品、财务、数据和我的页面。
+- `takeout-rider/`：外卖骑手端手机静态演示目录，面向外卖配送骑手，当前包含登录注册、入驻审核、骑手首页、订单配送、路线地图、收入、消息和我的页面。
 
 ## 电商商户端页面
 
@@ -180,141 +194,83 @@ private-chef-merchant-demo/index.html
 
 本项目根目录当前没有 `package.json`，因此没有可运行的 `npm run lint`、`npm run test` 或 `npm run build` 脚本。新增或修改 JavaScript 文件时，优先使用 `node --check <file>` 检查语法。
 
-## 统一主题设定
+## 本 PR 图片资产来源
 
-后续新增静态页面时，默认使用以下主题变量作为固定视觉规范。如需调整颜色、字体、圆角、阴影或深色模式变量，需要同步更新本节。
+本 PR 为 `ecommerce-merchant/`、`private-chef-admin/`、`private-chef-app/`、`private-chef-merchant-demo/` 增加了本地化演示图片，分别放在各目录的 `assets/images/` 下。图片仅用于静态页面的餐饮、菜品、备餐、订单和资料展示，不代表真实客户、员工、订单、地址或商户资质。
 
-```css
-:root {
-  --card: #f7f8f8;
-  --ring: #1da1f2;
-  --input: #f7f9fa;
-  --muted: #E5E5E6;
-  --accent: #E3ECF6;
-  --border: #e1eaef;
-  --radius: 1.3rem;
-  --chart-1: #1e9df1;
-  --chart-2: #00b87a;
-  --chart-3: #f7b928;
-  --chart-4: #17bf63;
-  --chart-5: #e0245e;
-  --popover: #ffffff;
-  --primary: #1e9df1;
-  --sidebar: #f7f8f8;
-  --font-mono: Menlo, monospace;
-  --font-sans: Open Sans, sans-serif;
-  --secondary: #0f1419;
-  --background: #ffffff;
-  --font-serif: Georgia, serif;
-  --foreground: #0f1419;
-  --destructive: #f4212e;
-  --shadow-blur: 0px;
-  --shadow-color: rgba(29,161,242,0.15);
-  --sidebar-ring: #1da1f2;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0;
-  --sidebar-accent: #E3ECF6;
-  --sidebar-border: #e1e8ed;
-  --card-foreground: #0f1419;
-  --shadow-offset-x: 0px;
-  --shadow-offset-y: 2px;
-  --sidebar-primary: #1e9df1;
-  --muted-foreground: #0f1419;
-  --accent-foreground: #1e9df1;
-  --popover-foreground: #0f1419;
-  --primary-foreground: #ffffff;
-  --sidebar-foreground: #0f1419;
-  --secondary-foreground: #ffffff;
-  --destructive-foreground: #ffffff;
-  --sidebar-accent-foreground: #1e9df1;
-  --sidebar-primary-foreground: #ffffff;
-}
+图片来源为 Pexels 免费图库，已下载到本地后通过相对路径引用：
 
-.dark {
-  --card: #17181c;
-  --ring: #1da1f2;
-  --input: #22303c;
-  --muted: #181818;
-  --accent: #061622;
-  --border: #242628;
-  --chart-1: #1e9df1;
-  --chart-2: #00b87a;
-  --chart-3: #f7b928;
-  --chart-4: #17bf63;
-  --chart-5: #e0245e;
-  --popover: #000000;
-  --primary: #1c9cf0;
-  --sidebar: #17181c;
-  --secondary: #f0f3f4;
-  --background: #000000;
-  --foreground: #e7e9ea;
-  --destructive: #f4212e;
-  --shadow-color: rgba(29,161,242,0.25);
-  --sidebar-ring: #1da1f2;
-  --sidebar-accent: #061622;
-  --sidebar-border: #38444d;
-  --card-foreground: #d9d9d9;
-  --sidebar-primary: #1da1f2;
-  --muted-foreground: #72767a;
-  --accent-foreground: #1c9cf0;
-  --popover-foreground: #e7e9ea;
-  --primary-foreground: #ffffff;
-  --sidebar-foreground: #d9d9d9;
-  --secondary-foreground: #0f1419;
-  --destructive-foreground: #ffffff;
-  --sidebar-accent-foreground: #1c9cf0;
-  --sidebar-primary-foreground: #ffffff;
-}
+- `chef-prep.jpg`：厨师备餐/厨房场景，来源 `https://www.pexels.com/photo/man-in-white-dress-shirt-and-blue-vest-holding-a-silver-knife-4252137/`。
+- `chinese-set-lunch.jpg`：餐桌菜品组合展示，来源 `https://www.pexels.com/photo/white-and-brown-cooked-dish-on-white-ceramic-bowls-958545/`。
+- `fusion-dishes.jpg`：菜品/轻食组合展示，来源 `https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/`。
+- `takeout-box.jpg`：餐食组合展示，来源 `https://www.pexels.com/photo/delicious-burger-with-fried-egg-and-fries-4393021/`。
+- `dumplings.jpg`：中式饺子/汤品展示，来源 `https://www.pexels.com/photo/round-white-and-blue-ceramic-bowl-with-cooked-ball-soup-and-brown-wooden-chopsticks-955137/`。
 
-@theme inline {
-  --color-card: var(--card);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-border: var(--border);
-  --color-radius: var(--radius);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-popover: var(--popover);
-  --color-primary: var(--primary);
-  --color-sidebar: var(--sidebar);
-  --color-font-mono: var(--font-mono);
-  --color-font-sans: var(--font-sans);
-  --color-secondary: var(--secondary);
-  --color-background: var(--background);
-  --color-font-serif: var(--font-serif);
-  --color-foreground: var(--foreground);
-  --color-destructive: var(--destructive);
-  --color-shadow-blur: var(--shadow-blur);
-  --color-shadow-color: var(--shadow-color);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-shadow-spread: var(--shadow-spread);
-  --color-shadow-opacity: var(--shadow-opacity);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-card-foreground: var(--card-foreground);
-  --color-shadow-offset-x: var(--shadow-offset-x);
-  --color-shadow-offset-y: var(--shadow-offset-y);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-}
+## 外卖商户端手机演示页面
+
+当前外卖商户端为纯前端静态 H5 演示，不依赖后端、数据库、真实接口、真实登录鉴权、真实上传、构建工具或第三方前端框架。可直接在浏览器中打开：
+
+```text
+takeout-merchant/index.html
 ```
+
+推荐演示流程：
+
+1. 从 `takeout-merchant/index.html` 查看全部页面导航。
+2. 进入 `pages/auth/login.html`，点击登录进入 `pages/dashboard/merchant-home.html`。
+3. 从 `pages/auth/register.html` 进入店铺资料和审核结果。
+4. 在 `pages/dashboard/merchant-home.html` 查看店铺名称、店铺头像、营业状态、评分、消息入口、订单指标、快捷入口、最新订单和底部导航。
+5. 进入订单列表、订单详情和确认接单，演示商家处理待接单订单。
+6. 查看商品管理、财务结算、经营数据和我的店铺。
+
+页面说明：
+
+- `index.html`：外卖商户端静态演示入口，提供主要页面导航。
+- `pages/auth/`：外卖商户登录和注册。
+- `pages/shop-verify/`：店铺入驻资料和审核结果。
+- `pages/dashboard/merchant-home.html`：外卖商户首页工作台。
+- `pages/orders/`：订单列表、订单详情和确认接单。
+- `pages/goods/`：商品管理和商品编辑。
+- `pages/finance/wallet.html`：财务结算和结算记录。
+- `pages/data/data-overview.html`：经营数据概览。
+- `pages/mine/profile.html`：我的/店铺资料入口。
+- `assets/css/base.css`、`assets/css/app.css`：移动端静态页面基础样式和业务样式。
+- `assets/js/mock.js`：本地静态交互，包括 tab 筛选、toast、营业状态切换、上传占位状态和表单演示跳转。
+
+## 外卖骑手端手机演示页面
+
+当前外卖骑手端为纯前端静态 H5 演示，不依赖后端、数据库、真实接口、真实登录鉴权、真实上传、真实提现、真实地图或第三方前端框架。可直接在浏览器中打开：
+
+```text
+takeout-rider/index.html
+```
+
+推荐演示流程：
+
+1. 从 `takeout-rider/index.html` 查看全部页面导航。
+2. 进入 `pages/auth/login.html`，点击登录进入 `pages/dashboard/rider-home.html`。
+3. 从 `pages/auth/register.html` 进入骑手资料、身份证认证、健康证上传和审核结果。
+4. 在 `pages/dashboard/rider-home.html` 查看骑手姓名、认证状态、接单状态、今日指标、当前配送任务和附近可抢订单。
+5. 进入订单大厅、订单详情、当前订单、确认取餐和确认送达，演示骑手配送流程。
+6. 查看静态路线地图、收入中心、收入明细、消息中心和我的页面。
+
+页面说明：
+
+- `index.html`：外卖骑手端静态演示入口，提供主要页面导航。
+- `pages/auth/`：骑手登录和注册。
+- `pages/rider-verify/`：骑手基础资料、身份证认证、健康证上传和审核结果。
+- `pages/dashboard/rider-home.html`：骑手首页工作台。
+- `pages/orders/`：订单大厅、订单详情、当前订单、取餐确认、送达确认、异常上报和历史订单。
+- `pages/route/route-map.html`：静态路线地图占位，不接真实地图接口。
+- `pages/income/`：收入首页和收入明细。
+- `pages/message/message-center.html`：消息中心。
+- `pages/mine/`：我的、工作设置和设置。
+- `assets/css/base.css`、`assets/css/app.css`：移动端静态页面基础样式和业务样式。
+- `assets/js/mock.js`：本地静态交互，包括底部导航高亮、toast、静态表单跳转、tab 筛选、上传占位状态和接单开关演示。
 
 ## 开发注意事项
 
-- `takeout-merchant/`、`takeout-rider/` 当前仅包含 `.gitkeep`，用于让 Git 保留空目录；业务页面尚未开始编写。
+- `takeout-rider/` 当前为外卖骑手端纯前端静态演示目录，后续修改需要保持配送端定位，不接后端、数据库、真实接口或真实地图。
 - 不在本仓库创建 `customer`、`client`、`user` 等 C 端目录，除非后续任务明确要求。
 - 修改页面时优先保持最小必要改动，不做无关重构。
 - 如果新增 JavaScript 文件，优先运行 `node --check <file>` 检查语法。

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>经营数据 - 外卖商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="data-overview">
+  <div class="app-shell">
+    <header class="app-header"><div><h1 class="header-title">经营数据</h1><p class="header-subtitle">订单量、营业额、完成率和退款率静态概览</p></div></header>
+    <main class="main app-main">
+      <section class="data-grid">
+        <article class="data-card"><span>今日订单量</span><strong>38 单</strong></article>
+        <article class="data-card"><span>今日营业额</span><strong>¥2,680</strong></article>
+        <article class="data-card"><span>订单完成率</span><strong>96.4%</strong></article>
+        <article class="data-card"><span>退款率</span><strong>1.8%</strong></article>
+      </section>
+      <section class="section card">
+        <h2 class="section-title">热销商品排行</h2>
+        <div class="chart-bars">
+          <div class="bar-row"><div class="bar-head"><span>招牌鸡腿饭</span><span>86 份</span></div><div class="bar-track"><div class="bar-fill" style="--value:86%"></div></div></div>
+          <div class="bar-row"><div class="bar-head"><span>牛肉小面</span><span>72 份</span></div><div class="bar-track"><div class="bar-fill" style="--value:72%"></div></div></div>
+          <div class="bar-row"><div class="bar-head"><span>手打柠檬茶</span><span>58 份</span></div><div class="bar-track"><div class="bar-fill" style="--value:58%"></div></div></div>
+        </div>
+      </section>
+      <section class="section card">
+        <h2 class="section-title">时段订单分布</h2>
+        <div class="chart-bars">
+          <div class="bar-row"><div class="bar-head"><span>10:00-12:00</span><span>12 单</span></div><div class="bar-track"><div class="bar-fill" style="--value:48%"></div></div></div>
+          <div class="bar-row"><div class="bar-head"><span>12:00-14:00</span><span>18 单</span></div><div class="bar-track"><div class="bar-fill" style="--value:78%"></div></div></div>
+          <div class="bar-row"><div class="bar-head"><span>18:00-20:00</span><span>21 单</span></div><div class="bar-track"><div class="bar-fill" style="--value:92%"></div></div></div>
+        </div>
+      </section>
+      <section class="section card">
+        <h2 class="section-title">最近 7 日营业趋势</h2>
+        <div class="chart-bars">
+          <div class="bar-row"><div class="bar-head"><span>周一</span><span>¥1,860</span></div><div class="bar-track"><div class="bar-fill" style="--value:56%"></div></div></div>
+          <div class="bar-row"><div class="bar-head"><span>周二</span><span>¥2,120</span></div><div class="bar-track"><div class="bar-fill" style="--value:64%"></div></div></div>
+          <div class="bar-row"><div class="bar-head"><span>周三</span><span>¥2,680</span></div><div class="bar-track"><div class="bar-fill" style="--value:82%"></div></div></div>
+          <div class="bar-row"><div class="bar-head"><span>周四</span><span>¥2,430</span></div><div class="bar-track"><div class="bar-fill" style="--value:74%"></div></div></div>
+        </div>
+      </section>
+    </main>
+    <nav class="bottom-nav">
+      <a class="nav-item" data-nav="home" href="../dashboard/merchant-home.html"><span class="nav-icon">首</span><span>首页</span></a>
+      <a class="nav-item" data-nav="orders" href="../orders/order-list.html"><span class="nav-icon">单</span><span>订单</span></a>
+      <a class="nav-item" data-nav="goods" href="../goods/goods-list.html"><span class="nav-icon">品</span><span>商品</span></a>
+      <a class="nav-item" data-nav="data" href="data-overview.html"><span class="nav-icon">数</span><span>数据</span></a>
+      <a class="nav-item" data-nav="mine" href="../mine/profile.html"><span class="nav-icon">我</span><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

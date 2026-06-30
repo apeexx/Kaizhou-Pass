@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>确认接单 - 外卖商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="order-accept">
+  <div class="app-shell">
+    <header class="app-header"><div class="header-row"><a class="back-link" href="order-detail.html" aria-label="返回">‹</a><div style="flex:1"><h1 class="header-title">确认接单</h1><p class="header-subtitle">订单已进入备餐流程</p></div></div></header>
+    <main class="main app-main">
+      <section class="hero-panel">
+        <p class="section-note">接单成功</p>
+        <h2 class="section-title">请在 18 分钟内完成备餐</h2>
+        <p class="header-subtitle">预计出餐时间 12:05，骑手到店后请核对订单尾号。</p>
+      </section>
+      <section class="section card">
+        <h2 class="section-title">订单摘要</h2>
+        <div class="detail-grid">
+          <div class="detail"><span>订单编号</span><strong>WM20260626001</strong></div>
+          <div class="detail"><span>客户</span><strong>小周</strong></div>
+          <div class="detail"><span>商品数量</span><strong>2 件</strong></div>
+          <div class="detail"><span>实付金额</span><strong>¥48.80</strong></div>
+        </div>
+        <p class="item-subtitle">骑手取餐提示：请将餐品放置在前台 2 号取餐架，订单尾号 1234。</p>
+      </section>
+      <section class="actions">
+        <button class="btn secondary" type="button" data-toast="打印小票静态演示">打印小票</button>
+        <a class="btn" href="order-list.html">返回订单列表</a>
+      </section>
+    </main>
+    <nav class="bottom-nav">
+      <a class="nav-item" data-nav="home" href="../dashboard/merchant-home.html"><span class="nav-icon">首</span><span>首页</span></a>
+      <a class="nav-item" data-nav="orders" href="order-list.html"><span class="nav-icon">单</span><span>订单</span></a>
+      <a class="nav-item" data-nav="goods" href="../goods/goods-list.html"><span class="nav-icon">品</span><span>商品</span></a>
+      <a class="nav-item" data-nav="data" href="../data/data-overview.html"><span class="nav-icon">数</span><span>数据</span></a>
+      <a class="nav-item" data-nav="mine" href="../mine/profile.html"><span class="nav-icon">我</span><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

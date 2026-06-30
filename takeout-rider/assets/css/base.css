@@ -1,0 +1,71 @@
+:root {
+  --primary: #FF4B1A;
+  --primary-strong: #E93F12;
+  --green: #17BF63;
+  --amber: #FF7A1A;
+  --orange: #FF7A1A;
+  --coral: #E53935;
+  --ink: #222222;
+  --muted: #666666;
+  --soft: #F6F6F6;
+  --surface: #ffffff;
+  --line: #EEEEEE;
+  --page: #F6F6F6;
+  --notice: #fff7dc;
+  --notice-text: #b86400;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 14% 6%, rgba(247, 185, 40, 0.2), transparent 28%),
+    radial-gradient(circle at 86% 8%, rgba(255, 75, 26, 0.16), transparent 30%),
+    var(--page);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+[hidden] {
+  display: none !important;
+}

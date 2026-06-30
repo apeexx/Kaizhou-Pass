@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>订单详情 - 外卖商户端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="order-detail">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="header-row"><a class="back-link" href="order-list.html" aria-label="返回">‹</a><div style="flex:1"><h1 class="header-title">订单详情</h1><p class="header-subtitle">WM20260626001 · 待接单</p></div></div>
+    </header>
+    <main class="main app-main">
+      <section class="hero-panel">
+        <div class="header-row"><div><p class="section-note">当前状态</p><h2 class="section-title">待商家确认接单</h2></div><span class="badge amber">待接单</span></div>
+      </section>
+      <section class="section card">
+        <h2 class="section-title">客户与配送</h2>
+        <div class="detail-grid">
+          <div class="detail"><span>客户信息</span><strong>小周</strong></div>
+          <div class="detail"><span>联系电话</span><strong>138****1234</strong></div>
+          <div class="detail"><span>下单时间</span><strong>2026-06-26 11:42</strong></div>
+          <div class="detail"><span>预计送达</span><strong>12:30 前</strong></div>
+        </div>
+        <p class="item-subtitle">配送地址：重庆市开州区汉丰街道渝中小区 5 栋 1203</p>
+      </section>
+      <section class="section card">
+        <h2 class="section-title">商品清单</h2>
+        <div class="menu-row"><span><strong class="item-title">招牌鸡腿饭</strong><span class="item-subtitle">x1</span></span><strong>¥32.00</strong></div>
+        <div class="menu-row"><span><strong class="item-title">柠檬茶</strong><span class="item-subtitle">x1</span></span><strong>¥12.00</strong></div>
+        <div class="detail-grid">
+          <div class="detail"><span>打包费</span><strong>¥2.00</strong></div>
+          <div class="detail"><span>配送费</span><strong>¥4.00</strong></div>
+          <div class="detail"><span>优惠金额</span><strong>-¥1.20</strong></div>
+          <div class="detail"><span>实付金额</span><strong>¥48.80</strong></div>
+        </div>
+      </section>
+      <section class="section card">
+        <h2 class="section-title">顾客备注</h2>
+        <p class="item-subtitle">米饭少一点，餐具需要 1 份，请尽快出餐。</p>
+      </section>
+      <section class="actions">
+        <a class="btn green" href="order-accept.html">确认接单</a>
+        <button class="btn coral" type="button" data-toast="拒绝订单仅为静态演示">拒绝订单</button>
+        <button class="btn ghost" type="button" data-toast="联系顾客仅为静态演示">联系顾客</button>
+      </section>
+    </main>
+    <nav class="bottom-nav">
+      <a class="nav-item" data-nav="home" href="../dashboard/merchant-home.html"><span class="nav-icon">首</span><span>首页</span></a>
+      <a class="nav-item" data-nav="orders" href="order-list.html"><span class="nav-icon">单</span><span>订单</span></a>
+      <a class="nav-item" data-nav="goods" href="../goods/goods-list.html"><span class="nav-icon">品</span><span>商品</span></a>
+      <a class="nav-item" data-nav="data" href="../data/data-overview.html"><span class="nav-icon">数</span><span>数据</span></a>
+      <a class="nav-item" data-nav="mine" href="../mine/profile.html"><span class="nav-icon">我</span><span>我的</span></a>
+    </nav>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

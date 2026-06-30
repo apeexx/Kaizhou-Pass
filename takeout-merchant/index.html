@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>外卖商户端静态演示入口 - 开州金厨</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="demo-index">
+  <div class="app-shell">
+    <header class="app-header is-plain">
+      <div class="brand-lockup">
+        <span class="brand-mark is-warm">外</span>
+        <div>
+          <h1 class="header-title">外卖商户端</h1>
+          <p class="header-subtitle">店铺、订单、商品、财务和经营数据静态演示</p>
+        </div>
+      </div>
+    </header>
+    <main class="main app-main">
+      <section class="hero-panel">
+        <p class="section-note">纯前端 H5 静态演示</p>
+        <h2 class="section-title">面向店铺老板、店长和商家员工的外卖经营工作台</h2>
+        <p class="header-subtitle">不包含后端、接口、数据库或真实登录鉴权。</p>
+      </section>
+      <section class="section">
+        <div class="section-header">
+          <h2 class="section-title">推荐演示流程</h2>
+          <span class="badge green">无真实接口</span>
+        </div>
+        <a class="menu-row" href="pages/auth/login.html"><span class="row-left"><span class="row-icon is-warm">登</span><span><strong class="item-title">登录进入商户首页</strong><span class="item-subtitle">登录 → 商户首页 → 订单处理</span></span></span><span class="chevron">›</span></a>
+        <a class="menu-row" href="pages/auth/register.html"><span class="row-left"><span class="row-icon is-warm">注</span><span><strong class="item-title">注册与店铺入驻</strong><span class="item-subtitle">注册 → 店铺资料 → 审核结果</span></span></span><span class="chevron">›</span></a>
+        <a class="menu-row" href="pages/dashboard/merchant-home.html"><span class="row-left"><span class="row-icon">首</span><span><strong class="item-title">商户首页工作台</strong><span class="item-subtitle">订单、商品、财务、数据和我的</span></span></span><span class="chevron">›</span></a>
+      </section>
+      <section class="section">
+        <h2 class="section-title">全部页面</h2>
+        <div class="quick-grid">
+          <a class="card" href="pages/auth/login.html"><strong class="item-title">商户登录</strong><span class="item-subtitle">手机号、密码/验证码</span></a>
+          <a class="card" href="pages/auth/register.html"><strong class="item-title">商户注册</strong><span class="item-subtitle">开店账号创建</span></a>
+          <a class="card" href="pages/shop-verify/shop-info.html"><strong class="item-title">店铺资料</strong><span class="item-subtitle">名称、类型、地址</span></a>
+          <a class="card" href="pages/shop-verify/verify-result.html"><strong class="item-title">审核结果</strong><span class="item-subtitle">审核中、通过、失败</span></a>
+          <a class="card" href="pages/dashboard/merchant-home.html"><strong class="item-title">商户首页</strong><span class="item-subtitle">经营工作台</span></a>
+          <a class="card" href="pages/orders/order-list.html"><strong class="item-title">订单管理</strong><span class="item-subtitle">状态分类与处理</span></a>
+          <a class="card" href="pages/orders/order-detail.html"><strong class="item-title">订单详情</strong><span class="item-subtitle">顾客、地址、费用</span></a>
+          <a class="card" href="pages/orders/order-accept.html"><strong class="item-title">确认接单</strong><span class="item-subtitle">接单成功和备餐</span></a>
+          <a class="card" href="pages/goods/goods-list.html"><strong class="item-title">商品管理</strong><span class="item-subtitle">分类、库存、上下架</span></a>
+          <a class="card" href="pages/goods/goods-edit.html"><strong class="item-title">商品编辑</strong><span class="item-subtitle">价格、库存、描述</span></a>
+          <a class="card" href="pages/finance/wallet.html"><strong class="item-title">财务结算</strong><span class="item-subtitle">收入、提现、记录</span></a>
+          <a class="card" href="pages/data/data-overview.html"><strong class="item-title">经营数据</strong><span class="item-subtitle">订单、营收、排行</span></a>
+          <a class="card" href="pages/mine/profile.html"><strong class="item-title">我的店铺</strong><span class="item-subtitle">资料、设置、客服</span></a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="assets/js/mock.js" defer></script>
+</body>
+</html>

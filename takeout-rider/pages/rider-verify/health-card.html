@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>健康证上传 - 外卖骑手端</title><link rel="stylesheet" href="../../assets/css/base.css"><link rel="stylesheet" href="../../assets/css/app.css"><link rel="icon" href="data:,"></head>
+<body data-page="health-card">
+  <div class="app-shell">
+    <header class="app-header"><div class="header-row"><a class="back-link" href="id-card-upload.html" aria-label="返回">‹</a><div style="flex:1"><h1 class="header-title">健康证上传</h1><p class="header-subtitle">食品配送健康资质静态展示</p></div></div></header>
+    <main class="main app-main">
+      <button class="upload-card" type="button" data-upload-demo><strong class="item-title">健康证照片</strong><span class="item-subtitle">点击选择静态示例</span></button>
+      <form class="section form-card form-grid" data-demo-form data-redirect="verify-result.html" data-success="审核申请已提交">
+        <div class="field"><label>有效期</label><input value="2026-06-26 至 2027-06-25"></div>
+        <div class="card" style="box-shadow:none"><strong class="item-title">审核说明</strong><span class="item-subtitle">提交后展示审核结果静态页面，不会触发真实审核。</span></div>
+        <button class="btn green" type="submit">提交审核</button>
+      </form>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div><script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

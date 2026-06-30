@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>确认送达 - 外卖骑手端</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/app.css">
+  <link rel="icon" href="data:,">
+</head>
+<body data-page="delivery-confirm">
+  <div class="app-shell proto-shell">
+    <div class="proto-statusbar"><span>9:41</span><span class="proto-icons">▮▮▮ WiFi ▰</span></div>
+    <header class="proto-topbar">
+      <a class="proto-back" href="pickup-confirm.html" aria-label="返回">‹</a>
+      <h1 class="proto-title">订单详情</h1>
+      <span></span>
+    </header>
+    <main class="proto-main">
+      <section class="proto-card">
+        <h2>骑手配送中</h2>
+        <p class="proto-sub">请送达至中央国际 B 区 3 栋 1802，预计12:05前送达</p>
+        <div class="proto-divider"></div>
+        <div class="rider-contact">
+          <span class="rider-photo"></span>
+          <div><strong class="food-name">周先生</strong><span class="item-subtitle">电话 138****1234　备注：放门口前请联系</span></div>
+          <button class="round-action" type="button" data-toast="联系顾客仅为静态演示">☎</button>
+          <button class="round-action" type="button" data-toast="发送消息仅为静态演示">☰</button>
+        </div>
+      </section>
+
+      <section class="proto-card is-map">
+        <div class="proto-map-grid"><span class="proto-map-label">地图　送达位置</span></div>
+      </section>
+
+      <section class="proto-card">
+        <h2 class="shop-card-title">川味小厨（开州建委店）</h2>
+        <div class="food-list">
+          <div class="food-row"><img class="food-thumb-img" src="../../assets/images/red-braised-pork.jpg" alt="招牌红烧肉"><div><strong class="food-name">招牌红烧肉</strong><span class="food-price">¥28</span></div><span class="food-qty">x1</span></div>
+          <div class="food-row"><img class="food-thumb-img" src="../../assets/images/noodle-bowl.jpg" alt="重庆小面"><div><strong class="food-name">重庆小面</strong><span class="food-price">¥18</span></div><span class="food-qty">x1</span></div>
+        </div>
+      </section>
+      <section class="fee-list">
+        <div class="fee-row"><span>商品金额</span><span>¥299</span></div>
+        <div class="fee-row"><span>配送费</span><span>¥3</span></div>
+        <div class="fee-row"><span>优惠活动</span><span class="orange">-¥3</span></div>
+        <div class="fee-row"><strong>已支付</strong><span class="orange">¥299</span></div>
+      </section>
+    </main>
+    <div class="bottom-action">
+      <a class="proto-btn secondary" href="order-exception.html">异常上报</a>
+      <a class="proto-btn" href="../income/income-home.html">确认送达</a>
+    </div>
+  </div>
+  <div class="toast" data-toast-root hidden></div>
+  <script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>

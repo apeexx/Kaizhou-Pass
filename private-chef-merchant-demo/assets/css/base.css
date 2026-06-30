@@ -1,17 +1,17 @@
 :root {
-  --primary: #1e9df1;
-  --primary-strong: #0f7ed0;
-  --green: #00b87a;
-  --amber: #f5a524;
-  --coral: #f25f5c;
-  --ink: #102033;
-  --muted: #697789;
-  --soft: #f4f8fb;
+  --primary: #FF4B1A;
+  --primary-strong: #E93F12;
+  --green: #17BF63;
+  --amber: #FF7A1A;
+  --coral: #E53935;
+  --ink: #222222;
+  --muted: #666666;
+  --soft: #F7F7F7;
   --surface: #ffffff;
-  --line: #e1edf5;
-  --page: #eef6fb;
-  --radius: 8px;
-  --shadow: 0 18px 50px rgba(16, 65, 108, 0.14);
+  --line: #EEEEEE;
+  --page: #F6F6F6;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -28,10 +28,10 @@ body {
   min-height: 100%;
   color: var(--ink);
   background:
-    radial-gradient(circle at 18% 8%, rgba(30, 157, 241, 0.14), transparent 30%),
-    radial-gradient(circle at 84% 10%, rgba(0, 184, 122, 0.12), transparent 28%),
+    radial-gradient(circle at 18% 8%, rgba(255, 75, 26, 0.14), transparent 30%),
+    radial-gradient(circle at 84% 10%, rgba(255, 122, 26, 0.10), transparent 28%),
     var(--page);
-  font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0;
 }
 

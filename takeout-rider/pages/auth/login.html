@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>骑手登录 - 外卖骑手端</title><link rel="stylesheet" href="../../assets/css/base.css"><link rel="stylesheet" href="../../assets/css/app.css"><link rel="icon" href="data:,"></head>
+<body data-page="login">
+  <div class="app-shell">
+    <section class="auth-hero"><a class="back-link" href="../../index.html" aria-label="返回">‹</a><div class="mascot">骑</div><h1>开州金厨骑手端</h1><p>登录后进入配送工作台，查看附近订单和当前配送任务。</p></section>
+    <div class="compliance-banner">静态演示：不做真实登录鉴权，不会提交手机号或密码。</div>
+    <main class="main is-auth">
+      <form class="form-card form-grid" data-demo-form data-redirect="../dashboard/rider-home.html" data-success="登录成功，进入骑手首页">
+        <div class="field"><label for="phone">骑手手机号</label><input id="phone" value="138****1234" autocomplete="off"></div>
+        <div class="field"><label for="password">密码或验证码</label><input id="password" value="123456" type="password" autocomplete="off"></div>
+        <button class="btn black" type="submit">登录</button>
+        <div class="row-between"><a class="text-btn" href="register.html">注册成为骑手</a><button class="text-btn" type="button" data-toast="忘记密码仅为静态入口">忘记密码</button></div>
+      </form>
+    </main>
+  </div>
+  <div class="toast" data-toast-root hidden></div><script src="../../assets/js/mock.js" defer></script>
+</body>
+</html>
