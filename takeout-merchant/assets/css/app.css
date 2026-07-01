@@ -855,3 +855,50 @@
     box-shadow: none;
   }
 }
+
+/* Kaizhou Golden Chef H5 theme rewrite: light commerce + local-life sale style. */
+:root {
+  --color-primary: #FF4B1A;
+  --color-primary-dark: #E93F12;
+  --color-price: #E53935;
+  --color-bg: #F6F6F6;
+  --color-card: #FFFFFF;
+  --color-search-bg: #F4F4F4;
+  --color-text-main: #222222;
+  --color-text-secondary: #666666;
+  --color-text-light: #999999;
+  --color-border: #EEEEEE;
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-pill: 999px;
+  --shadow-commerce: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+html, body { background: var(--color-bg) !important; color: var(--color-text-main); letter-spacing: 0; }
+.app-shell { background: var(--color-bg) !important; box-shadow: none !important; }
+.app-header, .proto-topbar { background: rgba(255,255,255,.98) !important; border-bottom: 1px solid var(--color-border) !important; }
+.main, .app-main, .proto-main { background: var(--color-bg) !important; padding-left: 12px; padding-right: 12px; }
+.header-title, .proto-title { color: var(--color-text-main) !important; font-size: 20px !important; font-weight: 700 !important; letter-spacing: 0 !important; }
+.header-subtitle, .section-note, .item-subtitle, .proto-sub { color: var(--color-text-secondary) !important; }
+.hero-panel { color: var(--color-text-main) !important; background: linear-gradient(135deg, #fff, #FFF1EA) !important; border: 1px solid var(--color-border) !important; border-radius: var(--radius-large) !important; box-shadow: var(--shadow-commerce) !important; }
+.hero-panel .section-note, .hero-panel .header-subtitle { color: var(--color-text-secondary) !important; }
+.hero-panel.with-photo { color: #fff !important; }
+.hero-panel.with-photo .section-note, .hero-panel.with-photo .header-subtitle, .hero-panel.with-photo .item-subtitle { color: rgba(255,255,255,.84) !important; }
+.card, .stat-card, .order-card, .form-card, .menu-row, .upload-card, .data-card, .result-card, .route-card, .appointment-card, .dish-card, .message-item, .wallet-qr, .profile-card, .proto-card, .media-card, .goods-card { background: var(--color-card) !important; border: 1px solid var(--color-border) !important; border-radius: var(--radius-large) !important; box-shadow: var(--shadow-commerce) !important; }
+.detail, .data-cell, .proto-stat, .summary-card, .dish-editor-head, .empty-state { background: var(--color-bg) !important; border-radius: var(--radius-medium) !important; }
+.btn, .proto-btn, .tab.is-active, .chip.is-active, .segment.is-active { background: var(--color-primary) !important; border-color: var(--color-primary) !important; color: #fff !important; box-shadow: none !important; }
+.btn.secondary, .proto-btn.secondary, .btn.ghost, .icon-btn { color: var(--color-primary-dark) !important; border-color: rgba(255,75,26,.22) !important; background: #fff !important; }
+.btn.green { background: var(--color-primary) !important; }
+.badge, .badge.green, .badge.amber, .badge.coral { color: var(--color-primary-dark) !important; background: rgba(255,75,26,.12) !important; }
+.price, .food-price, .proto-money, .fee-row .orange, .bottom-action .total b, .stat-value, .metric strong { color: var(--color-price) !important; }
+.brand-mark, .row-icon, .mini-icon, .avatar, .drag-handle, .proto-dot.orange, .proto-map-pin.shop { background: linear-gradient(135deg, var(--color-primary), #FF7A1A) !important; color: #fff !important; }
+.food-thumb, .order-thumb, .food-thumb-img, .hero-photo, .profile-photo, .proto-hero-photo, .store-thumb { border-radius: var(--radius-medium) !important; }
+.bottom-nav, .bottom-action { background: rgba(255,255,255,.98) !important; border-top: 1px solid var(--color-border) !important; }
+.nav-item.is-active { color: var(--color-primary) !important; }
+.field input, .field textarea, .field select, .chat-composer input { background: var(--color-search-bg) !important; border-color: var(--color-border) !important; border-radius: var(--radius-medium) !important; }
+.proto-statusbar { background: #fff; color: var(--color-text-main); }
+.proto-back { color: var(--color-text-main) !important; }
+.proto-card.is-gray, .proto-card.is-map { background: #fff !important; }
+.proto-map-grid, .proto-route-map, .map-canvas { background-color: #FAFAFA !important; }
+.toast { background: var(--color-primary) !important; }
+@media (max-width: 480px) { html, body { background: var(--color-bg) !important; } .app-shell { width: 100%; } }

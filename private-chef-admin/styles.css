@@ -1408,3 +1408,51 @@ textarea {
     width: 100%;
   }
 }
+
+/* Kaizhou Golden Chef theme rewrite: light commerce + local-life sale style. */
+:root {
+  --color-primary: #FF4B1A;
+  --color-primary-dark: #E93F12;
+  --color-price: #E53935;
+  --color-bg: #F6F6F6;
+  --color-card: #FFFFFF;
+  --color-search-bg: #F4F4F4;
+  --color-text-main: #222222;
+  --color-text-secondary: #666666;
+  --color-text-light: #999999;
+  --color-border: #EEEEEE;
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-pill: 999px;
+  --shadow-commerce: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+html, body { background: var(--color-bg) !important; color: var(--color-text-main); letter-spacing: 0; }
+.app { background: var(--color-bg); }
+.sidebar { background: #fff !important; border-right: 1px solid var(--color-border); box-shadow: none; }
+.brand-mark, .metric-icon, .avatar, .thumb { background: linear-gradient(135deg, var(--color-primary), #FF7A1A) !important; }
+.nav-link { border-radius: var(--radius-medium); color: var(--color-text-secondary); }
+.nav-link:hover, .nav-link.active { color: var(--color-primary) !important; background: #FFF0EA !important; box-shadow: inset 3px 0 0 var(--color-primary); }
+.topbar { background: rgba(255,255,255,.96) !important; border-bottom: 1px solid var(--color-border); box-shadow: none; }
+.search input, .filters input, .filters select, .field input, .field select, .field textarea { background: var(--color-search-bg) !important; border-color: var(--color-border) !important; border-radius: var(--radius-pill); }
+.page-header, .panel, .metric-card, .media-hero, .dish-card, .message-item, .form-card, .danger-zone { background: var(--color-card) !important; border: 1px solid var(--color-border) !important; border-radius: var(--radius-large) !important; box-shadow: var(--shadow-commerce) !important; }
+.metric-card::before { background: var(--color-primary) !important; }
+.metric-value, .price, .data-table td:nth-child(3), .data-table td:nth-child(4), .list-row > strong { color: var(--color-price); font-weight: 800; }
+.btn, .tab-button.active { background: var(--color-primary) !important; border-color: var(--color-primary) !important; color: #fff !important; box-shadow: none !important; }
+.btn-primary { background: var(--color-primary-dark) !important; border-color: var(--color-primary-dark) !important; }
+.btn-ghost, .action-button { background: #fff !important; color: var(--color-primary) !important; border-color: rgba(255,75,26,.22) !important; }
+.badge, .badge-blue, .badge-green, .badge-highlight { color: var(--color-primary-dark) !important; background: rgba(255,75,26,.12) !important; }
+.badge-yellow { color: #b85800 !important; background: rgba(255,122,26,.15) !important; }
+.badge-red { color: #b9261d !important; background: rgba(229,57,53,.12) !important; }
+.data-table th { background: var(--color-search-bg) !important; color: var(--color-text-secondary); }
+.data-table tbody tr:hover { background: #FFF7F3 !important; }
+.photo-card, .service-photo, .dish-cover, .media-card img, .hero-photo, .profile-photo, .order-thumb, .thumb.has-image { border-radius: var(--radius-medium) !important; }
+.media-hero { background: linear-gradient(135deg, #fff, #FFF5EF) !important; }
+.media-copy { background: linear-gradient(135deg, #fff, #FFF1EA) !important; color: var(--color-text-main) !important; border: 1px solid rgba(255,75,26,.14) !important; box-shadow: var(--shadow-commerce) !important; }
+.media-copy h2 { color: var(--color-text-main) !important; }
+.media-copy p { color: var(--color-text-secondary) !important; }
+.media-copy .eyeline { color: var(--color-primary) !important; }
+.media-points span { color: var(--color-primary-dark) !important; background: rgba(255,75,26,.10) !important; border: 1px solid rgba(255,75,26,.14) !important; }
+.media-copy, .page-subtitle, .item-subtitle, .metric-note, .section-note { color: var(--color-text-secondary); }
+.progress-bar { background: var(--color-primary) !important; }
+.toast { background: var(--color-primary) !important; }

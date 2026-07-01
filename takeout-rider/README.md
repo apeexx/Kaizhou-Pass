@@ -78,3 +78,10 @@ takeout-rider/
 - 当前入口、登录注册、入驻审核、骑手首页、订单配送、收入、消息和我的页面均复用本目录既有图片资产，主要包括 `delivery-rider.jpg`、`restaurant-store.jpg`、`restaurant-kitchen.jpg`、`takeout-packaging.jpg`、`red-braised-pork.jpg`、`noodle-bowl.jpg`、`chef-kitchen.jpg`。
 - 证件和健康证上传位只使用配送、打包、厨房等通用图片做资料准备占位，不展示真实身份证或健康证样张。
 - 本目录仍不包含真实电话、地图 SDK、定位、支付、提现、上传、接口请求或后端逻辑。
+
+## 本轮主题重写说明
+
+- 当前 PR 全部静态页面按根目录 `AGENTS.md` 的“轻电商 + 本地生活特卖风格”统一处理。
+- 页面仍为 HTML、CSS、原生 JavaScript 静态演示，不接后端、数据库、真实接口、真实地图或真实支付能力。
+- 视觉统一为浅灰页面背景、白色圆角卡片、橙红主色 `#FF4B1A`、价格/状态突出和弱阴影。
+- 页面图片均为本地演示素材，正式商用前需替换为自有或确认授权素材。
