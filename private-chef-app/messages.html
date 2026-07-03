@@ -13,7 +13,7 @@
       <div class="header-row">
         <div>
           <h1 class="header-title">消息</h1>
-          <p class="header-subtitle">处理预约提醒、客户沟通和系统通知</p>
+          <p class="header-subtitle">通知统一查看，客户私信单独处理</p>
         </div>
         <button class="icon-btn" type="button" data-toast="全部已读演示" aria-label="全部已读">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
@@ -22,56 +22,94 @@
     </header>
 
     <main class="main app-main">
-      <section class="tabs" data-message-tabs>
-        <button class="tab is-active" type="button" data-message-filter="all">全部</button>
-        <button class="tab" type="button" data-message-filter="预约提醒">预约提醒</button>
-        <button class="tab" type="button" data-message-filter="客户沟通">客户沟通</button>
-        <button class="tab" type="button" data-message-filter="系统通知">系统通知</button>
+      <section class="tabs message-switch" aria-label="消息类型切换">
+        <button class="tab is-active" type="button" data-message-section="notice">通知</button>
+        <button class="tab" type="button" data-message-section="private">私信</button>
       </section>
 
-      <section class="message-layout">
-        <div class="message-list">
-          <button class="message-item is-active" type="button" data-message-item data-thread="zhou" data-type="客户沟通" data-chat-title="周女士 · 今晚家宴" data-chat-meta="18:30 · 滨湖壹号" data-phone="138****6688">
+      <section class="message-section" data-message-view="notice">
+        <article class="notice-summary">
+          <div>
+            <strong class="item-title">通知汇总</strong>
+            <span class="item-subtitle">系统、预约、审核、收益等不需要回复的消息统一展示。</span>
+          </div>
+          <span class="badge">5 条未读</span>
+        </article>
+
+        <div class="message-list notice-list">
+          <article class="message-item notice-item">
             <div class="item-top">
-              <span><strong class="item-title">周女士 · 今晚家宴</strong><span class="item-subtitle">确认地址、口味和老人餐需求</span></span>
-              <span class="unread">2</span>
+              <span><strong class="item-title">明天生日宴提醒</strong><span class="item-subtitle">明天 11:20 · 金科府，服务前请再次确认食材清单和到达时间。</span></span>
+              <span class="badge amber">预约</span>
             </div>
-          </button>
-          <button class="message-item" type="button" data-message-item data-thread="birthday" data-type="预约提醒" data-chat-title="明天生日宴提醒" data-chat-meta="明天 11:20 · 金科府">
+          </article>
+          <article class="message-item notice-item">
             <div class="item-top">
-              <span><strong class="item-title">明天生日宴提醒</strong><span class="item-subtitle">服务前准备事项待确认</span></span>
-              <span class="badge amber">提醒</span>
-            </div>
-          </button>
-          <button class="message-item" type="button" data-message-item data-thread="system" data-type="系统通知" data-chat-title="认证资料已通过" data-chat-meta="系统通知">
-            <div class="item-top">
-              <span><strong class="item-title">认证资料已通过</strong><span class="item-subtitle">完善菜品后更容易被客户指定</span></span>
+              <span><strong class="item-title">认证资料已通过</strong><span class="item-subtitle">你的厨师认证资料已通过展示审核，可继续完善菜品和服务范围。</span></span>
               <span class="badge green">系统</span>
             </div>
-          </button>
+          </article>
+          <article class="message-item notice-item">
+            <div class="item-top">
+              <span><strong class="item-title">平台活动通知</strong><span class="item-subtitle">本周家宴服务完成 3 单，可获得首页推荐位展示机会。</span></span>
+              <span class="badge coral">活动</span>
+            </div>
+          </article>
+          <article class="message-item notice-item">
+            <div class="item-top">
+              <span><strong class="item-title">收益到账提醒</strong><span class="item-subtitle">YY2026062501 服务费已结算，可在收钱页面查看明细。</span></span>
+              <span class="badge">钱包</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="message-section" data-message-view="private" hidden>
+        <div class="private-list-head">
+          <div>
+            <strong class="item-title">用户私信</strong>
+            <span class="item-subtitle">点击用户进入详细私信，返回后仍停留在用户列表。</span>
+          </div>
+          <span class="badge green">3 位客户</span>
         </div>
 
-        <article class="chat-panel" data-chat-panel>
-          <div class="item-top">
+        <div class="message-list private-message-list">
+          <button class="message-item private-user" type="button" data-open-thread data-thread="zhou">
+            <span class="avatar">周</span>
+            <span class="private-user-main"><strong class="item-title">周女士 · 今晚家宴</strong><span class="item-subtitle">确认地址、口味和老人餐需求</span></span>
+            <span class="unread">2</span>
+          </button>
+          <button class="message-item private-user" type="button" data-open-thread data-thread="wang">
+            <span class="avatar">王</span>
+            <span class="private-user-main"><strong class="item-title">王先生 · 周末聚餐</strong><span class="item-subtitle">想把菜单里增加一道清蒸鱼</span></span>
+            <span class="message-time-inline">09:58</span>
+          </button>
+          <button class="message-item private-user" type="button" data-open-thread data-thread="liu">
+            <span class="avatar">刘</span>
+            <span class="private-user-main"><strong class="item-title">刘女士 · 企业午宴</strong><span class="item-subtitle">厨房设备和上门动线待确认</span></span>
+            <span class="message-time-inline">昨天</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="message-section chat-detail-section" data-chat-detail hidden>
+        <article class="chat-panel">
+          <div class="chat-detail-head">
+            <button class="icon-btn" type="button" data-chat-back aria-label="返回私信列表">‹</button>
             <div>
               <strong class="item-title" data-chat-title-view>周女士 · 今晚家宴</strong>
               <span class="item-subtitle" data-chat-meta-view>18:30 · 滨湖壹号</span>
             </div>
             <a class="text-btn" href="index.html">看服务单</a>
           </div>
-          <div class="chat-thread" data-chat-thread aria-live="polite">
-            <div class="chat-time">今天 09:42</div>
-            <div class="chat-message from-customer">李师傅您好，今晚家宴确认一下地址和口味。</div>
-            <div class="chat-message from-me">您好，地址是滨湖壹号 3 栋 1802，对吗？</div>
-            <div class="chat-message from-customer">对，家里有老人，希望整体少辣，鱼类菜品需要去刺，餐具已准备。</div>
-          </div>
+          <div class="chat-thread" data-chat-thread aria-live="polite"></div>
           <div class="phone-copy" data-phone-copy hidden>已经复制对方手机号：138****6688</div>
           <form class="chat-composer" data-chat-form>
             <input data-chat-input type="text" placeholder="输入回复内容">
             <button class="btn" type="submit">发送</button>
           </form>
           <div class="actions" data-chat-actions>
-            <button class="btn secondary" type="button" data-quick-reply>快速回复</button>
+            <button class="btn secondary" type="button" data-quick-reply>快捷回复</button>
             <button class="btn ghost" type="button" data-copy-phone>电话联系</button>
           </div>
         </article>

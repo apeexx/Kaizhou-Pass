@@ -17,7 +17,6 @@
 
   const chatThreads = {
     zhou: {
-      type: "客户沟通",
       title: "周女士 · 今晚家宴",
       meta: "18:30 · 滨湖壹号",
       phone: "138****6688",
@@ -27,20 +26,23 @@
         { side: "customer", time: "今天 09:51", text: "对，家里有老人，希望整体少辣，鱼类菜品需要去刺，餐具已准备。" }
       ]
     },
-    birthday: {
-      type: "预约提醒",
-      title: "明天生日宴提醒",
-      meta: "明天 11:20 · 金科府",
+    wang: {
+      title: "王先生 · 周末聚餐",
+      meta: "周六 12:00 · 汉丰湖畔",
+      phone: "139****0521",
       messages: [
-        { side: "system", time: "系统提醒", text: "生日宴服务单已进入待上门状态，请在出发前再次确认食材清单和到达时间。" }
+        { side: "customer", time: "今天 09:58", text: "李师傅，周末聚餐菜单里可以增加一道清蒸鱼吗？老人比较喜欢清淡一点。" },
+        { side: "me", time: "今天 10:03", text: "可以，我会把辣度调低，鱼类提前处理好鱼刺，稍后把调整后的菜单发您确认。" }
       ]
     },
-    system: {
-      type: "系统通知",
-      title: "认证资料已通过",
-      meta: "系统通知",
+    liu: {
+      title: "刘女士 · 企业午宴",
+      meta: "明天 10:30 · 创业园 3 号楼",
+      phone: "136****7712",
       messages: [
-        { side: "system", time: "系统通知", text: "你的厨师认证资料已通过展示审核，可继续完善菜品和服务范围。" }
+        { side: "customer", time: "昨天 17:20", text: "我们厨房有双灶和蒸箱，您上门前还需要准备其他设备吗？" },
+        { side: "me", time: "昨天 17:33", text: "双灶和蒸箱够用，我会自带常用调料和备菜工具，现场需要预留一个操作台。" },
+        { side: "customer", time: "昨天 17:38", text: "好的，入口在园区东门，我提前和保安登记。" }
       ]
     }
   };
@@ -160,14 +162,15 @@
   });
   updateAppointmentCounts();
 
+  let activeThreadKey = "zhou";
+
   function renderThread(threadKey) {
     const thread = chatThreads[threadKey] || chatThreads.zhou;
     const title = document.querySelector("[data-chat-title-view]");
     const meta = document.querySelector("[data-chat-meta-view]");
     const body = document.querySelector("[data-chat-thread]");
-    const composer = document.querySelector("[data-chat-form]");
-    const actions = document.querySelector("[data-chat-actions]");
     const phoneCopy = document.querySelector("[data-phone-copy]");
+    activeThreadKey = chatThreads[threadKey] ? threadKey : "zhou";
     if (title) title.textContent = thread.title;
     if (meta) meta.textContent = thread.meta;
     if (phoneCopy) {
@@ -175,41 +178,58 @@
       phoneCopy.textContent = `已经复制对方手机号：${thread.phone || "138****6688"}`;
     }
     if (body) {
-      body.innerHTML = thread.messages.map((message) => {
+      body.replaceChildren();
+      thread.messages.forEach((message) => {
         const className = message.side === "me" ? "from-me" : message.side === "system" ? "from-system" : "from-customer";
-        return `<div class="chat-time">${message.time}</div><div class="chat-message ${className}">${message.text}</div>`;
-      }).join("");
+        const time = document.createElement("div");
+        const bubble = document.createElement("div");
+        time.className = "chat-time";
+        time.textContent = message.time;
+        bubble.className = `chat-message ${className}`;
+        bubble.textContent = message.text;
+        body.append(time, bubble);
+      });
       body.scrollTop = body.scrollHeight;
     }
-    const isCustomer = thread.type === "客户沟通";
-    if (composer) composer.hidden = !isCustomer;
-    if (actions) actions.hidden = !isCustomer;
   }
 
-  function selectMessage(item) {
-    document.querySelectorAll("[data-message-item]").forEach((row) => row.classList.remove("is-active"));
-    item.classList.add("is-active");
-    renderThread(item.dataset.thread);
+  function showMessageSection(sectionName) {
+    const detail = document.querySelector("[data-chat-detail]");
+    document.querySelectorAll("[data-message-section]").forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.messageSection === sectionName);
+    });
+    document.querySelectorAll("[data-message-view]").forEach((section) => {
+      section.hidden = section.dataset.messageView !== sectionName;
+    });
+    if (detail) detail.hidden = true;
   }
 
-  document.querySelectorAll("[data-message-tabs]").forEach((group) => {
-    const buttons = group.querySelectorAll("[data-message-filter]");
-    const items = document.querySelectorAll("[data-message-item]");
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.messageFilter;
-        buttons.forEach((item) => item.classList.toggle("is-active", item === button));
-        items.forEach((item) => {
-          item.hidden = filter !== "all" && item.dataset.type !== filter;
-        });
-        const firstVisible = Array.from(items).find((item) => !item.hidden);
-        if (firstVisible) selectMessage(firstVisible);
-      });
+  function openChatDetail(threadKey) {
+    const privateList = document.querySelector('[data-message-view="private"]');
+    const detail = document.querySelector("[data-chat-detail]");
+    renderThread(threadKey);
+    document.querySelectorAll("[data-message-section]").forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.messageSection === "private");
+    });
+    document.querySelectorAll("[data-message-view]").forEach((section) => {
+      section.hidden = true;
+    });
+    if (privateList) privateList.hidden = true;
+    if (detail) detail.hidden = false;
+  }
+
+  document.querySelectorAll("[data-message-section]").forEach((button) => {
+    button.addEventListener("click", () => {
+      showMessageSection(button.dataset.messageSection);
     });
   });
 
-  document.querySelectorAll("[data-message-item]").forEach((item) => {
-    item.addEventListener("click", () => selectMessage(item));
+  document.querySelectorAll("[data-open-thread]").forEach((item) => {
+    item.addEventListener("click", () => openChatDetail(item.dataset.thread));
+  });
+
+  document.querySelector("[data-chat-back]")?.addEventListener("click", () => {
+    showMessageSection("private");
   });
 
   document.querySelector("[data-chat-form]")?.addEventListener("submit", (event) => {
@@ -221,6 +241,7 @@
       showToast("请输入回复内容");
       return;
     }
+    if (!body) return;
     const time = new Date().toLocaleTimeString("zh-CN", { hour: "2-digit", minute: "2-digit" });
     const bubble = document.createElement("div");
     const timeNode = document.createElement("div");
@@ -243,8 +264,7 @@
   });
 
   document.querySelector("[data-copy-phone]")?.addEventListener("click", () => {
-    const active = document.querySelector("[data-message-item].is-active");
-    const phone = active?.dataset.phone || "138****6688";
+    const phone = chatThreads[activeThreadKey]?.phone || "138****6688";
     const phoneCopy = document.querySelector("[data-phone-copy]");
     if (phoneCopy) {
       phoneCopy.textContent = `已经复制对方手机号：${phone}`;
@@ -252,7 +272,10 @@
     }
     showToast("已经复制对方手机号");
   });
-  if (document.querySelector("[data-chat-thread]")) renderThread("zhou");
+  if (document.querySelector("[data-chat-thread]")) {
+    renderThread("zhou");
+    showMessageSection("notice");
+  }
 
   document.querySelectorAll("[data-switch-login]").forEach((button) => {
     button.addEventListener("click", () => {
